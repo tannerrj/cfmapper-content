@@ -1,9 +1,10 @@
 digraph {
 creation -> navar
 creation -> scorn
+creation -> wilderness
 creation -> brest
 creation -> darcap
-creation -> wilderness
+wilderness -> unlinked
 brest -> unlinked
 navar -> unlinked
 darcap -> unlinked
@@ -12,10 +13,10 @@ darcap -> navar
 darcap -> wolfsburg
 scorn -> scorncounty
 scorn -> unlinked
-wilderness -> unlinked
 scorn -> portjoseph
 scorn -> scornarena
 scorn -> scornoldcity
+unlinked -> wilderness
 unlinked -> brest
 brest -> scorn
 brest -> ancientpupland
@@ -36,7 +37,6 @@ navar -> pupland
 navar -> santodominion
 navar -> brest
 unlinked -> darcap
-unlinked -> wilderness
 darcapcircus -> darcap
 wolfsburg -> unlinked
 wolfsburg -> navar
@@ -175,6 +175,7 @@ citydeclouds -> darcap
 citydeclouds -> brest
 citydeclouds -> scorn
 citydeclouds -> wolfsburg
+wilderness -> darcap
 ancientpupland -> lakecountry
 butakisfortress -> scorn
 butakisfortress -> ancientpupland
@@ -185,21 +186,20 @@ butakisfortress -> navar
 butakisfortress -> santodominion
 butakisfortress -> brest
 navar -> dream
-wilderness -> darcap
 unlinked -> azumauindo
 dream -> citydeclouds
+unlinked -> marksel
 unlinked -> whalingoutpost
 dream -> navar
 azumauindo -> unlinked
-unlinked -> marksel
+marksel -> unlinked
+marksel -> wilderness
+wilderness -> marksel
 butakisfortress -> wolfsburg
 butakisfortress -> unlinked
 butakisfortress -> euthville
 wilderness -> navar
 whalingoutpost -> unlinked
-marksel -> unlinked
-marksel -> wilderness
-wilderness -> marksel
 unlinked -> firevolcano
 wilderness -> santodominion
 unlinked -> threesisters
