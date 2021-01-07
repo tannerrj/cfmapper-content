@@ -49,6 +49,8 @@ scorncounty -> scorn
 scorncounty -> wilderness
 scorn -> unlinked
 scorncounty -> euthville
+scorncounty -> andustar
+scorn -> andustar
 scorn -> pupland
 scorn -> wilderness
 portjoseph -> unlinked
@@ -96,6 +98,10 @@ wilderness -> scorncounty
 unlinked -> scorn
 euthville -> unlinked
 euthville -> scorncounty
+andustar -> unlinked
+andustar -> scorncounty
+andustar -> scorn
+andustar -> greenway
 scorn -> stoneville
 wilderness -> scorn
 unlinked -> portjoseph
@@ -142,6 +148,7 @@ butakisfortress -> lakecountry
 stoneville -> unlinked
 wolfsburg -> astralplane
 unlinked -> euthville
+unlinked -> andustar
 euthville -> scorn
 euthville -> ancientpupland
 euthville -> nurnberg
@@ -150,6 +157,7 @@ euthville -> darcap
 euthville -> navar
 euthville -> santodominion
 euthville -> brest
+greenway -> andustar
 stoneville -> scorn
 scorn -> citydeclouds
 portjoseph -> astralplane
