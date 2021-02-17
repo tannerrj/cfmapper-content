@@ -1,5 +1,5 @@
 # cfmapper-content
-Output of cfmapper script used by Crossfire
+Output of crossfire-mapper script used by Crossfire
 
 ## Introduction
 
@@ -19,7 +19,7 @@ http://wiki.cross-fire.org/dokuwiki/doku.php/server:server_compiling
 
 To build it, you need the GD library (ie. install a libgd-devel package).
 
-This program is not part of the build process. The command line from the utils directory is:
+This program is not part of the regular build process. The command to compile crossfire-mapper is invoked during ./configure
 ```
-gcc mapper.c -I../include ../common/libcross.a -o crossfire-mapper -lm -lgd
+./configure --enable-mapper && make && sudo make install
 ```
