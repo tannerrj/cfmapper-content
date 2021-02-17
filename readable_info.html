@@ -9,60 +9,6 @@
 You will find here everything you need to build your own customized home, sweet home.
 Make sure to read our documentation on how to build nice maps.
 </pre></li>
-<li>Removing items (5,22): <br /><pre>To remove built items, you need a 'generic destroyer'.
-Simply apply it, and fire in the desired direction. It will remove the first built item from the location.
-Warning: a destroyer will remove items starting from the lowest order on the spot. Basically, this means the first removed item will be a pedestal (underground), then items on floor.
-Note that the destroyer will not remove walls or floors.
-</pre></li>
-<li>Building gates and buttons/pedestals (5,21): <br /><pre>Some items, like gates, require buttons, pedestals, ..., something to be opened and closed.
-To build a gate with its associated button:
-* put a marking rune at the spot where you wish to build the door. The text can be whatever you want, make sure to remember it.
-* build the gate on this spot
-* put a marking rune at the spot where you with to put the button. Use the same text as for the door.
-* build the button
-Your button will now activate the gate when you apply it.
-Note that you can link together as many gates, buttons, pedestals, as you want.
-As long as you use the same text on the marking rune, they will all work together.
-To build gates activated by other buttons, just use another text.
-Normally all gates with a single marking rune text are either all up or all down at a given time, however if you want one open while another is closed, make use of inverted gates.
-Also, it is possible to make buttons, levers, and pedestals underneath gates, however it requires things to be made in a specific order.
-* make 2 marking runes on the square that you want to build the button and gate on
-* build the gate first
-* then build the button underneath it
-This is useful for making a gate avoid crushing people underneath it. Also, you can use this same technique with inverted gates in order to make a square that pushes objects placed on it off of it.
-</pre></li>
-<li>Building floor and walls (5,20): <br /><pre>Building enables you to put walls and floors where you want.
-Building a floor lets you remove walls. This is the only way to remove them.
-You can change an existing floor by building another on top. Same goes for walls.
-All created floors are magic, and will preserve items you put on them.
-You can add a window in some walls. To remove the window, build a new wall.
-</pre></li>
-<li>Basic building instructions (4,23): <br /><pre>To build your own home, you can use different items:
-* generic builder: this tool lets you build anything. You need one to build.
-* generic destroyer: this tool lets you destroy a built item. This will remove any built item, except floors and walls.
-* materials: you need those to build items. For instance, a 'Wood floor material' enables you to build a woodfloor.
-To build an item:
-* apply the builder
-* mark the material of the item you want to build
-* fire the builder in the desired direction
-Of course, the material is used when you build, so you need to buy quite a few.
-</pre></li>
-<li>Building other items (4,22): <br /><pre>All items not requiring any special handling are built simply by marking the appropriate material and firing the builder.
-Note that, to avoid any issue, those items can not be picked up.
-Note also that you can build an item on another.
-</pre></li>
-<li>Building restrictions (4,21): <br /><pre>To build on a spot, all items on this spot must be 'buildable'.
-Buildable items will display 'this is a buildable item' when examined.
-There are several exceptions though. In all cases you can build on marking runes as they are used for making gates and buttons work together. Also you can build signs and talking books on of books and or scrolls, because they are needed for specifying the message. Also, buttons, levers and pedestals can be built underneath gates. Don't worry, you should have some clear messages on why you can't build.
-</pre></li>
-<li>Signs and talking books (4,20): <br /><pre>When making signs and talking (or listening) books, you need to place a book or scroll with the text you want on the square you're building on just like a marking rune.
-With the talking/listening books, they will take the name and picture of the book used to create them as well.
-For the talking and listening books, you also need to connect them with a marking rune just like gates buttons and levers, which in the case of the talking books, makes the book say it's message when activated, and in the case of listening books, it causes saying the phrase that the book looks for to act like pulling a lever.
-For the listening books, the message must be in this format:
-@match blah
-Click.
-Which will make it activate when somebody within two squares says "blah", and will additionally say "Click." upon activation.
-</pre></li>
 </ul>
 </li>
 <li>/pup_land/rainbow/Lv4/alter2</li>
@@ -5613,60 +5559,6 @@ Say, "Dangerous return" to open the gate to purchase your flight ticket.
 </pre></li>
 </ul>
 </li>
-<li>/pup_land/lone_town/shops/buildshop</li>
-<ul><li>Removing items (21,20): <br /><pre>To remove built items, you need a 'generic destroyer.'
-Simply apply it, and fire in the desired direction.  It will remove the first built item from the location.
-Warning: a destroyer will remove items starting from the lowest order on the spot.  Basically, this means the first removed item will be a pedestal (underground), then items on floor.
-Note that the destroyer will not remove walls or floors.
-</pre></li>
-<li>Building restrictions (21,19): <br /><pre>To build on a spot, all items on this spot must be 'buildable.'
-Buildable items will display 'this is a buildable item' when examined.
-There are several exceptions though.  In all cases you can build on marking runes as they are used for making gates and buttons work together.  Also you can build signs and talking books on of books and or scrolls, because they are needed for specifying the message.  Also, buttons, levers and pedestals can be built underneath gates.  Don't worry, you should have some clear messages on why you can't build.
-</pre></li>
-<li>Signs and talking books (21,18): <br /><pre>When making signs and talking (or listening) books, you need to place a book or scroll with the text you want on the square you're building on just like a marking rune.
-With the talking/listening books, they will take the name and picture of the book used to create them as well.
-For the talking and listening books, you also need to connect them with a marking rune just like gates buttons and levers, which in the case of the talking books, makes the book say it's message when activated, and in the case of listening books, it causes saying the phrase that the book looks for to act like pulling a lever.
-For the listening books, the message must be in this format:
-@match blah
-Click.
-Which will make it activate when somebody within two squares says "blah", and will additionally say "Click." upon activation.
-</pre></li>
-<li>Basic building instructions (18,21): <br /><pre>To build your own home, you can use different items:
-* generic builder: this tool lets you build anything.  You need one to build.
-* generic destroyer: this tool lets you destroy a built item.  This will remove any built item, except floors and white_walls.
-* materials: you need those to build items.  For instance, a 'Wood floor material' enables you to build a woodfloor.
-To build an item:
-* apply the builder
-* mark the material of the item you want to build
-* fire the builder in the desired direction
-Of course, the material is used when you build, so you need to buy quite a few.
-</pre></li>
-<li>Building floor and walls (18,20): <br /><pre>Building enables you to put walls and floors where you want.
-Building a floor lets you remove walls.  This is the only way to remove them.
-You can change an existing floor by building another on top.  Same goes for walls.
-All created floors are magic, and will preserve items you put on them.
-You can add a window in some walls.  To remove the window, build a new wall.
-</pre></li>
-<li>Building gates and buttons/pedestals (18,19): <br /><pre>Some items, like gates, require buttons, pedestals, ..., something to be opened and closed. To build a gate with its associated button:
-* put a marking rune at the spot where you wish to build the door.  The text can be whatever you want, make sure to remember it.
-* build the gate on this spot
-* put a marking rune at the spot where you with to put the button. Use the same text as for the door.
-* build the button
-Your button will now activate the gate when you apply it.
-Note that you can link together as many gates, buttons, pedestals, as you want.
-As long as you use the same text on the marking rune, they will all work together.
-To build gates activated by other buttons, just use another text.
-Normally all gates with a single marking rune text are either all up or all down at a given time, however if you want one open while another is closed, make use of inverted gates.
-Also, it is possible to make buttons, levers, and pedestals underneath gates, however it requires things to be made in a specific order.
-* make 2 marking runes on the square that you want to build the button and gate on
-* build the gate first
-* then build the button underneath it
-This is useful for making a gate avoid crushing people underneath it.  Also, you can use this same technique with inverted gates in order to make a square that pushes objects placed on it off of it.
-</pre></li>
-<li>Building other items (18,18): <br /><pre>All items not requiring any special handling are built simply by marking the appropriate material and firing the builder.  Note that, to avoid any issue, those items can not be picked up.  Note also that you can build an item on another.
-</pre></li>
-</ul>
-</li>
 <li>/pup_land/ancient/village/village</li>
 <ul><li>sign (7,23): <br /><pre>There are many monsters in this hole.  But don't worry, Siegfried prevents them from coming out.
 </pre></li>
@@ -9248,61 +9140,7 @@ The tiny fairy disappears.
 </ul>
 </li>
 <li>/scorn/shops/buildshop</li>
-<ul><li>Basic building instructions (13,19): <br /><pre>To build your own home, you can use different items:
-* generic builder: this tool lets you build anything.  You need one to build.
-* generic destroyer: this tool lets you destroy a built item.  This will remove any built item, except floors and walls.
-* materials: you need those to build items.  For instance, a 'Wood floor material' enables you to build a woodfloor.
-To build an item:
-* apply the builder
-* mark the material of the item you want to build
-* fire the builder in the desired direction
-Of course, the material is used when you build, so you need to buy quite a few.
-</pre></li>
-<li>Building floor and walls (13,18): <br /><pre>Building enables you to put walls and floors where you want.
-Building a floor lets you remove walls.  This is the only way to remove them.
-You can change an existing floor by building another on top.  Same goes for walls.
-All created floors are magic, and will preserve items you put on them.
-You can add a window in some walls.  To remove the window, build a new wall.
-</pre></li>
-<li>Building gates and buttons/pedestals (13,17): <br /><pre>Some items, like gates, require buttons, pedestals, ..., something to be opened and closed.
-To build a gate with its associated button:
-* put a marking rune at the spot where you wish to build the door.  The text can be whatever you want, make sure to remember it.
-* build the gate on this spot
-* put a marking rune at the spot where you with to put the button.  Use the same text as for the door.
-* build the button
-Your button will now activate the gate when you apply it.
-Note that you can link together as many gates, buttons, pedestals, as you want.
-As long as you use the same text on the marking rune, they will all work together.
-To build gates activated by other buttons, just use another text.
-Normally all gates with a single marking rune text are either all up or all down at a given time, however if you want one open while another is closed, make use of inverted gates.
-Also, it is possible to make buttons, levers, and pedestals underneath gates, however it requires things to be made in a specific order.
-* make 2 marking runes on the square that you want to build the button and gate on
-* build the gate first
-* then build the button underneath it
-This is useful for making a gate avoid crushing people underneath it.  Also, you can use this same technique with inverted gates in order to make a square that pushes objects placed on it off of it.
-</pre></li>
-<li>Building other items (13,16): <br /><pre>All items not requiring any special handling are built simply by marking the appropriate material and firing the builder.
-Note that, to avoid any issue, those items can not be picked up.
-Note also that you can build an item on another.
-</pre></li>
-<li>Removing items (13,15): <br /><pre>To remove built items, you need a 'generic destroyer'.
-Simply apply it, and fire in the desired direction.  It will remove the first built item from the location.
-Warning: a destroyer will remove items starting from the lowest order on the spot.  Basically, this means the first removed item will be a pedestal (underground), then items on floor.
-Note that the destroyer will not remove walls or floors.
-</pre></li>
-<li>Building restrictions (13,14): <br /><pre>To build on a spot, all items on this spot must be 'buildable'.
-Buildable items will display 'this is a buildable item' when examined.
-There are several exceptions though.  In all cases you can build on marking runes as they are used for making gates and buttons work together.  Also you can build signs and talking books on of books and or scrolls, because they are needed for specifying the message.  Also, buttons, levers and pedestals can be built underneath gates.  Don't worry, you should have some clear messages on why you can't build.
-</pre></li>
-<li>Signs and talking books (13,13): <br /><pre>When making signs and talking (or listening) books, you need to place a book or scroll with the text you want on the square you're building on just like a marking rune.
-With the talking/listening books, they will take the name and picture of the book used to create them as well.
-For the talking and listening books, you also need to connect them with a marking rune just like gates buttons and levers, which in the case of the talking books, makes the book say it's message when activated, and in the case of listening books, it causes saying the phrase that the book looks for to act like pulling a lever.
-For the listening books, the message must be in this format:
-@match blah
-Click.
-Which will make it activate when somebody within two squares says "blah", and will additionally say "Click." upon activation.
-</pre></li>
-<li>sign (11,19): <br /><pre>Welcome to Acme. Inc construction shop!
+<ul><li>sign (11,19): <br /><pre>Welcome to Acme. Inc construction shop!
 You will find here everything you need to build your own customized home, sweet home.  Make sure to read our documentation on how to build nice maps.
 </pre></li>
 </ul>
@@ -9701,17 +9539,6 @@ Thank you very much for cleaning my tower! Here is your reward.
 </pre></li>
 </ul>
 </li>
-<li>/world/world_109_125</li>
-<ul><li>sign (16,35): <br /><pre>The province of Brittany lies ahead. This road leads over the ice crown mountains, which is a dangerous path to follow. Don't go any further unless you are level 15 at least.
-</pre></li>
-<li>sign (14,45): <br /><pre>Brest - North
-Scorn - East
-Lake Country - South
-</pre></li>
-<li>sign (13,35): <br /><pre>Training Centers Incorporated
-</pre></li>
-</ul>
-</li>
 <li>/scorn/houses/alfalfa_ground</li>
 <ul><li>magic_mouth (7,6): <br /><pre>Phew!  Something reeks behind this door.
 </pre></li>
@@ -9782,6 +9609,7 @@ Do not leave litter on teleporters or other transporters.  That will stop them f
 <li>magic_mouth (29,9): <br /><pre>If you can't teleport out with the right activation word, it is only because someone litter here and made the teleporter malfunction.  Clear it up and it will function again.
 </pre></li>
 <li>sign (28,22): <br /><pre>One dark elf at the end of the room holds the key to the treasure room.  Kill him, get the key and take your rewards.
+The gate may close behind you as you enter. Stand in front of the gate to reopen it from within.
 </pre></li>
 <li>magic_mouth (27,14): <br /><pre>If you can't teleport out with the right activation word, it is only because someone litter here and made the teleporter malfunction.  Clear it up and it will function again.
 </pre></li>
@@ -9815,6 +9643,7 @@ Warning: Littering on teleporter will make it malfunction.
 When you are ready, step on the teleporter to the right, and say the word, 'Charge'.  You will be teleported within the fences.  The exit it located at the other end of the room, a teleporter.  Test you courage and strength.
 </pre></li>
 <li>sign (16,31): <br /><pre>This room is quit a bit harder than the room to the north.  Monsters move in a pattern.  You will get a bit more than regular experience out of them.
+The gate may close behind you as you enter. Stand in front of the gate to reopen it from within.
 </pre></li>
 </ul>
 </li>
@@ -11545,63 +11374,9 @@ decide to come back across our bridge.
 </ul>
 </li>
 <li>/navar_city/shops/buildshop</li>
-<ul><li>Basic building instructions (9,11): <br /><pre>To build your own home, you can use different items:
-* generic builder: this tool lets you build anything. You need one to build.
-* generic destroyer: this tool lets you destroy a built item. This will remove any built item, except floors and walls.
-* materials: you need those to build items. For instance, a 'Wood floor material' enables you to build a woodfloor.
-To build an item:
-* apply the builder
-* mark the material of the item you want to build
-* fire the builder in the desired direction
-Of course, the material is used when you build, so you need to buy quite a few.
-</pre></li>
-<li>Building other items (9,10): <br /><pre>All items not requiring any special handling are built simply by marking the appropriate material and firing the builder.
-Note that, to avoid any issue, those items can not be picked up.
-Note also that you can build an item on another.
-</pre></li>
-<li>Building restrictions (9,9): <br /><pre>To build on a spot, all items on this spot must be 'buildable'.
-Buildable items will display 'this is a buildable item' when examined.
-There are several exceptions though. In all cases you can build on marking runes as they are used for making gates and buttons work together. Also you can build signs and talking books on of books and or scrolls, because they are needed for specifying the message. Also, buttons, levers and pedestals can be built underneath gates. Don't worry, you should have some clear messages on why you can't build.
-</pre></li>
-<li>Signs and talking books (9,8): <br /><pre>When making signs and talking (or listening) books, you need to place a book or scroll with the text you want on the square you're building on just like a marking rune.
-With the talking/listening books, they will take the name and picture of the book used to create them as well.
-For the talking and listening books, you also need to connect them with a marking rune just like gates buttons and levers, which in the case of the talking books, makes the book say it's message when activated, and in the case of listening books, it causes saying the phrase that the book looks for to act like pulling a lever.
-For the listening books, the message must be in this format:
-@match blah
-Click.
-Which will make it activate when somebody within two squares says "blah", and will additionally say "Click." upon activation.
-</pre></li>
-<li>sign (7,12): <br /><pre>Welcome to Acme. Inc construction shop!
+<ul><li>sign (7,12): <br /><pre>Welcome to Acme. Inc construction shop!
 You will find here everything you need to build your own customized home, sweet home.
 Make sure to read our documentation on how to build nice maps.
-</pre></li>
-<li>Removing items (7,11): <br /><pre>To remove built items, you need a 'generic destroyer'.
-Simply apply it, and fire in the desired direction. It will remove the first built item from the location.
-Warning: a destroyer will remove items starting from the lowest order on the spot. Basically, this means the first removed item will be a pedestal (underground), then items on floor.
-Note that the destroyer will not remove walls or floors.
-</pre></li>
-<li>Building gates and buttons/pedestals (7,10): <br /><pre>Some items, like gates, require buttons, pedestals, ..., something to be opened and closed.
-To build a gate with its associated button:
-* put a marking rune at the spot where you wish to build the door. The text can be whatever you want, make sure to remember it.
-* build the gate on this spot
-* put a marking rune at the spot where you with to put the button. Use the same text as for the door.
-* build the button
-Your button will now activate the gate when you apply it.
-Note that you can link together as many gates, buttons, pedestals, as you want.
-As long as you use the same text on the marking rune, they will all work together.
-To build gates activated by other buttons, just use another text.
-Normally all gates with a single marking rune text are either all up or all down at a given time, however if you want one open while another is closed, make use of inverted gates.
-Also, it is possible to make buttons, levers, and pedestals underneath gates, however it requires things to be made in a specific order.
-* make 2 marking runes on the square that you want to build the button and gate on
-* build the gate first
-* then build the button underneath it
-This is useful for making a gate avoid crushing people underneath it. Also, you can use this same technique with inverted gates in order to make a square that pushes objects placed on it off of it.
-</pre></li>
-<li>Building floor and walls (7,9): <br /><pre>Building enables you to put walls and floors where you want.
-Building a floor lets you remove walls. This is the only way to remove them.
-You can change an existing floor by building another on top. Same goes for walls.
-All created floors are magic, and will preserve items you put on them.
-You can add a window in some walls. To remove the window, build a new wall.
 </pre></li>
 </ul>
 </li>
@@ -11814,11 +11589,6 @@ When the door is open the character will be able to leave.
 <ul><li>sign (30,17): <br /><pre>Enchanted ford
 </pre></li>
 <li>magic_mouth (27,24): <br /><pre>You feel a strange sensation here, as if your senses were dulled.
-</pre></li>
-</ul>
-</li>
-<li>/world/world_106_122</li>
-<ul><li>sign (27,0): <br /><pre>The province of Brittany lies ahead. This road leads over the ice crown mountains, which is a dangerous path to follow. Don't go any further unless you are level 15 at least.
 </pre></li>
 </ul>
 </li>
@@ -12528,23 +12298,6 @@ Good luck.
 </pre></li>
 </ul>
 </li>
-<li>/navar_city/temples/devourers_lvl2</li>
-<ul><li>magic_mouth (24,27): <br /><pre>The wind here is gusting and bringing with it the awful stench of death - too many zombies are in the area.
-</pre></li>
-<li>magic_mouth (23,26): <br /><pre>You can see a cave exit ahead.
-</pre></li>
-<li>magic_mouth (21,27): <br /><pre>Up ahead you can see outside, it looks like this is a cave exit.
-</pre></li>
-<li>magic_mouth (20,27): <br /><pre>The horrendous smell from the zombies is almost unbearable and the constant wind gust is making it worse.
-</pre></li>
-<li>magic_mouth (7,5): <br /><pre>The wind here is constantly blowing.
-</pre></li>
-<li>magic_mouth (5,5): <br /><pre>The wind here is so strong here you can barely maintain your footing.
-</pre></li>
-<li>magic_mouth (4,6): <br /><pre>A massive gust of wind almost knocks you over.
-</pre></li>
-</ul>
-</li>
 <li>/scorn/houses/doors_galore</li>
 <ul><li>Instructions (15,16): <br /><pre>No spells and no prayers are allowed in this dungeon.  Use keys or lockpicks to open doors, melee won't work well.  .......and always search for traps.......
 </pre></li>
@@ -12649,6 +12402,23 @@ o  Special weapons crafted for mages may also have Spell Point regeneration bonu
 <li>exposition (37,10): <br /><pre>There are two factors controlling one's magical powers: Spell Point capacity, and Spell Point regeneration rate.  Spell Points is the force that drives magical spells; Spell Point capacity is how much Spell Points one can naturally have.  Spell Point regeneration rate is how fast the Spell Points are replenished.  Spell Point capacity is controlled mainly by one's power (Pow) and level of magic experience.  One's intelligence (Int) also affects this capacity, to a lesser degree.  Some magical equipment grant Pow bonuses, which will increase this capacity while worn.  Improvement potions may also permanently increase one's Spell Point capacity.  There are also very rare gemstones that have capacity to store Spell Points.  Spell Points stored in these crystals can be retrieved at a single touch.  High-level wizards use these stones to increase the total amount of Spell Points they have at their disposal.
 </pre></li>
 <li>sign (35,11): <br /><pre>The Glowing Crystal exhibited here is one of the rare gemstones that are able to store Spell Points.  Touching it when your Spell Points is at maximum capacity will transfer half your Spell Points into it.  Touching it when you are below maximum capacity will retrieve any stored Spell Points, up to your capacity.  This particular crystal can only store up to 200 Spell Points.  Crystals with capacities for 1000 Spell Points and beyond are known to exist; and are very much sought after by all spellcasters.
+</pre></li>
+</ul>
+</li>
+<li>/navar_city/temples/devourers_lvl2</li>
+<ul><li>magic_mouth (24,27): <br /><pre>The wind here is gusting and bringing with it the awful stench of death - too many zombies are in the area.
+</pre></li>
+<li>magic_mouth (23,26): <br /><pre>You can see a cave exit ahead.
+</pre></li>
+<li>magic_mouth (21,27): <br /><pre>Up ahead you can see outside, it looks like this is a cave exit.
+</pre></li>
+<li>magic_mouth (20,27): <br /><pre>The horrendous smell from the zombies is almost unbearable and the constant wind gust is making it worse.
+</pre></li>
+<li>magic_mouth (7,5): <br /><pre>The wind here is constantly blowing.
+</pre></li>
+<li>magic_mouth (5,5): <br /><pre>The wind here is so strong here you can barely maintain your footing.
+</pre></li>
+<li>magic_mouth (4,6): <br /><pre>A massive gust of wind almost knocks you over.
 </pre></li>
 </ul>
 </li>
@@ -12992,13 +12762,6 @@ Please speak with low voice.
 </pre></li>
 </ul>
 </li>
-<li>/scorn/houses/barracks</li>
-<ul><li>Faith of the Sword (21,7): <br /><pre>On the faith of Valkyrie, the Brave, the Just, Deathbringer
-In a world rich with sorcery and its users, some brave warriors forsake the help of those foul arts.  We, followers of the Brave Lady, face any and all threats by might of sword and skill only.  We bring our lady the spoils of our conquests for Her pleasure.
-All praise be the Deathbringer.  Pity those who use wizardry, and kill those who set themselves as its champions, as well as magic-based monsters.  The Just shall bring happiness and honor.
-</pre></li>
-</ul>
-</li>
 <li>/lake_country/Butakis/houses/Bobs_house</li>
 <ul><li>magic_mouth (14,14): <br /><pre>Beware of guard dogs
 </pre></li>
@@ -13144,15 +12907,6 @@ It would be nice of you not to bother with others' lives.
 </li>
 <li>/brest/brittany/dol-guldur.4</li>
 <ul><li>sign (6,5): <br /><pre>You might want to look at the library...
-</pre></li>
-</ul>
-</li>
-<li>/brest/brittany/dol-guldur.5</li>
-<ul><li>sign (13,17): <br /><pre>Here's some acid... It may help your stomach.
-</pre></li>
-<li>sign (4,12): <br /><pre>Armoury...
-</pre></li>
-<li>sign (2,17): <br /><pre>Miam Miam...
 </pre></li>
 </ul>
 </li>
@@ -13472,38 +13226,6 @@ My son and I are afraid that this secret room will be discovered by the monsters
 </pre></li>
 </ul>
 </li>
-<li>/brest/brittany/dol-guldur.3</li>
-<ul><li>sign (23,28): <br /><pre>There's nothing like reading a book near the fireplace...
-</pre></li>
-<li>book (19,28): <br /><pre>Once in the Mines: Try to find a way from west-door to east gate...
-</pre></li>
-<li>sign (16,27): <br /><pre>The library...
-</pre></li>
-</ul>
-</li>
-<li>/brest/brittany/dol-guldur.6</li>
-<ul><li>book (33,4): <br /><pre>Careful the wells are deep and dangerous in the Mines...
-</pre></li>
-<li>sign (31,8): <br /><pre>Do not disturb while eating...
-</pre></li>
-<li>magic_mouth (25,3): <br /><pre>Who dares to disturb my sleeping...
-</pre></li>
-<li>magic_mouth (25,2): <br /><pre>Who dares to disturb my sleeping...
-</pre></li>
-<li>magic_mouth (25,1): <br /><pre>Who dares to disturb my sleeping...
-</pre></li>
-<li>magic_mouth (7,3): <br /><pre>Aleeert !!!
-</pre></li>
-<li>magic_mouth (7,2): <br /><pre>Alert !!!
-</pre></li>
-<li>magic_mouth (7,1): <br /><pre>Aleeert !!!
-</pre></li>
-<li>sign (5,1): <br /><pre>Master's chamber...
-</pre></li>
-<li>sign (3,10): <br /><pre>Training...
-</pre></li>
-</ul>
-</li>
 <li>/navar_city/light/light4</li>
 <ul><li>magic_mouth (9,5): <br /><pre>You look out across the bay and see lots of ships...one particular ship catches your eye...it is alone, which is strange, since they seem to be loading and unloading cargo on the deck.  Could this be the smugglers ship?
 </pre></li>
@@ -13674,11 +13396,6 @@ End of Stronghold Road (where else!)
 </li>
 <li>/quests/peterm/CTower/Dungeon</li>
 <ul><li>magic_mouth (4,4): <br /><pre>This cell door has 'traitor' written on it....
-</pre></li>
-</ul>
-</li>
-<li>/brest/brittany/tower_of__zoon</li>
-<ul><li>Tower of  Zoon (1,1): <br /><pre>Lord Zoon invites to step in and discover his treasures.  Please deposit 50 foods on the altar.
 </pre></li>
 </ul>
 </li>
@@ -14861,6 +14578,47 @@ Standing on or near a mana crystal for too long can be fatal to your health.
 </pre></li>
 </ul>
 </li>
+<li>/brest/brittany/dol-guldur.5</li>
+<ul><li>sign (13,17): <br /><pre>Here's some acid... It may help your stomach.
+</pre></li>
+<li>sign (4,12): <br /><pre>Armoury...
+</pre></li>
+<li>sign (2,17): <br /><pre>Miam Miam...
+</pre></li>
+</ul>
+</li>
+<li>/brest/brittany/dol-guldur.3</li>
+<ul><li>sign (23,28): <br /><pre>There's nothing like reading a book near the fireplace...
+</pre></li>
+<li>book (19,28): <br /><pre>Once in the Mines: Try to find a way from west-door to east gate...
+</pre></li>
+<li>sign (16,27): <br /><pre>The library...
+</pre></li>
+</ul>
+</li>
+<li>/brest/brittany/dol-guldur.6</li>
+<ul><li>book (33,4): <br /><pre>Careful the wells are deep and dangerous in the Mines...
+</pre></li>
+<li>sign (31,8): <br /><pre>Do not disturb while eating...
+</pre></li>
+<li>magic_mouth (25,3): <br /><pre>Who dares to disturb my sleeping...
+</pre></li>
+<li>magic_mouth (25,2): <br /><pre>Who dares to disturb my sleeping...
+</pre></li>
+<li>magic_mouth (25,1): <br /><pre>Who dares to disturb my sleeping...
+</pre></li>
+<li>magic_mouth (7,3): <br /><pre>Aleeert !!!
+</pre></li>
+<li>magic_mouth (7,2): <br /><pre>Alert !!!
+</pre></li>
+<li>magic_mouth (7,1): <br /><pre>Aleeert !!!
+</pre></li>
+<li>sign (5,1): <br /><pre>Master's chamber...
+</pre></li>
+<li>sign (3,10): <br /><pre>Training...
+</pre></li>
+</ul>
+</li>
 <li>/quests/peterm/DragonQuest/FireHatchery</li>
 <ul><li>magic_mouth (0,12): <br /><pre>A hot wind is blowing in from the passageway here.
 </pre></li>
@@ -15180,6 +14938,11 @@ The large demons are very strong and their touch drains life.
 </pre></li>
 </ul>
 </li>
+<li>/brest/brittany/tower_of__zoon</li>
+<ul><li>Tower of  Zoon (1,1): <br /><pre>Lord Zoon invites to step in and discover his treasures.  Please deposit 50 foods on the altar.
+</pre></li>
+</ul>
+</li>
 <li>/quests/mak/giant/mainfloor</li>
 <ul><li>magic_mouth (10,21): <br /><pre>You can here loud snoring coming from behind this door.
 </pre></li>
@@ -15320,6 +15083,22 @@ The census of last year has now confirmed that Scorn is now the largest western 
 </li>
 <li>/navar_city/mlab/ttower9</li>
 <ul><li>magic_mouth (13,10): <br /><pre>The wizard oversaw the rise of the tower through the clouds.  The wizard oversaw the deaths of many.  The wizard's powers did not come from what is good, or even said to be good.  The tower was built to avoid a pact which every wizard has made.  There is no good magic.  It is of the black arts.
+</pre></li>
+</ul>
+</li>
+<li>/world/world_106_122</li>
+<ul><li>sign (27,0): <br /><pre>The province of Brittany lies ahead. This road leads over the ice crown mountains, which is a dangerous path to follow. Don't go any further unless you are level 15 at least.
+</pre></li>
+</ul>
+</li>
+<li>/world/world_109_125</li>
+<ul><li>sign (16,35): <br /><pre>The province of Brittany lies ahead. This road leads over the ice crown mountains, which is a dangerous path to follow. Don't go any further unless you are level 15 at least.
+</pre></li>
+<li>sign (14,45): <br /><pre>Brest - North
+Scorn - East
+Lake Country - South
+</pre></li>
+<li>sign (13,35): <br /><pre>Training Centers Incorporated
 </pre></li>
 </ul>
 </li>
@@ -17278,6 +17057,7 @@ Only one of these gates will open when the lever is pulled.  You only get one ch
 </li>
 <li>/quests/peterm/FireTemple/FifthFloor</li>
 <ul><li>scroll (35,1): <br /><pre>This scroll contains the final secrets for the alchemical preparation which grants temporary immunity to fire.  It's pre-publication, so you're getting a scoop on the rest of the world.
+Unfortunately the ingredients are not written, maybe you can find them elsewhere...
 </pre></li>
 </ul>
 </li>
@@ -17402,63 +17182,6 @@ We reserve the right to ignore the request for a chance to anyone.
 <ul><li>magic_mouth (13,3): <br /><pre>Only one in Navar saw the deception.
 </pre></li>
 <li>magic_mouth (12,3): <br /><pre>Only one in Navar saw the deception.
-</pre></li>
-</ul>
-</li>
-<li>/wolfsburg/shops/buildshop</li>
-<ul><li>Removing items (16,39): <br /><pre>To remove built items, you need a 'generic destroyer'.
-Simply apply it, and fire in the desired direction.  It will remove the first built item from the location.
-Warning: a destroyer will remove items starting from the lowest order on the spot.  Basically, this means the first removed item will be a pedestal (underground), then items on floor.
-Note that the destroyer will not remove walls or floors.
-</pre></li>
-<li>Building restrictions (16,38): <br /><pre>To build on a spot, all items on this spot must be 'buildable'.
-Buildable items will display 'this is a buildable item' when examined.
-There are several exceptions though.  In all cases you can build on marking runes as they are used for making gates and buttons work together.  Also you can build signs and talking books on of books and or scrolls, because they are needed for specifying the message.  Also, buttons, levers and pedestals can be built underneath gates.  Don't worry, you should have some clear messages on why you can't build.
-</pre></li>
-<li>Signs and talking books (16,37): <br /><pre>When making signs and talking (or listening) books, you need to place a book or scroll with the text you want on the square you're building on just like a marking rune.
-With the talking/listening books, they will take the name and picture of the book used to create them as well.
-For the talking and listening books, you also need to connect them with a marking rune just like gates buttons and levers, which in the case of the talking books, makes the book say it's message when activated, and in the case of listening books, it causes saying the phrase that the book looks for to act like pulling a lever.
-For the listening books, the message must be in this format:
-@match blah
-Click.
-Which will make it activate when somebody within two squares says "blah", and will additionally say "Click." upon activation
-</pre></li>
-<li>Basic building instructions (13,40): <br /><pre>To build your own home, you can use different items:
-* generic builder: this tool lets you build anything.  You need one to build.
-* generic destroyer: this tool lets you destroy a built item.  This will remove any built item, except floors and walls.
-* materials: you need those to build items.  For instance, a 'Wood floor material' enables you to build a woodfloor.
-To build an item:
-* apply the builder
-* mark the material of the item you want to build
-* fire the builder in the desired direction
-Of course, the material is used when you build, so you need to buy quite a few.
-</pre></li>
-<li>Building floor and walls (13,39): <br /><pre>Building enables you to put walls and floors where you want.
-Building a floor lets you remove walls.  This is the only way to remove them.
-You can change an existing floor by building another on top.  Same goes for walls.
-All created floors are magic, and will preserve items you put on them.
-You can add a window in some walls.  To remove the window, build a new wall.
-</pre></li>
-<li>Building gates and buttons/pedestals (13,38): <br /><pre>Some items, like gates, require buttons, pedestals, ..., something to be opened and closed.
-To build a gate with its associated button:
-* put a marking rune at the spot where you wish to build the door.  The text can be whatever you want, make sure to remember it.
-* build the gate on this spot
-* put a marking rune at the spot where you with to put the button.  Use the same text as for the door.
-* build the button
-Your button will now activate the gate when you apply it.
-Note that you can link together as many gates, buttons, pedestals, as you want.
-As long as you use the same text on the marking rune, they will all work together.
-To build gates activated by other buttons, just use another text.
-Normally all gates with a single marking rune text are either all up or all down at a given time, however if you want one open while another is closed, make use of inverted gates.
-Also, it is possible to make buttons, levers, and pedestals underneath gates, however it requires things to be made in a specific order.
-* make 2 marking runes on the square that you want to build the button and gate on
-* build the gate first
-* then build the button underneath it
-This is useful for making a gate avoid crushing people underneath it.  Also, you can use this same technique with inverted gates in order to make a square that pushes objects placed on it off of it.
-</pre></li>
-<li>Building other items (13,37): <br /><pre>All items not requiring any special handling are built simply by marking the appropriate material and firing the builder.
-Note that, to avoid any issue, those items can not be picked up.
-Note also that you can build an item on another.
 </pre></li>
 </ul>
 </li>
