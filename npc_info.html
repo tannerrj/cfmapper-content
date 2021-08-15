@@ -37,7 +37,7 @@ When a combatant gets badly injured, we save his life.
 When a combatant gets badly injured, we save his life.
 </pre></li>
 <li>large man (23,4): <br /><pre>@match *
-*munch*, *munch*... Did you visit the snack-shop yet? It's on the other side... *munch*
+*Munch*, *munch*... Did you visit the snack-shop yet? It's on the other side... *munch*
 </pre></li>
 <li>wizard (11,30): <br /><pre>@match *
 Most gladiators don't know how to use magic efficiently!
@@ -79,7 +79,7 @@ Arrgghh, quit bothering me! If you have a question, go read the books over there
 Go buy something or leave me alone.
 </pre></li>
 <li>Arena fan (13,17): <br /><pre>@match sword|arena
-"there can only be ONE"...
+"There can only be ONE"...
 @match *
 Man those souvenirs are SO cool.  If I had any money left I would buy that sword...
 </pre></li>
@@ -228,18 +228,18 @@ How can I help you with your banking needs?
 </li>
 <li>/scorn/misc/beginners2_entry</li>
 <ul><li>Sage of Training (4,9): <br /><pre>@match hi|hello
-@reply test Well yes, of course!
 Greetings Adventurer!  Here to test your skills and abilities?
+@reply test Well yes, of course!
 @match skills|skill|test|abilities|portal|arch
+Proceed through the archway ahead and bring back the red key and choose a reward..
 @question reward A reward, really?
 @question key Can you tell me anything about the red key?
-Proceed through the archway ahead and bring back the red key and choose a reward..
 @match reward
-@question key Can you tell me anything about the red key?
 Why yes, a reward.  To your left is a Potion of Healing - recover and heal yourself after battle, and a Potion of Minor Potion of LIfe - recover lost stats after an untimely, but momentary death. To your right is a Potion of Shielding - protect you for physical attacks for a limited time, and a Potion of Heroism - a tempary boost to your strength, health and quickness; great for combat during your many adventures.
+@question key Can you tell me anything about the red key?
 @match key|red
-@question reward So this key gives me a reward?
 A sly and clever Gnoll Champion stole the key and I suspect he has it hidden somewhere in the dungeon.  Explore, use your might, use your wit.  Fight and survive and come back here to collect your prizes.
+@question reward So this key gives me a reward?
 @match *
 Good day, traveler!
 </pre></li>
@@ -247,18 +247,18 @@ Good day, traveler!
 </li>
 <li>/scorn/misc/beginners_entry</li>
 <ul><li>Sage of Training (4,9): <br /><pre>@match hi|hello
-@reply test Well yes, of course!
 Greetings Adventurer!  Here to test your skills and abilities?
+@reply test Well yes, of course!
 @match skills|skill|test|abilities|portal|arch
+Proceed through the archway ahead and bring back the blue key and choose a reward..
 @question reward A reward, really?
 @question key Can you tell me anything about the blue key?
-Proceed through the archway ahead and bring back the blue key and choose a reward..
 @match reward
-@question key Can you tell me anything about the blue key?
 Why yes, a reward.  To your left is a Potion of Healing - recover and heal yourself after battle.  To your right is a Potion of Minor Life - recover lost stats after an untimely, but momentary death.
+@question key Can you tell me anything about the blue key?
 @match key|blue
-@question reward So this key gives me a reward?
 A devious Ogre holds the key. But don't expect to find him to easily.  Explore, use your might, use your wit.  Fight and survive and come back here to collect your prize.
+@question reward So this key gives me a reward?
 @match *
 Good day, traveler!
 </pre></li>
@@ -536,7 +536,7 @@ No entry!... Unless of course you have permission from the Captain of the Guard.
 </pre></li>
 <li>Proprietor (48,111): <br /><pre>@match hi|hello
 Welcome to the dragon dock.  Please show your pass.
-@match lord|Valdak
+@match lord|valdak
 Oh... that business... I'd not venture to that castle far enough to the west if I were you.
 </pre></li>
 </ul>
@@ -569,23 +569,21 @@ This is the treasure room.
 </li>
 <li>/darcap/darcap/circus/shooting</li>
 <ul><li>Sideshow Attendant (10,9): <br /><pre>@match *
-Shoot the chickens as they come past
+Shoot the chickens as they come past!
 Its that easy...
 </pre></li>
 </ul>
 </li>
 <li>/darcap/darcap/circus/strength</li>
 <ul><li>exhausted warrior (13,13): <br /><pre>@match *
-I'm puffed
+I'm puffed!
 </pre></li>
-<li>Sideshow Attendant (10,9): <br /><pre>@match Boulder | boulder
-The bigger the boulder - the bigger
-the prize!
-@match Prize | prize
+<li>Sideshow Attendant (10,9): <br /><pre>@match boulder
+The bigger the boulder - the bigger the prize!
+@match prize
 How about a soft toy?
 @match *
-Push the Boulders to win a
-Fabulous Prize!
+Push the Boulders to win a Fabulous Prize!
 </pre></li>
 </ul>
 </li>
@@ -644,19 +642,26 @@ IN a target.
 </ul>
 </li>
 <li>/darcap/darcap/circus/wheel</li>
-<ul><li>Sideshow Attendant (5,14): <br /><pre>@match Prize | prize
+<ul><li>Sideshow Attendant (5,14): <br /><pre>@match prize
 How about a soft toy?
 @match *
 Pull the lever and win a Prize!
 </pre></li>
 </ul>
 </li>
+<li>/darcap/darcap/manor.ground</li>
+<ul><li>Politos (9,9): <br /><pre>@match *
+Hello, welcome to Darcap's manor!
+Unfortunately, the manor is currently closed for maintenance.
+</pre></li>
+</ul>
+</li>
 <li>/dungeons/dark-cave/dwarven_camp</li>
-<ul><li>dwarf priest (5,5): <br /><pre>@match mine|Mine|town|Town|Grondell|Quest|quest
+<ul><li>dwarf priest (5,5): <br /><pre>@match mine|town|grondell|quest
 We are from Grondell, a small mining town south of here.  But Grondell has fallen. The Red Foot tribe invaded our peaceful village two months ago.  They captured many of our brethren and occupy the village still.  Will you help us free our comrades?
-@match dwarves|dwarfs|captured|free|yes|Yes|OK
+@match dwarves|dwarfs|captured|free|yes|ok
 The Red Foot tribal cave is just north of the nearby inn.  Our comrades are being held there.
-@match letter|Letter
+@match letter
 You've returned with a letter?  Wonderful! But it doesn't appear to be for me.  I understand that some dwarves escaped the invasion and are hidden in the mine's tombs.  If you find them, you can deliver the letter.
 @match *
 Eh?  Didn't quite catch that.
@@ -673,7 +678,7 @@ Hmph...
 </ul>
 </li>
 <li>/lake_country/ebony/masterlev</li>
-<ul><li>viking guildguard (19,8): <br /><pre>@match door|secret|door
+<ul><li>viking guildguard (19,8): <br /><pre>@match door|secret
 The door is between two of us.  Go straight.
 @match key
 Oh yeah.  You need to have the Master key of thievery to enter next room.  The keys are hidden under the table.
@@ -684,10 +689,10 @@ Hello fellow guild members.
 </pre></li>
 <li>thief guildmaster (11,11): <br /><pre>@match door|exit
 Do you deserve to be a guild member if you can't even find the door by yourself!!??
-@match *
-Hello stranger! So you want to be a member of the guild!? Well, since you passed the test, I will let you in the guild.  There are many things that the guild provide you.  Make your contributions on time, remember! And be a good fellow.  Okay you may go now.  You have to search the rooms for the master keys of thievery, which you may have and use as symbol of this guild.
 @match symbol|thivery
 You may use the master key for many uses.  Keep them safe and you will find it useful.
+@match *
+Hello stranger! So you want to be a member of the guild!? Well, since you passed the test, I will let you in the guild.  There are many things that the guild provide you.  Make your contributions on time, remember! And be a good fellow.  Okay you may go now.  You have to search the rooms for the master keys of thievery, which you may have and use as symbol of this guild.
 </pre></li>
 </ul>
 </li>
@@ -752,8 +757,7 @@ I noticed that a good tactic is to stay near the edge and sidestep your opponent
 </li>
 <li>/azumauindo/minatomachi/stores/diamondex1</li>
 <ul><li>Diamond Broker (9,8): <br /><pre>@match *
-You can buy First World Bank 2000 Diamond Notes or Redeem your notes.
-here.
+You can buy First World Bank 2000 Diamond Notes or Redeem your notes here.
 </pre></li>
 </ul>
 </li>
@@ -770,7 +774,7 @@ Welcome to the place of Gaea.
 </ul>
 </li>
 <li>/navar_city/temples/gaea</li>
-<ul><li>Servant of Gaea (13,13): <br /><pre>@match G | A
+<ul><li>Servant of Gaea (13,13): <br /><pre>@match g|a
 It is a hypothetical cheer you silly...
 @match *
 I am celebrating Gaea.  Gimme a G! Gimme an A ...
@@ -779,7 +783,7 @@ I am celebrating Gaea.  Gimme a G! Gimme an A ...
 </li>
 <li>/scorn/taverns/goths</li>
 <ul><li>Dragon Emissary (34,19): <br /><pre>@match name
-Gramzon, Bringer-of-Ashes
+Gramzon, Bringer-of-Ashes.
 @match hi|hello|job
 I am the Emissary of the Dragonlords to the City of Scorn.  I have come to present the Demands of my masters.  However, your King is less than cooperative.  I should tell my masters that the city is ripe for conquer.
 @match demand
@@ -811,7 +815,7 @@ Don't know much about it.  It is probably full of nasty monsters after all of th
 @match desert
 It is in the north-eastern part of the continent.  Can't really miss it.
 @match job
-Professor Emeritus of Empirical History
+Professor Emeritus of Empirical History.
 @match *
 Can't you see I'm studying?
 </pre></li>
@@ -973,7 +977,7 @@ You seem surprised to see a priest here drowning his sorrows in drink.  Well, my
 Well, thank you.  I hope you have passed the Third Tier in your guilds otherwise helping me will be the death of you. My church is overrun by zombies.  If you can get rid of them, you may take anything of value you find there as a reward.  It's on the south side of town.
 </pre></li>
 <li>lumberjack (11,14): <br /><pre>@match name
-Limyat
+Limyat.
 @match hi|hello|job
 I chop down trees in the forest.
 @match trees|forest
@@ -1000,7 +1004,7 @@ You've heard the rumors about the goings on in Navar, at the end of the Great Ea
 Well, Morkov, the former Wizard there, has turned to darkness.  He's out-and-out sold his soul.  Kill him and take his Sword.  He got it when he betrayed Navar and opened a gate for Evil to come through.  The flood of undead has taken over his Tower already.  The idiot city council there hasn't taken action yet.  Perhaps they're waiting for someone of the 13th or 14th Tier in their guilds to go kick Morkov out.
 </pre></li>
 <li>wizard (3,16): <br /><pre>@match name
-That's one bit o' information you won't be gettin'
+That's one bit o' information you won't be gettin'.
 @match job
 You'd think I was running an information booth the way some people act...
 @match hi|hello
@@ -1278,7 +1282,7 @@ The elite training center is free for all members of the Regular Army.
 <li>/wolfsburg/volcano/heimser_hut_0</li>
 <ul><li>sage (5,4): <br /><pre>@match clock
 A pretty nice clock, he? It is really a rare antiquity.  It was built in Euthville, during the golden age of that city.  Can you imagine? That clock is hundreds of years old!  We found it in the ruins of the city long ago, and my brother fixed it.  My brother was a genius... *sigh*
-@match Euthville
+@match euthville
 It was an city located at the north of Scorn, where people could build wonderful machines one can only dream of nowadays.  But their thirst for power killed them; today, only ruins remain from Euthville.
 @match brother
 My brother Keiran and I always were pretty close. When the armies of Kurthan the Bloody took Wolfsburg, I managed to escape, but my brother didn't, and was put into slavery.  I really don't know if he's still alive or not.  That clock is the only souvenir I have from the happy times of our youth... *sigh*
@@ -1295,15 +1299,15 @@ Finest healing potions this side of Scorn.
 Me not speak good, you say to Hermes.
 </pre></li>
 <li>Hermes (3,2): <br /><pre>@match hi|hello
-@question room Do you have a room for the night?
 Greetings, welcome to my inn.
 You must be cold and tired.
+@question room Do you have a room for the night?
 @match room|bed
-@question 50 Fifty goldcoins!?
 Need a room eh? Upstairs, cost ya 50 gold for one day.
+@question 50 Fifty goldcoins!?
 @match 50|fifty
-@reply ripoff You are ripping me off!
 Not much else around friend.
+@reply ripoff You are ripping me off!
 @match ripoff|cheat|robbery
 You could always go sleep with the bears...
 @match billy|giant
@@ -1313,8 +1317,8 @@ Who?  Never heard of him.
 @match white
 Look. I'm getting tired of all your questions...understand me?
 @match *
-@question room Do you have a room for the night?
 What can I gettcha?
+@question room Do you have a room for the night?
 </pre></li>
 </ul>
 </li>
@@ -1335,7 +1339,7 @@ Hello, I'm too busy to answer your questions, but maybe my military collaegues w
 Eureca's son is called Bernie.  He visited me sometimes.  He loved my cookies and he was always hungry.
 @match wife
 I don't know Eureca's wife.  Visit his former steward, Pupuly.  He should know.
-@match Pupuly
+@match pupuly
 He lives in the tower northwest in this town.
 @match eureca
 My husband served Lord Eureca.  I never met him in person, but I know his son.
@@ -1363,7 +1367,7 @@ Hello there! To the left is a private apartment, to your right is a room you may
 @match apartment
 This apartment is very comfortable, trust me! And it's got a cauldron, too!
 </pre></li>
-<li>Noruk (2,1): <br /><pre>@match Hello|Hallo|Hi
+<li>Noruk (2,1): <br /><pre>@match hello|hallo|hi
 Hello! Nice to see you!
 @match hurt
 Most people just want to kill me on sight, sniff!
@@ -1406,7 +1410,7 @@ I'm a scholar of the Kurte.
 </li>
 <li>/pup_land/ancient/village/hut3</li>
 <ul><li>Jacob (18,0): <br /><pre>@match *
-uuu... He killed me... His real name is ... Cordish!! Cordish killed me!
+Uuu... He killed me... His real name is ... Cordish!! Cordish killed me!
 </pre></li>
 <li>widow (8,4): <br /><pre>@match two|weeks|murder
 That day he told me, "I found a supplier of fund, we'll be rich!!", and off he went.  He never came back alive... Will you help me avenge him?
@@ -1553,11 +1557,11 @@ In searching for information on the Jade Chest our informant in Navar seems to h
 <ul><li>child (5,7): <br /><pre>@match why
 I lost my pen somewhere, and I don't have any spare one.
 @match what|job
-@question why Why can't you write?
 I'm a writer, I write books for children.  But I can't write now...
+@question why Why can't you write?
 @match *
-@question job What are you doing?
 Hello.
+@question job What are you doing?
 </pre></li>
 </ul>
 </li>
@@ -1574,7 +1578,7 @@ Oh! You are quite okay.  I'll tell you a secret: On one of the islands close to 
 Who is that?
 @match odo
 Well... I don't know much.  My friend To-jyo is more familiar with stories about the ancient gods.
-@match To-jyo
+@match to-jyo
 He is an archeologist.  He lives to the east of here on an island.  The local sailors are friendly, so it should be easy to find a ship to take you there.
 @match key
 O.K.  Try the game.
@@ -1622,7 +1626,7 @@ Welcome to my house.
 </li>
 <li>/pup_land/rainbow/Lv2/Kum</li>
 <ul><li>Kum (1,2): <br /><pre>@match room
-I know a password that (I think) leads me to treasure room: ururdd
+I know a password that (I think) leads me to treasure room: ururdd.
 @match *
 I am Kum the dwarf.  I am looking for the treasure rumored to be in this ruin.  I disovered a ROOM in which I think the treasure is located.  But I can't make it past the maze.  So, I made a door to prevent others from finding the maze.
 </pre></li>
@@ -1974,9 +1978,9 @@ Be quiet!
 </pre></li>
 <li>Bob (22,21): <br /><pre>@match nurnberg
 Nurnberg is located east from here.
-@match Lickmond
+@match lickmond
 He works for Bauer. He is the general of the Regular Army.
-@match Bauer
+@match bauer
 He is the mayor of the Nurnberg. Shortly after Eureca was gone, he said, "The people of Lone Town kidnapped Eureca. We must not permit their reckless attempt." In fact, THEY kidnapped Eureca, probably Bauer himself did it.
 @match regular
 Bauer and Lickmond are the leaders of the Regular Army.
@@ -2149,10 +2153,10 @@ I'm working on the translation of ancient scripts.  The Evil Masters don't want 
 </ul>
 </li>
 <li>/pup_land/ancient/village/shop</li>
-<ul><li>vendor (7,2): <br /><pre>@match *
-Welcome to my shop.  I'll exchange my items for your nuggets.
-@match job|business|money
+<ul><li>vendor (7,2): <br /><pre>@match job|business|money
 *sigh* Nobody is buying anything here.  The people don't have any money.  I used to sell my stuff in shining village - and now it's in ruins.  These are bad days indeed...
+@match *
+Welcome to my shop.  I'll exchange my items for your nuggets.
 </pre></li>
 </ul>
 </li>
@@ -2232,7 +2236,7 @@ Customer! Welcome to our famous magic show.  Have you seen it yet?
 <li>Magician (1,11): <br /><pre>@match *
 The magic show is over.  Please wait for your server to reset this map.
 </pre></li>
-<li>Fool (1,8): <br /><pre>@match I don't know
+<li>Fool (1,8): <br /><pre>@match i don't know
 At least you are an honest person.  I have decided to give you the token, but I can't stand your ugly face any more! GO AWAY!!
 @match token
 You do want the token don't you? So...  If you can answer my query, I'll give you the token.  Ok?
@@ -2254,7 +2258,7 @@ Yes, he went adventuring and I await his return to see to his every need.
 </ul>
 </li>
 <li>/scorn/misc/mercenaries</li>
-<ul><li>ninja (8,6): <br /><pre>@match
+<ul><li>ninja (8,6): <br /><pre>@match *
 Hehe... nobody can defeat me!
 </pre></li>
 <li>orc (4,6): <br /><pre>@match *
@@ -2328,50 +2332,50 @@ You can find his office on the west wing, he shouldn't be too far from it.
 Ha, you'll want to talk to Professor Drolf.
 You can usually find her somewhere in the east wing.
 @match *
+Hello, and welcome to Navar university!
+How can I help you?
 @question magic Do you have a department of magical studies?
 @question geography Do you have a department of world geography?
 @question history Do you have a department of world history?
 @question monster Do you have a department of monster lore?
-Hello, and welcome to Navar university!
-How can I help you?
 </pre></li>
 <li>Professor Ulote (9,4): <br /><pre>@match khelens
 According to the few historical records we know, the Empire of Khelens was a big empire, many years ago.
 Scorn and Navar were originally colonies from this Empire.
 Unfortunately, something happened to it some millenia ago, all contact was lost, and no one really knows what happened to it.
 @match world
-@question khelens The Empire of Khelens?
 Well, explaining everything would take really much time, time I don't have, sorry.
 Let's just say that many cities are just colonies of the Empire of Khelens.
-@match navar
 @question khelens The Empire of Khelens?
-@question scorn What about Scorn?
+@match navar
 Navar was once a colony of Khelens.
 After the loss of contact, both Navar and Scorn became rival for glory.
+@question khelens The Empire of Khelens?
+@question scorn What about Scorn?
 @match herghist
 Herghist was a famour explorer, who travelled the world without seeking any glory.
 @match darcap
-@question herghist Herghist?
 Ha, the lost colony of Darcap...
 Initially, Darcap was a colony of the Kingdom of the Masts, left to survive when the kingdom disappeared.
 It was forgotten for millenia, before the famous explorer Herghist arrived there about two thousand years ago.
+@question herghist Herghist?
 @match scorn
-@question khelens The Empire of Khelens?
-@question ek What does 'EK' mean?
 Scorn was the first colony of the Empire of Khelens to be established on this continent.
 The founder was Skud the Great, in 435 EK.
 In the next millenias, Scorn was destroyed a lot.
-@match ek
 @question khelens The Empire of Khelens?
+@question ek What does 'EK' mean?
+@match ek
 Years are counted 'EK' based on the calendar of the Empire of Khelens.
 The first year seems to correspond to the founding of the Empire.
+@question khelens The Empire of Khelens?
 @match *
+Hello.
 @question world What do you know of the history of the world?
 @question navar So, is the history of Navar interesting?
 @question darcap Any idea about the history of Darcap?
 @question scorn Do you know anything about the history of Scorn?
-@question EK Do you happen to know what 'EK' means when we talk about years?
-Hello.
+@question ek Do you happen to know what 'EK' means when we talk about years?
 </pre></li>
 </ul>
 </li>
@@ -2474,6 +2478,7 @@ May you weather the whims of the Ocean Goddess.
 </li>
 <li>/scorn/shops/oleds_cafe</li>
 <ul><li>Oled (7,4): <br /><pre></pre></li>
+<li>courier (3,9): <br /><pre></pre></li>
 </ul>
 </li>
 <li>/scorn/houses/house2</li>
@@ -2615,15 +2620,15 @@ Mew... mew?
 </li>
 <li>/pup_land/rainbow/Lv3/Rufto</li>
 <ul><li>Rufto (6,3): <br /><pre>@match word|holy
-Oh.  I forgot to tell you.  The holy word is: SEVEN
+Oh.  I forgot to tell you.  The holy word is: SEVEN.
 @match test
 Yes.  My test was over.  You passed my test.  Go to the next level, adventurer.
 @match guard
-@reply test Tell me more about this testing.
 Yes.  I test an adventurer whether he is worthy enough to enter the heroes mousoleum.
+@reply test Tell me more about this testing.
 @match *
-@question guard So, how do you guard this ruin?
 Welcome.  I am a guard of this ruin.
+@question guard So, how do you guard this ruin?
 </pre></li>
 </ul>
 </li>
@@ -2698,18 +2703,18 @@ Welcome to the ticket office! How can I help you?
 </li>
 <li>/scorn/towers/brewery.2</li>
 <ul><li>Morioch (7,2): <br /><pre>@match rebel
-@question key The key?
 My employees, of course.  They rebelled and took over the factory.  And they hold the key!
+@question key The key?
 @match reward
 You'll know the secret of my beer, and still you expect a reward?
 Well, I guess you can have a potion, and whatever you find downstairs...
 @match key
-@question reward And what will be my reward?
 Yeah, the key to my secret beer recipe! What will Scorn become without beer?
 If you want to help me, open the door at the left, climb down the stairs, and put an end to the stake.  Then, bring back the key and open the secure room at the right.
+@question reward And what will be my reward?
 @match *
-@question rebel Who rebelled?
 It is terrible, please help me! They rebelled!
+@question rebel Who rebelled?
 </pre></li>
 <li>Lady Morioch (5,4): <br /><pre>@match *
 Pesky orcs! Always complaining! They even got the right to sleep *four* hours each night, and they still aren't happy!
@@ -2778,11 +2783,11 @@ Mind if I smoke?
 </ul>
 </li>
 <li>/start/newbieshouse</li>
-<ul><li>Doorman (7,22): <br /><pre>@match beds
+<ul><li>Doorman (7,25): <br /><pre>@match beds
 You can find beds to reality at inns scattered all over the world.
 @match talk
 You can talk to other players by using the commands 'chat', 'shout', 'say', and 'tell'. To hear chat messages, use the command 'listen 10' (set by default). If you only want to hear shouts, use 'listen 9'.
-@help
+@match help
 If you get stuck, try talking to other players. And, as a parting word to the wise, don't forget the most useful command: 'help'.
 @match *
 So you're ready for the world of Crossfire? To go outside, use the knowledge you've just learned in the tutorials. There is no way back once you pass through the gate ahead. Do you have any questions?
@@ -2839,7 +2844,7 @@ Woah, that's a whole 'nother can of worms you're talking about.
 @match *
 Whew, what a rough week.
 </pre></li>
-<li>elf man (12,8): <br /><pre>@match Sweet
+<li>elf man (12,8): <br /><pre>@match sweet
 No, I'm not Sweet. Sweet is the big pixie over in the corner.
 @match hi|hello
 Hello, welcome to Sweets. Food and drink available at a reasonable rate. Rooms are 50 gold.
@@ -2850,15 +2855,15 @@ What can I do for you?
 </pre></li>
 <li>elf (7,12): <br /><pre>@match greenway|portal
 I wouldn't know about that - you could ask Pyper.
-@question Pyper Who is Pyper?
-@match Pyper
+@question pyper Who is Pyper?
+@match pyper
 He's the local jeweler, you should be able to find him at his shop.
 @match *
 Ah, what a fine view of the sea...
 </pre></li>
 <li>Sweet (5,4): <br /><pre>@match hi|hello
 Greetings, I am Sweet.  Please take advantage of my services.
-@match Sweet
+@match sweet
 My mother was a real barrel of laughs...
 @match portal|greenway|dark|forest
 Sorry, I don't know much about that.
@@ -3033,8 +3038,7 @@ Welcome to the temple of Lythander.
 </li>
 <li>/navar_city/temples/ruggilli</li>
 <ul><li>Knight of Ruggilli (16,14): <br /><pre>@match ruggilli
-....Massster...We...Live...In...His...
-rath....
+....Massster...We...Live...In...His...rath....
 @match *
 ....Do...Not...Attempt...To...Pervent...This...Place...
 </pre></li>
@@ -3044,14 +3048,12 @@ rath....
 ....We...are...Watchhhing...You...
 </pre></li>
 <li>Knight of Ruggilli (15,6): <br /><pre>@match ruggilli
-....Massster...We...Live...In...His...
-rath....
+....Massster...We...Live...In...His...rath....
 @match *
 ....Do...Not...Attempt...To...Pervent...This...Place...
 </pre></li>
 <li>Knight of Ruggilli (9,6): <br /><pre>@match ruggilli
-....Massster...We...Live...In...His...
-rath....
+....Massster...We...Live...In...His...rath....
 @match *
 ....Do...Not...Attempt...To...Pervent...This...Place...
 </pre></li>
@@ -3151,8 +3153,7 @@ Hello!
 @match day
 Oh, a beautiful day indeed! Just don't go into any house, like the dreadful house, or you may well get yourself killed!
 @match dreadful|house
-Oh, the dreadful house.... If you want to go there, and you never heard of sesame, you may have a difficult time with the password - and that is just as well, because you can enjoy the day
-instead of getting yourself killed!
+Oh, the dreadful house.... If you want to go there, and you never heard of sesame, you may have a difficult time with the password - and that is just as well, because you can enjoy the day instead of getting yourself killed!
 @match *
 Nice day, isn't it?
 </pre></li>
@@ -3187,28 +3188,28 @@ Shhh! You must not speak HIS name! It's not healthy to be that curious.
 @match warrior|wound|upstairs
 Maybe you should look after him?
 @match *
-@question warrior A warrior, really?
 There's a wounded warrior in one of the rooms upstairs.  That guy is in real bad shape.  I wonder what happened to him?
+@question warrior A warrior, really?
 </pre></li>
 <li>sailor (8,13): <br /><pre>@match apartment
 Sure, it's just a matter of having enough money.  I made some sailing, and the pay was good, so here I am.
 @match mudman
 Huh... Mudman? What's that?
 @match *
-@question apartment You can buy a apartment around here?
 Santo Dominion is a nice little town.  I bought one of the apartments and now I'm staying here for the weekends.
+@question apartment You can buy a apartment around here?
 </pre></li>
 <li>cook (8,3): <br /><pre>@match *
 I'm busy here.
 </pre></li>
 <li>TCI Representative (5,17): <br /><pre>@match tci
-@question location location And what are those locations?
 Training Centers Incorporated is the best dang training you'll ever get.  We have locations all over the world in exotic settings.  Come fight with us! (heh, they tell us we have to say all that)
+@question location location And what are those locations?
 @match location
 Well, I don't know about all of them. But our local TCI is off the road south of here.  Just look for one of our signs!
 @match hello|hi
-@question tci What is TCI?
 Well, hello there! Sit down and chat with me a bit.  I am always looking for new people to tell about TCI.
+@question tci What is TCI?
 @match *
 Hi there young'un.  Wanna join TCI?
 </pre></li>
@@ -3296,6 +3297,16 @@ We are thieves.  But we would never kill or harm anybody.  We are not like Nazgu
 </pre></li>
 </ul>
 </li>
+<li>/darcap/darcap/thilgar</li>
+<ul><li>Thilgar (8,10): <br /><pre>@match armors
+Isn't it?
+Those are all very rare and valuable armors, it took me years and much effort to manage to collect them.  Be my guest, feel free to look at them.
+@match *
+@question armors You got a really impressive armor collection.
+Hello, stranger, what are you doing in my house?
+</pre></li>
+</ul>
+</li>
 <li>/dragonisland/house8</li>
 <ul><li>Timothius (4,4): <br /><pre>@match h[ae]llo|hi|greet
 My Greetigs to you! Welcome to my humble home.  Have you heard of my friend, Carthon? He was heading off to dragon mountain.
@@ -3303,7 +3314,7 @@ My Greetigs to you! Welcome to my humble home.  Have you heard of my friend, Car
 What a pity! I hope he's all right.
 @match dead|corpse|killed
 Oh dear!!!
-*Timothius looks very sad*
+*Timothius looks very sad.*
 Please leave me alone for a while.
 @match yes
 Well, where have you seen him?
@@ -3360,13 +3371,14 @@ Ha well, you seem like a decent follow, so I will let you look if you can reply 
 @match see
 Well, I'm not sure, they are precious ones...
 @match store
-@question see Could I see them?
 I store them in this house, in the attic.
+@question see Could I see them?
 @match job
-@question store Where do you store all those books? I collect stories, books, whatever I can find.
+@question store Where do you store all those books?
+I collect stories, books, whatever I can find.
 @match hello
-@question job What is your job?
 Hello there!
+@question job What is your job?
 @match *
 *grumble*
 </pre></li>
@@ -3385,7 +3397,7 @@ Hello.  Are you an adventurer?
 <li>woman (9,9): <br /><pre>@match *
 Hey! I'm not a statue! Don't push me.
 </pre></li>
-<li>Cain, the guard (3,3): <br /><pre>@match T.K.
+<li>Cain, the guard (3,3): <br /><pre>@match t[.]k[.]
 He is my master.  In his days of youth, no monster or quest was too hard for him! He collected lots of treasure... But now, he is an old man.
 @match *
 T.K., an old treasure hunter, lives in this tower.  Please do not disturb him.
@@ -3394,9 +3406,7 @@ T.K., an old treasure hunter, lives in this tower.  Please do not disturb him.
 </li>
 <li>/mlab/mlabscrntrdb1</li>
 <ul><li>Diamond Broker (7,11): <br /><pre>@match *
-You can buy First World Bank 2000
-Diamond Notes or Redeem your notes
-here.
+You can buy First World Bank 2000 Diamond Notes or Redeem your notes here.
 </pre></li>
 </ul>
 </li>
@@ -3417,7 +3427,7 @@ Why not stop and read for awhile?
 </ul>
 </li>
 <li>/navar_city/misc/navarwiz</li>
-<ul><li>guildmaster (4,1): <br /><pre>@match Terrance|Rhyz|terrance|rhyz
+<ul><li>guildmaster (4,1): <br /><pre>@match terrance|rhyz
 Oh! Terrance must have sent you? If he needs more gem essence, drop the bottle where the gem to magically fill it.
 @match magic
 For my own protection I've made an anti-magic field here.
@@ -3437,6 +3447,20 @@ Please get along with Poppy.
 @match *
 I'm sorry for Poppy's biting you.
 (_o_).
+</pre></li>
+</ul>
+</li>
+<li>/world/world_101_114</li>
+<ul><li>Percival (15,46): <br /><pre>@match hello|hi|howdy
+Goodday to-ya.  Want a ride out to Goblin island?  (Simply press `A')
+@match portia
+Portia is a good woman.  You don't bother her now.
+@match bill|moogly
+Eh, I sailed with Moogly Bill.
+@match buried|grave
+Yes, I buried Moogly Bill, but he built his own tomb.
+@match map
+Never seen the treasure maps but ye might have better luck...
 </pre></li>
 </ul>
 </li>
@@ -3476,7 +3500,7 @@ Look lively there...
 </li>
 <li>/navar_city/houses/bingohall</li>
 <ul><li>Bingo Master (8,5): <br /><pre>@match *
-Two Fat Ladies - 88
+Two Fat Ladies - 88.
 </pre></li>
 </ul>
 </li>
@@ -3498,23 +3522,23 @@ Seems the mail's down... sorry, come back once the required law is passed.
 </li>
 <li>/brest/brest.inn</li>
 <ul><li>TCI Representative (25,14): <br /><pre>@match tci
-@question location Where are these locations?
 Training Centers Incorporated is the best dang training you'll ever get.  We have locations all over the world in exotic settings.  Come fight with us! (heh, they tell us we have to say all that)
+@question location Where are these locations?
 @match location
 Well, I don't know about all of them.  But our local TCI is off the road south of here just the other side of the mountain pass.  The road may be easier to reach from the Lake Country side.  Just look for one of our signs!
 @match hello|hi
-@question tci What is TCI?
 Well, hello there! Sit down and chat with me a bit.  I am always looking for new people to tell about TCI.
-@match *
 @question tci What is TCI?
+@match *
 Hi there young'un.  Wanna join TCI?
+@question tci What is TCI?
 </pre></li>
 <li>sage (24,8): <br /><pre>@match irritable|zorn
-@question secretive How are they secretive?
 Ah, yes.  I do not know much about the Zorn family.  They are quite a secretive bunch.
+@question secretive How are they secretive?
 @match secretive
-@question dangerous So they are dangerous too?
 Yes, secretive and dangerous.  I do not want to be the subject of the Zorn family wrath.
+@question dangerous So they are dangerous too?
 @match dangerous
 I mean dangerous as in those that bother or upset the Zorns end up dead.  Haemon, the owner of the Brest Seaside Tavern, used to work for the Zorns.  Go ask him your questions.
 @match *
@@ -3562,18 +3586,28 @@ Seems the mail's down... sorry, come back once the required law is passed.
 </pre></li>
 </ul>
 </li>
+<li>/darcap/darcap/library_ground</li>
+<ul><li>Lovast (16,7): <br /><pre>@match access
+The entire downstairs part of the library is open to all visitors, for a small fee. The upstairs is still under construction.
+@question fee Why is there a fee?
+@match fee
+Well, the library uses the money to aquire new books. That's why the books in the library change every so often, you know.
+@match *
+Oh, hello! Welcome to the Darcap Public Library!
+@question access What parts of the library can I access?
+</pre></li>
+<li>Trevor (2,9): <br /><pre>@match hi|hello|greet
+G'day, an' welcome to the library. Anything I can help you with?
+@match *
+Shush! This is a library!
+</pre></li>
+</ul>
+</li>
 <li>/darcap/darcap/circus/fz_orcpit</li>
 <ul><li>wizard (29,3): <br /><pre>@match orc
 I rased him myself. Me and the wolves... Any way he won.
 @match *
 This is my orc! Leave us alone!
-</pre></li>
-</ul>
-</li>
-<li>/darcap/darcap/manor.ground</li>
-<ul><li>Politos (9,9): <br /><pre>@match *
-Hello, welcome to Darcap's manor!
-Unfortunately, the manor is currently closed for maintenance.
 </pre></li>
 </ul>
 </li>
@@ -3681,33 +3715,9 @@ Seems the mail's down... sorry, come back once the required law is passed.
 </pre></li>
 </ul>
 </li>
-<li>/darcap/darcap/thilgar</li>
-<ul><li>Thilgar (8,10): <br /><pre>@match armors
-Isn't it?
-Those are all very rare and valuable armors, it took me years and much effort to manage to collect them.  Be my guest, feel free to look at them.
-@match *
-@question armors You got a really impressive armor collection.
-Hello, stranger, what are you doing in my house?
-</pre></li>
-</ul>
-</li>
 <li>/wolfsburg/shops/IPO_wolfsburg</li>
 <ul><li>Postmaster Argyle (5,4): <br /><pre>@match *
 Seems the mail's down... sorry, come back once the required law is passed.
-</pre></li>
-</ul>
-</li>
-<li>/world/world_101_114</li>
-<ul><li>Percival (15,46): <br /><pre>@match hello|hi|howdy
-Goodday to-ya.  Want a ride out to Goblin island?  (Simply press `A')
-@match portia
-Portia is a good woman.  You don't bother her now.
-@match bill|moogly
-Eh, I sailed with Moogly Bill.
-@match buried|grave
-Yes, I buried Moogly Bill, but he built his own tomb.
-@match map
-Never seen the treasure maps but ye might have better luck. . .
 </pre></li>
 </ul>
 </li>
@@ -4118,23 +4128,6 @@ Are you here about the smugglers??
 </pre></li>
 </ul>
 </li>
-<li>/darcap/darcap/library_ground</li>
-<ul><li>Lovast (16,7): <br /><pre>@match access
-The entire downstairs part of the library is open to all visitors, for a small fee. The upstairs is still under construction.
-@question fee Why is there a fee?
-@match fee
-Well, the library uses the money to aquire new books. That's why the books in the library change every so often, you know.
-@match *
-Oh, hello! Welcome to the Darcap Public Library!
-@question access What parts of the library can I access?
-</pre></li>
-<li>Trevor (2,9): <br /><pre>@match hi|hello|greet
-G'day, an' welcome to the library. Anything I can help you with?
-@match *
-Shush! This is a library!
-</pre></li>
-</ul>
-</li>
 <li>/navar_city/houses/freddyshouse</li>
 <ul><li>Freddy the Troll (12,11): <br /><pre>@match *
 Go away from me house.  Me no like you.  Leave now Scummer!
@@ -4188,13 +4181,13 @@ Mark always keeps the key to that door with him.
 @question where Where is the key?
 @match where
 Dunno... but if you find Joey, he'll be somewhere nearby...
-@question Joey Who's Joey?
+@question joey Who's Joey?
 @match joey
 Oh, Mark's friend.
 @match *
 Whatda want?
 </pre></li>
-<li>J.C. (6,21): <br /><pre>@match mark
+<li>Jacey (6,21): <br /><pre>@match mark
 Ya good guy lets me beat him at cards all the time. Guy loves to gamble. Otherwise he's a bum.
 @match amy
 She runs the place for that rat Witherspoon.
@@ -4242,6 +4235,8 @@ You do not come from here, I can tell by your strange accent. Where are you from
 @reply navar I'm from Navar.
 @match scorn
 I have heard of that city. Far away it is, and in this age, many people do not travel far from their birthplace. You would do well to ask one of the elders about our magic lore.
+@match navar
+People from Navar do not come by this place often.
 @match *
 You seem a wise and honorable one. A stranger in a strange land.
 @question land Why do you think I'm a stranger?
@@ -4287,12 +4282,12 @@ FOR RUGGILLI!
 <ul><li>Martus (7,8): <br /><pre>@match brother
 Yes, his brother is nicknamed the Mad Mage, famous in all Scorn.
 @match exploded
-@question brother Ha, he has a brother?
 Yes, apparently from a magical experiment gone weird.  Though he did survived, it is said he works for some king.
 Maybe his brother knows more, you should ask him directly.
+@question brother Ha, he has a brother?
 @match farnass
-@question exploded His house exploded, really?
 Haa, Farnass, now that's a name I haven't heard in a while.  He was one of the best cook chiefs of the whole world.  Brother of the Mad Mage of Scorn, he shared with him passion for wizardry; yet his center of interest was much more focused on making tasty things and brewing nice beers.  Fifteen years ago his house just exploded.
+@question exploded His house exploded, really?
 @match *
 Hello, youngster.
 </pre></li>
@@ -4560,6 +4555,186 @@ You can pay your ticket either with platinum, gold or silver.
 </pre></li>
 </ul>
 </li>
+<li>/scorn/misc/castle</li>
+<ul><li>Magistrate (12,5): <br /><pre></pre></li>
+<li>Magistrate (11,5): <br /><pre></pre></li>
+</ul>
+</li>
+<li>/pup_land/ancient/village/siegfried/siegfried.1</li>
+<ul><li>Siegfried (8,16): <br /><pre>@match key
+... I cannot give it to you... because Eureca is very dangerous now!
+@match lock
+I locked the castle entrance with my Key.
+@match ran
+I ran away from the castle, and I locked the castle entrance in order to prevent Eureca from leaving that place.
+@match sword
+Eureca picked up the sword, because he was curious about it.  Then he started screaming and punching at his own head.  I was frightened by his behavior, and ran away from the castle.
+@match gothwolte
+Eureca fought against Gothwolte.  After a long fight, Eureca killed him! As soon as Gothwolte had died, his black Sword flashed mysteriously.
+@match castle
+There were four evil masters in the castle.  But we didn't deal with them.  We went directly to the top of the castle, to Gothwolte's room.
+@match everything
+Eureca and I came here two months ago.  We went straight to Gothwolte's Castle.
+@match unpunished|live
+I will tell you everything.
+@match kill
+I don't want to be killed! Bodyguards! Come and help me!!!
+@match *
+Don't kill me! If you let me live, I'll tell you everything.
+</pre></li>
+</ul>
+</li>
+<li>/whalingoutpost/taverns/storehouse1</li>
+<ul><li>large man (9,11): <br /><pre>@match hi|hello
+Hi there mate, You want to know what we or, usually rather, I do here I bet eh?
+@match yes|what|yea
+Well, here we store the shipments of rum runners and of the occasional whaling ship whose captain wishes to avoid taxation... Some of those whaling ships go deep into the Antarctic...
+@match ship|antarctic
+Oh yes those whaling ships go to places colder than I'd ever want to venture.  This little island is as far south as I've ever been... and we dip below zero often enough that a man's blood starts to thin out real quick.
+@match whale|whaling
+Those whaling ships are built strong.  That's how you can tell them from others.  They often go deep into the frozen oceans and have outposts here and there.  One captain offered once to take me to a place at the bottom of the world... I declined as I probably would have died from the frost... but perhaps you could find such a captain to bring you along to one of there desolate islands... if you would want to.  In any case, the seas those ships ride upon are mighty rough and mighty cold; well below freezing all year round!
+@match bye|seeya
+Well so long then, keep yourself safe, and, if I may give you sage advice, don't go any more south than this here little rock... go north instead.
+@match name
+Hmm... Gunnar, if you have to know, but don't be spreading names about, eh.
+</pre></li>
+</ul>
+</li>
+<li>/pup_land/ancient/ruin/underground</li>
+<ul><li>Andersen, boss of the gang (9,7): <br /><pre>@match siegfried
+Haha, he is the hero of this land.  He would never kill anybody! I don't believe you.
+@match cordish
+Siegfried and Cordish are one and the same person? Now I begin to understand... I will kill him! And you may pass friend.  But be careful... I hear frightening noises from the castle every night!
+@match path|gate
+If you want to pass, please tell me "who killed Jacob, my follower?"
+@match boss|gang
+Yeah! We Robbed the mysterious cristal from the castle by using the secret Path! And now my hometown has been destroyed due to our actions.  I feel SO sad...
+@match *
+I'm the Boss of the gang.  I am the only person who survived the destruction of Shining Village.
+</pre></li>
+</ul>
+</li>
+<li>/scorn/houses/woodhouse</li>
+<ul><li>nurse (8,7): <br /><pre>@match trapper
+Oh, you want to buy some goods? Please go down and check what we offer.
+@match *
+Go away, you're bothering us! We have many patients to help!
+</pre></li>
+<li>injured neko chan (6,1): <br /><pre>@match *
+Meow!
+</pre></li>
+</ul>
+</li>
+<li>/scorn/houses/breezy_acres</li>
+<ul><li>cleaning woman (21,9): <br /><pre>@match *
+Oooo there's some lovely filth down 'ere.
+</pre></li>
+<li>Ethil (11,21): <br /><pre>@match *
+I hear something in the basement.  Don't you hear it?
+</pre></li>
+<li>Fred (6,20): <br /><pre>@match *
+She's a loony, we don't have a basement.
+</pre></li>
+</ul>
+</li>
+<li>/port_joseph/goblin/fortress</li>
+<ul><li>Big guy (15,1): <br /><pre>@match king
+Yes, king!  All the treasure is mine! You will never find it!
+@match treasure
+My treasure!  It is hidden deep in the dungeons.  Only I have the key!
+@match *
+I am the king here!  Get out!
+</pre></li>
+</ul>
+</li>
+<li>/pup_land/lone_town/training</li>
+<ul><li>viking (10,9): <br /><pre>@match *
+1,2,1,2..
+</pre></li>
+<li>wizard (10,7): <br /><pre>@match *
+1,2,1,2..
+</pre></li>
+<li>thief (10,5): <br /><pre>@match *
+1,2,1,2...
+</pre></li>
+<li>human (10,3): <br /><pre>@match *
+1,2,1,2,..
+</pre></li>
+<li>thief (8,9): <br /><pre>@match *
+1,2,1,2...
+</pre></li>
+<li>conjurer (8,7): <br /><pre>@match *
+1,2,1,2...
+</pre></li>
+<li>swashbuckler (8,5): <br /><pre>@match *
+1,2,1,2..
+</pre></li>
+<li>cleric (8,3): <br /><pre>@match *
+1,2,1,2..
+</pre></li>
+<li>Instructor (7,1): <br /><pre>@match cordish
+Cordish was my worst pupil ever.  I couldn't teach him how to fight because he always ran away.  Unbelievable that Eureca accepted such a person as royal servant.
+@match *
+Here is the Training Center of Liberation Army.  Do you want to be my pupil?
+</pre></li>
+<li>cleric (6,9): <br /><pre>@match *
+1,2,1,2...
+</pre></li>
+<li>dwarf (6,7): <br /><pre>@match *
+1,2,1,2...
+</pre></li>
+<li>fireborn (6,5): <br /><pre>@match *
+1,2,1,2..
+</pre></li>
+<li>barbarian (6,3): <br /><pre>@match *
+1,2,1,2..
+</pre></li>
+<li>mage (4,7): <br /><pre>@match *
+1,2,1,2...
+</pre></li>
+<li>ninja (4,5): <br /><pre>@match *
+1,2,1,2,..
+</pre></li>
+<li>mage (4,3): <br /><pre>@match yes
+He is such a coward.  He always ran away from the kobolds in Room 1.
+Hahaha!
+@match no|cordish
+He used to live in the south-east of lone town.  But now he his missing.
+@match *
+1,2,1,2.. Do you know Cordish?
+</pre></li>
+</ul>
+</li>
+<li>/wolfsburg/volcano/vvmansion</li>
+<ul><li>prisoner (32,5): <br /><pre>@match job
+I am a prisoner.  Release me.
+@match release
+Death is the only release.  Save Me!!!
+@match prisoner
+I am going to be eaten by the goblins!  Save me!
+@match save
+I won't survive much longer!  End my suffering!
+</pre></li>
+</ul>
+</li>
+<li>/navar_city/jail/jail</li>
+<ul><li>castle guard (12,8): <br /><pre>@match food|meal|starve|starving|hungry
+The Guard says: Only prisoners who show remorse may eat.
+</pre></li>
+<li>castle guard (8,8): <br /><pre>@match food|meal|starve|starving|hungry
+The Guard says: Only prisoners who show remorse may eat.
+</pre></li>
+<li>castle guard (8,6): <br /><pre>@match food|meal|starve|starving|hungry
+The Guard says: Only prisoners who show remorse may eat.
+</pre></li>
+<li>castle guard (4,8): <br /><pre>@match food|meal|starve|starving|hungry
+The Guard says: Only prisoners who show remorse may eat.
+</pre></li>
+<li>castle guard (4,6): <br /><pre>@match food|meal|starve|starving|hungry
+The Guard says: Only prisoners who show remorse may eat.
+</pre></li>
+</ul>
+</li>
 <li>/brest/pshops/pshop1/floor2</li>
 <ul><li>Mouser (6,23): <br /><pre>@match *
 Meow!
@@ -4722,186 +4897,6 @@ Meow!
 </pre></li>
 </ul>
 </li>
-<li>/scorn/misc/castle</li>
-<ul><li>Magistrate (12,5): <br /><pre></pre></li>
-<li>Magistrate (11,5): <br /><pre></pre></li>
-</ul>
-</li>
-<li>/pup_land/ancient/village/siegfried/siegfried.1</li>
-<ul><li>Siegfried (8,16): <br /><pre>@match key
-... I cannot give it to you... because Eureca is very dangerous now!
-@match lock
-I locked the castle entrance with my Key.
-@match ran
-I ran away from the castle, and I locked the castle entrance in order to prevent Eureca from leaving that place.
-@match sword
-Eureca picked up the sword, because he was curious about it.  Then he started screaming and punching at his own head.  I was frightened by his behavior, and ran away from the castle.
-@match gothwolte
-Eureca fought against Gothwolte.  After a long fight, Eureca killed him! As soon as Gothwolte had died, his black Sword flashed mysteriously.
-@match castle
-There were four evil masters in the castle.  But we didn't deal with them.  We went directly to the top of the castle, to Gothwolte's room.
-@match everything
-Eureca and I came here two months ago.  We went straight to Gothwolte's Castle.
-@match unpunished|live
-I will tell you everything.
-@match kill
-I don't want to be killed! Bodyguards! Come and help me!!!
-@match *
-Don't kill me! If you let me live, I'll tell you everything.
-</pre></li>
-</ul>
-</li>
-<li>/whalingoutpost/taverns/storehouse1</li>
-<ul><li>large man (9,11): <br /><pre>@match hi|hello
-Hi there mate, You want to know what we or, usually rather, I do here I bet eh?
-@match yes|what|yea
-Well, here we store the shipments of rum runners and of the occasional whaling ship whose captain wishes to avoid taxation... Some of those whaling ships go deep into the Antarctic...
-@match ship|antarctic
-Oh yes those whaling ships go to places colder than I'd ever want to venture.  This little island is as far south as I've ever been... and we dip below zero often enough that a man's blood starts to thin out real quick.
-@match whale|whaling
-Those whaling ships are built strong.  That's how you can tell them from others.  They often go deep into the frozen oceans and have outposts here and there.  One captain offered once to take me to a place at the bottom of the world... I declined as I probably would have died from the frost... but perhaps you could find such a captain to bring you along to one of there desolate islands... if you would want to.  In any case, the seas those ships ride upon are mighty rough and mighty cold; well below freezing all year round!
-@match bye|seeya
-Well so long then, keep yourself safe, and, if I may give you sage advice, don't go any more south than this here little rock... go north instead.
-@match name
-Hmm... Gunnar, if you have to know, but don't be spreading names about, eh.
-</pre></li>
-</ul>
-</li>
-<li>/pup_land/ancient/ruin/underground</li>
-<ul><li>Andersen, boss of the gang (9,7): <br /><pre>@match siegfried
-Haha, he is the hero of this land.  He would never kill anybody! I don't believe you.
-@match cordish
-Siegfried and Cordish are one and the same person? Now I begin to understand... I will kill him! And you may pass friend.  But be careful... I hear frightening noises from the castle every night!
-@match path|gate
-If you want to pass, please tell me "who killed Jacob, my follower?"
-@match boss|gang
-Yeah! We Robbed the mysterious cristal from the castle by using the secret Path! And now my hometown has been destroyed due to our actions.  I feel SO sad...
-@match *
-I'm the Boss of the gang.  I am the only person who survived the destruction of Shining Village.
-</pre></li>
-</ul>
-</li>
-<li>/scorn/houses/woodhouse</li>
-<ul><li>nurse (8,7): <br /><pre>@match trappers
-Oh, you want to buy some goods? Please go down and check what we offer.
-@match *
-Go away, you're bothering us! We have many patients to help!
-</pre></li>
-<li>injured neko chan (6,1): <br /><pre>@match *
-meow!
-</pre></li>
-</ul>
-</li>
-<li>/scorn/houses/breezy_acres</li>
-<ul><li>cleaning woman (21,9): <br /><pre>@match *
-Oooo there's some lovely filth down 'ere.
-</pre></li>
-<li>Ethil (11,21): <br /><pre>@match *
-I hear something in the basement.  Don't you hear it?
-</pre></li>
-<li>Fred (6,20): <br /><pre>@match *
-She's a loony, we don't have a basement.
-</pre></li>
-</ul>
-</li>
-<li>/port_joseph/goblin/fortress</li>
-<ul><li>Big guy (15,1): <br /><pre>@match king
-Yes, king!  All the treasure is mine! You will never find it!
-@match treasure
-My treasure!  It is hidden deep in the dungeons.  Only I have the key!
-@match *
-I am the king here!  Get out!
-</pre></li>
-</ul>
-</li>
-<li>/pup_land/lone_town/training</li>
-<ul><li>viking (10,9): <br /><pre>@match *
-1,2,1,2..
-</pre></li>
-<li>wizard (10,7): <br /><pre>@match *
-1,2,1,2..
-</pre></li>
-<li>thief (10,5): <br /><pre>@match *
-1,2,1,2...
-</pre></li>
-<li>human (10,3): <br /><pre>@match *
-1,2,1,2,..
-</pre></li>
-<li>thief (8,9): <br /><pre>@match *
-1,2,1,2...
-</pre></li>
-<li>conjurer (8,7): <br /><pre>@match *
-1,2,1,2...
-</pre></li>
-<li>swashbuckler (8,5): <br /><pre>@match *
-1,2,1,2..
-</pre></li>
-<li>cleric (8,3): <br /><pre>@match *
-1,2,1,2..
-</pre></li>
-<li>Instructor (7,1): <br /><pre>@match cordish
-Cordish was my worst pupil ever.  I couldn't teach him how to fight because he always ran away.  Unbelievable that Eureca accepted such a person as royal servant.
-@match *
-Here is the Training Center of Liberation Army.  Do you want to be my pupil?
-</pre></li>
-<li>cleric (6,9): <br /><pre>@match *
-1,2,1,2...
-</pre></li>
-<li>dwarf (6,7): <br /><pre>@match *
-1,2,1,2...
-</pre></li>
-<li>fireborn (6,5): <br /><pre>@match *
-1,2,1,2..
-</pre></li>
-<li>barbarian (6,3): <br /><pre>@match *
-1,2,1,2..
-</pre></li>
-<li>mage (4,7): <br /><pre>@match *
-1,2,1,2...
-</pre></li>
-<li>ninja (4,5): <br /><pre>@match *
-1,2,1,2,..
-</pre></li>
-<li>mage (4,3): <br /><pre>@match yes
-He is such a coward.  He always ran away from the kobolds in Room 1.
-hahaha!
-@match no|cordish
-He used to live in the south-east of lone town.  But now he his missing.
-@match *
-1,2,1,2.. Do you know Cordish?
-</pre></li>
-</ul>
-</li>
-<li>/wolfsburg/volcano/vvmansion</li>
-<ul><li>prisoner (32,5): <br /><pre>@match job
-I am a prisoner.  Release me.
-@match release
-Death is the only release.  Save Me!!!
-@match prisoner
-I am going to be eaten by the goblins!  Save me!
-@match save
-I won't survive much longer!  End my suffering!
-</pre></li>
-</ul>
-</li>
-<li>/navar_city/jail/jail</li>
-<ul><li>castle guard (12,8): <br /><pre>@match food|meal|starve|starving|hungry
-The Guard says: Only prisoners who show remorse may eat.
-</pre></li>
-<li>castle guard (8,8): <br /><pre>@match food|meal|starve|starving|hungry
-The Guard says: Only prisoners who show remorse may eat.
-</pre></li>
-<li>castle guard (8,6): <br /><pre>@match food|meal|starve|starving|hungry
-The Guard says: Only prisoners who show remorse may eat.
-</pre></li>
-<li>castle guard (4,8): <br /><pre>@match food|meal|starve|starving|hungry
-The Guard says: Only prisoners who show remorse may eat.
-</pre></li>
-<li>castle guard (4,6): <br /><pre>@match food|meal|starve|starving|hungry
-The Guard says: Only prisoners who show remorse may eat.
-</pre></li>
-</ul>
-</li>
 <li>/wolfsburg/piratechurch</li>
 <ul><li>bored priest (9,3): <br /><pre>@match *
 Mass starts in a few hours, I'll talk to you then.
@@ -4930,14 +4925,17 @@ The Guard says: Only prisoners who show remorse may eat.
 </ul>
 </li>
 <li>/scorn/houses/scorn_trappers</li>
-<ul><li>Receptionist (5,7): <br /><pre>@match visit
-Oh, sure, you can visit our factory.
+<ul><li>Receptionist (5,7): <br /><pre>@match shop
+Yes, of course. Step this way.
+@match sentrino
+Why yes, a farm hand of his came by not too long ago for livers and hearts.
 @match yes|offerings|products
-@question visit Can I visit the shop?
-Scorn's Trappers has been founded many hundred years ago.  We specialize in orcs and goblins, but only their noble parts: hearts, livers, brains.
-@match hello
-@reply yes Yes please.
+We specialize in orc and goblin cuts, but only their noble parts: hearts, livers, and brains.
+@question shop Can I visit the shop?
+@question sentrino Do you happen to know someone named Sentrino?
+@match hi|hello
 Hello, welcome to Scorn's Trappers! Do you wish to know more about our offerings?
+@reply yes Yes please, what do you sell here?
 @match *
 ... *sigh* People just aren't polite nowadays...
 </pre></li>
@@ -4957,11 +4955,11 @@ ARRRRRRR!!!!!
 </ul>
 </li>
 <li>/dungeons/dark-cave/dark-cave-2</li>
-<ul><li>dwarf priest (6,32): <br /><pre>@match yes|Yes|letter|Letter
+<ul><li>dwarf priest (6,32): <br /><pre>@match yes|letter
 Have you word from our friends?  Please, step forward and deliver it!
-@match no|No|where|Where|giant|Giant|ogre|Ogre
+@match no|where|giant|ogre
 The giant army is from the Red Foot tribe. The Red Foots are located in the mountains north of the nearby inn.  If our dwarven brothers still live, they are likely being held there.
-@match wizard|Wizard|glint|Glint|necromancer|Necromancer
+@match wizard|glint|necromancer
 Some time after the battle against the ogres, a wizard arrived.  We do not know much about him, but it appears that he has chosen our outpost as his home.
 We have heard battles raging upstairs, perhaps between the giants and the wizard's minions.  But the battles have been silent for some time now.
 We would be most appreciative if you can help rid us of this new threat, but I am afraid we have no more reward to offer you.
@@ -4972,17 +4970,17 @@ Have you perchance stumbled across our captive brethren?
 </ul>
 </li>
 <li>/dungeons/dark-cave/dark-cave</li>
-<ul><li>A distracted necromancer (19,45): <br /><pre>@match dwarf|Dwarf|dwarves|Dwarves
+<ul><li>A distracted necromancer (19,45): <br /><pre>@match dwarf|dwarves
 Dwarves?  There were no dwarves when I moved here.  Just a few easily persuaded ogres.
-@match ogre|Ogre|giant|Giant
+@match ogre|giant
 The ogre army?  They're not with me.  This cave is large enough to share and it took only a little persuasion before they agreed.
-@match mine|Mine
+@match mine
 Yes, this area appears to be an abandoned mine town.  I've been too busy with my research to explore it deeply.  I'm afraid that once I put in my security, I've rarely ventured outside this study.
-@match stairs|Stairs|down|Down
+@match stairs|down
 Feel free to look around downstairs, but I warn you to leave my possessions be.
-@match key|Key
+@match key
 The door is locked for a reason.  There is no reason for you to venture there.
-@match treasure|Treasure
+@match treasure
 Please stay out of my things.
 @match *
 Please go away.  I'm very busy.
@@ -4993,10 +4991,10 @@ OOOoooOOOooo!
 </ul>
 </li>
 <li>/dungeons/dark-cave/ogre-cave</li>
-<ul><li>Snortrider (12,35): <br /><pre>@match letter|Letter|outpost|Outpost
+<ul><li>Snortrider (12,35): <br /><pre>@match letter|outpost
 Our mining town is not far.  Head east from the Inn until you find a footpath going south.  Our town is in the mountains at the end of the path.
 Once in the cave, you must find the tombs.  Our brothers are hidden in a secret room near there.
-@match yes|Yes|Yeah|yeah
+@match yes|yeah
 Wonderful!  Please, take this letter.
 @match *
 Thank Mostrai you have arrived! We were captured by the Red Foot ogres in a terrible battle in our mining outpost south east of here.
@@ -5022,7 +5020,7 @@ You're starting to sound like the movies now, get outta here you punk!
 <li>/scorn/misc/gatehouse</li>
 <ul><li>gatehouse guard (22,9): <br /><pre>@match monster
 They keep trying to sneak in, but we always kill them.
-@match open|gate
+@match open
 The gate opens only for certain people.
 @match who|people
 Only those who are
@@ -5041,7 +5039,7 @@ Good to see a friend! Have you seen any monsters lately?
 <li>guard (16,2): <br /><pre>@match *
 Zzzzzzzzzzzzzzzz
 </pre></li>
-<li>Mercenary (15,11): <br /><pre>@match monster|Monsters
+<li>Mercenary (15,11): <br /><pre>@match monster
 What about them!
 @match *
 And where do you think your GOING? Not downstairs!.... You'll have to kill me first!
@@ -5060,7 +5058,7 @@ I can't understand where those monsters are coming from.
 </ul>
 </li>
 <li>/whalingoutpost/houses/fisherhousesouthwest</li>
-<ul><li>fisherman (9,12): <br /><pre>@match
+<ul><li>fisherman (9,12): <br /><pre>@match *
 Get out of my house!
 Sic em boy!
 </pre></li>
@@ -5089,22 +5087,22 @@ Ah me, thank you good adventurer.  I have a little knowledge that can help you o
 </ul>
 </li>
 <li>/navar_city/city1enter</li>
-<ul><li>city dweller (11,3): <br /><pre>@match *
-We were heading north with some trade goods when some monsters ambushed us!
-@match monsters|monster
+<ul><li>city dweller (11,3): <br /><pre>@match monsters|monster
 They came down from the mountains and attacked, dozens of them and we barely escaped with our lives.
 @match attack|ambush
 The monsters were in some sort of frenzy when they attacked, they were so vicious and ruthless - like nothing we have seen before.
 @match mountains|mountain
 There must be some huge battle happening in the mountain peaks and surrounding valleys.  Stench of rotting flesh is overwhelming.
+@match *
+We were heading north with some trade goods when some monsters ambushed us!
 </pre></li>
 <li>castle guard (9,7): <br /><pre></pre></li>
-<li>castle guard (1,11): <br /><pre>@match *
-Sheesh!  The smell of death when the wind comes over the mountains to the west make standing at this post unbearable!!
-@match death|smell
+<li>castle guard (1,11): <br /><pre>@match death|smell
 Can't you smell it?  Must be a couple hundred corpses up in the mountains all rotting and decaying to make a stench like that.
 @match corpses|dead
 Of course.. nothing, and I meaning nothing.. could smell that bad.
+@match *
+Sheesh!  The smell of death when the wind comes over the mountains to the west make standing at this post unbearable!!
 </pre></li>
 </ul>
 </li>
@@ -5133,7 +5131,7 @@ Hellllpppp meeeeeeeeeeeeeeeee!!!
 </ul>
 </li>
 <li>/navar_city/smugglers_cove/smugglercamp</li>
-<ul><li>Shelly (12,10): <br /><pre>@match smuggler[s]
+<ul><li>Shelly (12,10): <br /><pre>@match smuggler|smugglers
 Yes yes these horrible smugglers kidnapped me.
 @match *
 Oh please save me from these smugglers!
@@ -5141,14 +5139,16 @@ Oh please save me from these smugglers!
 </ul>
 </li>
 <li>/wolfsburg/tt/tta1</li>
-<ul><li>princess (20,18): <br /><pre>@match hello
-Oh, thank you for saving me from the monsters.
-@match name
+<ul><li>princess (20,18): <br /><pre>@match name
 I am the princess Corriann-Tremall.
-@match monsters
+@match monsters|yes|yeah
 They were actually after the magic items in the top of the other tower...
 @match items|magic
 There is a large store of magic items in the other tower.
+@match hello|hi|already
+Hello. You seem to have expected I would be trapped deeper in the tower with the monsters, no?
+@match *
+Oh, thank you for saving me from the monsters.
 </pre></li>
 <li>wounded knight (6,21): <br /><pre>@match *
 Escape while you can, creatures appeared throughout the tower, and they captured the princess...
@@ -5204,7 +5204,7 @@ You.. eat steak!
 <li>/port_joseph/goblin/dungeon2</li>
 <ul><li>Buggle (12,5): <br /><pre>@match key
 Key?  You must be thinking of my cousin upstairs.  He keeps all the keys.
-@match Buggle
+@match buggle
 That's me name.  Whats it to ya?
 @match *
 Yeah, so you killed all my gang.  You don't want to mess we me. Or my dogs.  You are free to go.
@@ -5307,7 +5307,7 @@ I invited over a few folks, but the party got out of hand.  Maybe you can help m
 <ul><li>warrior (12,8): <br /><pre>@match *
 The bandits have been most troublesome.  I don't know how much more we can take, I wish the King of Navar would send an army to help us.
 </pre></li>
-<li>courier (8,11): <br /><pre>@match king | King | Navar
+<li>courier (8,11): <br /><pre>@match king|navar
 His city lies to the south.  He is ruler of our province... or was.  There is no suitable heir.   Who will be our next King? Oh, poor Queen Wilhema... her grief is great!
 @match *
 I bear a message to my Lord.  The King of Navar is dead.
@@ -5338,8 +5338,7 @@ The Royal Apartments are upstairs.  You don't need to go up there.
 ....Do...Not...Attempt...To...Pervent...This...Place...
 </pre></li>
 <li>Knight of Ruggilli (12,3): <br /><pre>@match ruggilli
-....Massster...We...Live...In...His...
-rath....
+....Massster...We...Live...In...His...rath....
 @match *
 ....Do...Not...Attempt...To...Pervent...This...Place...
 </pre></li>
@@ -5353,14 +5352,12 @@ Yes! A Flame which will consume your enemies!
 The eternal flame of Ruggilli will prevail.
 </pre></li>
 <li>Knight of Ruggilli (3,12): <br /><pre>@match ruggilli
-....Massster...We...Live...In...His...
-rath....
+....Massster...We...Live...In...His...rath....
 @match *
 ....Do...Not...Attempt...To...Pervent...This...Place...
 </pre></li>
 <li>Knight of Ruggilli (3,3): <br /><pre>@match ruggilli
-....Massster...We...Live...In...His...
-rath....
+....Massster...We...Live...In...His...rath....
 @match *
 ....Do...Not...Attempt...To...Pervent...This...Place...
 </pre></li>
@@ -5370,21 +5367,21 @@ rath....
 <ul><li>elf man (23,3): <br /><pre>@match *
 Greetings.
 </pre></li>
-<li>elf (21,4): <br /><pre>@match Nirla
-@question queen What queen are you talking about?
+<li>elf (21,4): <br /><pre>@match nirla
 Yes this is her home.  She is wise but also, she is the Queen's daughter.
+@question queen What queen are you talking about?
 @match queen
 The Queen of the elves.
 @match *
-@question Nirla Who is Nirla?
 Nirla keeps a restful house.
+@question nirla Who is Nirla?
 </pre></li>
-<li>bird (18,25): <br /><pre>@match Hi|hello
+<li>bird (18,25): <br /><pre>@match hi|hello
 Hello two legs!
 @match talk|speak
 I can talk better than you can most likely.
 @match aza
-Do not trust Aza.  He is not the leader of the
+Do not trust Aza.  He is not the leader.
 @match *
 Hello.
 </pre></li>
@@ -5406,11 +5403,11 @@ Hello.
 <li>Nirla (4,4): <br /><pre>@match hi|hello
 Hello, I am Nirla, please make yourself welcome.
 @match dark|forest
-@question greenway What is this "Greenway"?
 Although it may seem to be many places where you can find it, there is only one Dark Forest.  It is all connected - these connections are called The Greenway.
+@question greenway What is this "Greenway"?
 @match greenway
-@question portal Where can I find a portal?
 The Greenway of the forest spans the world (and some say even time itself).  The portals are hard to find and the paths are chaotic and dangerous.  Only the experienced may find their way.
+@question portal Where can I find a portal?
 @match enter|portal
 Directly west of the Golden Yew you may find an entrance to The Greenway.
 @match *
@@ -5458,7 +5455,7 @@ Keep away from me, yer stinking up the bar.
 Glbk blgrd orgn.
 </pre></li>
 <li>kobold (18,9): <br /><pre>@match *
-hmbl grbll slind.
+Hmbl grbll slind.
 </pre></li>
 <li>kobold (18,8): <br /><pre>@match *
 Gblk flbl mgl.
@@ -5482,7 +5479,7 @@ Yes, he was buried with his treasure map.  Only Pegleg Percival knows where.
 Redeye is in the back room watching the fight.  He's the ugly one.
 </pre></li>
 <li>kobold (17,9): <br /><pre>@match *
-froop froop froop froop.
+Froop froop froop froop.
 </pre></li>
 <li>pirate (16,9): <br /><pre>@match redeye
 Heh, he's me mate oer in the corner.
@@ -5559,13 +5556,13 @@ One of the rooms has stairs leading where you want to go.
 What a rowdy lot!
 </pre></li>
 <li>TCI Representative (9,13): <br /><pre>@match tci
-@question location Where are the centers located?
 TCI, or Training Centers Incorporated, is the best dang training you'll ever get.  We have locations all over the world in exotic settings.  Come fight with us! (Heh, they tell us we have to say all that!)
+@question location Where are the centers located?
 @match location
 Well, I don't know about all of them.  But our local TCI is off the road north of here.  Just head north for Darcap and look for one of our signs!
 @match hello|hi
-@question tci what is TCI?
 Well, hello there! Sit down and chat with me a bit.  I am always looking for new people to tell about TCI.
+@question tci what is TCI?
 @match *
 Hi there young'un.  Wanna join TCI?
 </pre></li>
@@ -5585,7 +5582,7 @@ I ain't seen nuthin.
 <ul><li>Nancy (8,13): <br /><pre>@match monsters
 Yes huge horrible monsters - they were going to feed us to them!
 @match *
-Thank you for saving us from the monsters
+Thank you for saving us from the monsters!
 </pre></li>
 <li>Barny (7,11): <br /><pre>@match *
 You saved us! They were going to feed us to those monsters!
@@ -5743,7 +5740,7 @@ Oh good evening Zir, I am Charles, zee old wizzard's houze keeper!  Can I HELP y
 Ztrange aczent you have, zonny!
 @match wizzard
 Oh, mazzter Yarid waz a great wizzard!  Always working away down in zee dunzeon he waz. Zoo bad he izz DEAD now!
-@match mouth|dungeon|gate|word
+@match mouth|gate|word
 Ah, zee dunzeon, I woulzz not go zown zair if I waz you, but I am not you.  Mazzter Yarid don't tell me pazzword for gatz az he leavzz.  You muzzt searzz for it. Good Luck! Charles pulls out a PAPER, looks at it, marks an X and puts it away again.
 @match paper
 Oh nothing... I juzt write zown how many adventurerz entered zee DUNZEON zinze mazzter Yarid died.  Zee number be now 6.
@@ -5770,17 +5767,17 @@ I hear that there is a secret Path to the castle of Bauer in this aqueduct.  But
 </li>
 <li>/inn_and_outpost/outpost_aranor1</li>
 <ul><li>Merchant (18,11): <br /><pre>@match merchant|trade
+I mostly trade with the elves.  Some say it's dangerous but you just have to be cautious.
 @question elves Where are the elves?
 @question dangerous What do you mean with "dangerous"?
-I mostly trade with the elves.  Some say it's dangerous but you just have to be cautious.
 @match elves
 Yes there is a elven village to the west of here.
 @match dangerous
-@question elves Where are the elves?
 Well the elves aren't really dangerous but the Dark Forest is...
+@question elves Where are the elves?
 @match *
-@question merchant Who do you trade with out here in the wilderness?
 Hello, good to meet you.  I'm Zim, a merchant by trade.
+@question merchant Who do you trade with out here in the wilderness?
 </pre></li>
 <li>castle guard (15,5): <br /><pre>@match *
 G'day to you.
@@ -5807,100 +5804,6 @@ G'day to you.
 The word is "ARRANGE."  Please let me live!
 @match *
 Ahh!! Please don't kill me! I can teach you the holy WORD!
-</pre></li>
-</ul>
-</li>
-<li>/brest/taverns/brest.seaside.tavern</li>
-<ul><li>bartender (24,6): <br /><pre>@match haemon
-He's over there in the private room with his wife Annie.
-@match *
-@question haemon Where is Haemon?
-I know nothing.  Ask Haemon.  He owns this tavern.
-</pre></li>
-<li>wandering drunk (20,6): <br /><pre>match *
-I am celebrating my big win.  Lady luck was finally on my side of the dice! *hiccup*
-</pre></li>
-<li>fighter (20,5): <br /><pre>@match *
-<blank stare>
-</pre></li>
-<li>Slightly Intoxicated Elf (19,4): <br /><pre>@match hi|hello
-Eh?  Can't you see I'm trying to enjoy my drink?  What do you want, small talk?
-@match drink
-You would have a drink too if the bane of your existence moved in by your home!  In a temple no less!!
-@match bane|bane of your existence
-That temple at the northern wall!  Trolls, and more trolls everywhere you look! What does the administration do about it?  Nothing!!
-@match administration
-Yes - administration.  They care nothing for it's upstanding citizens.  By Lythander's grace we will do something about it soon.
-@match trolls|trolls
-That's is what I said, trolls - the blight of the land.  Lythander's Crusade will free us!
-@match lythander|crusade|lythanders crusade|lythander's crusade
-When those who follow The Trollslayer's will decimate and make this land safe and clean from those wretched trolls!
-@match trollslayer
-You know so very little of the world!  Lythander is the Trollslayer!! (Takes a swig of his drink) To Lythander!
-@match temple
-It is obviously constructed as part of a fortress.  The trolls that live there even wear armour!
-@match armour|fortress
-I couldn't stand to look at them more then I did - their site disgusts me .  More then their stench!
-@match *
-Bleah, try another topic or leave me alone.. *grumble* blasted trolls *grumble*
-</pre></li>
-<li>Guard (18,8): <br /><pre>@match *
-This is a private area.  No admittance.
-</pre></li>
-<li>Haemon (16,9): <br /><pre>@match tavern
-@question zorn You worked for Zorn?
-I bought this tavern with part of my pension from Zorn.
-@match given_name|given name
-Do NOT tell Zorn I told you this.  His given name is Zacharus Zorn.
-@match defeat_zorn|kill zorn|defeat zorn
-I know of no sure way to kill Zorn.  But there is a rumor in Brest that Zorn was a sickly child and has a weak immune system.
-@match tough
-@question defeat_zorn Do you know any way to defeat Zorn?
-It is true that Zorn is tough.  Many people have tried to kill Zorn but very few have been able to defeat Zorn.
-@match zorn
-@question tough So Zorn is tough?
-@question given_name What is Zorn's given name?
-Yes, I used to be Zorn's manservant.  He released me with a good pension many years ago.  He is a tough but fair man.  I am one of the few people to whom he entrusted his given name.
-@match *
-@question tavern So you are the owner of this tavern?
-Hello! Welcome to my tavern.
-</pre></li>
-<li>Annie (15,8): <br /><pre>@match *
-Hee hee hee hee! Oh, Haemon you are soooooo witty!
-</pre></li>
-<li>cleric (13,4): <br /><pre>@match hi|hello
-Greetings traveler.
-@match temple
-Ah yes, the temple along the northern wall.  That location is quite strange.  Almost as much as it's inhabitants.
-@match location|strange
-Why so interesting?  Because it was built on top of a grave site.
-@match inhabitants|inhabitant|residents|tenants|troll|trolls
-I can't for the life of me imagine why trolls would be so interested in a temple at that location.  They must not be followers of their typical god, Gnarg.  Maybe Devourers?
-@match grave|grave site|graveyard
-Oh yes, some of the Last Men who met their demise fleeing to here, Kingdom of Brittany before it was a kingdom, were entombed at that location.
-@match last men
-You have not hear the Lore of the Last Men?
-@match lore|lore of the last men
-Ah, well - I can share with you what I know.  The Last Men were a select group of people who fled Scorn after the Dragon Wars and the betrayel of the werebeasts.
-@match dragon war|dragon wars
-I know very little about that - just that Dragons once attacked Scorn and left it buried & ruined.
-@match buried|ruined
-As I said, I know very little - nothing more.
-@match werebeasts|werebeast
-The werebeasts hunted the Last Men as they fled Scorn to here.  The werebeasts were unable to survive the ice mountains and it's denizens.  Fortunately, most of the Last Men did.
-@match administration
-The ruling administration has a tolerance of all races here.
-@match ice mountain|ice mountains
-The legend has it - the mountains and icestorms appeared from nowhere.  As if they were summoned by mages.  How much truth bending took place for that tale?  One may never know.
-@match gnarg
-Gnarg is the god of trolls, goblins and even assassins.  You won't find too many civilized lands that accept temples of that kind.  I would flee in fear if the Administration here would allow the cult to set up here!
-@match devourers
-Devourers is the patron of the undead - mostly with wraiths who have returned to this world to finish what they could not accomplish when they were living.  Some embrace the darker side of Devourers, such as Necromancers and others in the dark arts.
-@match valkyrie
-Oh?  Valkyrie you say? She is the deity of warriors.  I know nothing more then that.
-</pre></li>
-<li>pirate (10,8): <br /><pre>@match *
-Run along, pup! Canna ye see we's wit' our wimmen!?
 </pre></li>
 </ul>
 </li>
@@ -5957,11 +5860,10 @@ Look at that crystal, boy.  Such things bring joy to the heart of a dwarf!
 <li>dwarf (15,6): <br /><pre>@match *
 Sorry, lad! Can't talk now, we have work to do!
 </pre></li>
-<li>guard (14,15): <br /><pre>@match *
+<li>guard (14,15): <br /><pre>@match mine
+Bit more exciting, I think.  If you get the area near the spider's lair.  I've heard that undead prowl somewhere deep in those mines.  A dwarf told me that it was even more exciting, before they completely drove the goblins away.
+@match *
 This is a boring post.  Sitting here in this dark hole.  I wish I was posted in the other mine.
-@match mine
-Bit more exciting, I think.  If you get the area near the spider's lair.  I've heard that undead prowl somewhere deep in those mines.  A dwarf told me that it was even more exciting, before they completely drove the goblins
-away.
 </pre></li>
 <li>dwarf (14,4): <br /><pre>@match *
 Think this is hard work, laddy? The work is its own reward... and some of the good stones we bring up... he he heh....
@@ -6058,7 +5960,7 @@ Greetings, can I help you?
 <li>wilds pixie (3,16): <br /><pre>@match who|name
 I am Twink, an apprentice.
 @match *
-Greetings
+Greetings!
 </pre></li>
 </ul>
 </li>
@@ -6073,7 +5975,7 @@ Those boys sure have a healthy appetite.
 Hello have you come to play with the boys?
 </pre></li>
 <li>halfling (8,20): <br /><pre>@match *
-Hi
+Hi!
 </pre></li>
 <li>crone (5,10): <br /><pre>@match young
 Well when you are as old as me everyone else is a young one...
@@ -6258,321 +6160,6 @@ Welcome to the Temple of Healing! This is the place where injured and ill people
 </pre></li>
 </ul>
 </li>
-<li>/brest/zorn/castle.mainfloor</li>
-<ul><li>fearless zorn guard (49,48): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (49,36): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (49,31): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (49,9): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (48,36): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (48,31): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (48,9): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (47,11): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (47,9): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (46,48): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (46,9): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (45,48): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (45,36): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (45,31): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (45,9): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (44,36): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (44,31): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (43,11): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (41,48): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (41,36): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (41,31): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (41,9): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (40,48): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (40,36): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (40,31): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (40,9): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (39,11): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (37,48): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (37,36): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (37,31): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (36,16): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (36,9): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (35,37): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (35,36): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (35,35): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (35,32): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (35,31): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (35,30): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (35,16): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (35,9): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (34,16): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (34,14): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (34,11): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (34,9): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (32,46): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (31,46): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (31,14): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (31,13): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (31,12): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (27,46): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (27,14): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (27,13): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (27,12): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (26,46): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (24,16): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (24,14): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (24,11): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (24,9): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (23,37): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (23,36): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (23,35): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (23,32): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (23,31): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (23,30): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (23,16): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (23,9): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (22,16): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (22,9): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (21,48): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (21,47): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (21,36): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (21,31): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (21,28): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (21,27): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (21,24): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (21,23): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (21,20): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (21,19): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (18,48): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (18,36): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (18,31): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (18,9): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (17,48): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (17,36): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (17,31): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (17,9): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (14,36): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (14,31): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (13,48): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (13,36): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (13,31): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (12,48): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (10,36): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (10,31): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (9,48): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (9,47): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (9,36): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (9,31): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (9,28): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (9,27): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (9,24): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (9,23): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (9,20): <br /><pre>@match *
-...
-</pre></li>
-<li>fearless zorn guard (9,19): <br /><pre>@match *
-...
-</pre></li>
-</ul>
-</li>
 <li>/navar_city/houses/charliesplace</li>
 <ul><li>Charlie (6,7): <br /><pre>@match *
 What would you like your gravestone to read?
@@ -6674,7 +6261,7 @@ What is it that you want?
 </ul>
 </li>
 <li>/scorn/oldcity/oldcity7</li>
-<ul><li>Lone Pixie (9,25): <br /><pre>match *
+<ul><li>Lone Pixie (9,25): <br /><pre>@match *
 Beware of Thalik Norois, he is king of the Old City.
 </pre></li>
 </ul>
@@ -6714,7 +6301,7 @@ Place objects on the white squares to enter the inner sanctium, Sir.
 </pre></li>
 <li>skeleton (5,10): <br /><pre>@match earthquake|buried
 Yes, the great earthquake destroyed the city of Scorn, we were rebuilding the city when I was trapped.
-@match Scorn|city|trapped
+@match scorn|city|trapped
 But I learned of something down here, as I heard monsters scratching at the walls...as the worms ate my flesh.  I heard an evil voice.
 @match evil|voice|monster|flesh
 Yes, It was commanding others around to build a secret chamber.
@@ -6741,7 +6328,7 @@ I guard this passage and I will kill any who try to pass.  The Black Art will st
 @match *
 You may not pass.
 </pre></li>
-<li>Groll (5,35): <br /><pre>@match fire|burn|Fire|Burn
+<li>Groll (5,35): <br /><pre>@match fire|burn
 I like to watch them burn. *Grolls says evilly*
 @match *
 Fire!!! Burn!!!!! BURN!!!
@@ -6755,7 +6342,7 @@ He might live here.  I don't know for certain.
 I don't know any details on the ring.
 @match tower|pupuly
 The Tower, in Lone Town.
-@match Nazgul
+@match nazgul
 I heard he went to Pupuly's Tower to steal a special ring.
 @match *
 Nazgul is not in this plant.  Please help me!
@@ -6800,7 +6387,7 @@ You found the right person.  The entrance to ebony tiger guild is under the cloc
 </ul>
 </li>
 <li>/quests/peterm/CTower/Dungeon</li>
-<ul><li>prisoner (1,4): <br /><pre>@match hi|hello|Hi
+<ul><li>prisoner (1,4): <br /><pre>@match hi|hello
 Set me free.  It's true I betrayed my master, but he's a monster.  There is worse than being a traitor.
 @match traitor|betray
 Yes, I betrayed my master.  Who wouldnt if they knew his evil scheme?
@@ -6826,6 +6413,100 @@ The bonesway is the graveyard.
 <li>/pup_land/rainbow/red_town/shop</li>
 <ul><li>Bobo, shopkeeper (4,12): <br /><pre>@match *
 Welcome to my shop!
+</pre></li>
+</ul>
+</li>
+<li>/brest/taverns/brest.seaside.tavern</li>
+<ul><li>bartender (24,6): <br /><pre>@match haemon
+He's over there in the private room with his wife Annie.
+@match *
+@question haemon Where is Haemon?
+I know nothing.  Ask Haemon.  He owns this tavern.
+</pre></li>
+<li>wandering drunk (20,6): <br /><pre>@match *
+I am celebrating my big win.  Lady luck was finally on my side of the dice! *hiccup*
+</pre></li>
+<li>fighter (20,5): <br /><pre>@match *
+<blank stare>
+</pre></li>
+<li>Slightly Intoxicated Elf (19,4): <br /><pre>@match hi|hello
+Eh?  Can't you see I'm trying to enjoy my drink?  What do you want, small talk?
+@match drink
+You would have a drink too if the bane of your existence moved in by your home!  In a temple no less!!
+@match bane|bane of your existence
+That temple at the northern wall!  Trolls, and more trolls everywhere you look! What does the administration do about it?  Nothing!!
+@match administration
+Yes - administration.  They care nothing for it's upstanding citizens.  By Lythander's grace we will do something about it soon.
+@match trolls
+That's is what I said, trolls - the blight of the land.  Lythander's Crusade will free us!
+@match lythander|crusade|lythanders crusade|lythander's crusade
+When those who follow The Trollslayer's will decimate and make this land safe and clean from those wretched trolls!
+@match trollslayer
+You know so very little of the world!  Lythander is the Trollslayer!! (Takes a swig of his drink) To Lythander!
+@match temple
+It is obviously constructed as part of a fortress.  The trolls that live there even wear armour!
+@match armour|fortress
+I couldn't stand to look at them more then I did - their site disgusts me .  More then their stench!
+@match *
+Bleah, try another topic or leave me alone.. *grumble* blasted trolls *grumble*
+</pre></li>
+<li>Guard (18,8): <br /><pre>@match *
+This is a private area.  No admittance.
+</pre></li>
+<li>Haemon (16,9): <br /><pre>@match tavern
+I bought this tavern with part of my pension from Zorn.
+@question zorn You worked for Zorn?
+@match given_name|given name
+Do NOT tell Zorn I told you this.  His given name is Zacharus Zorn.
+@match defeat_zorn|kill zorn|defeat zorn
+I know of no sure way to kill Zorn.  But there is a rumor in Brest that Zorn was a sickly child and has a weak immune system.
+@match tough
+It is true that Zorn is tough.  Many people have tried to kill Zorn but very few have been able to defeat Zorn.
+@question defeat_zorn Do you know any way to defeat Zorn?
+@match zorn
+Yes, I used to be Zorn's manservant.  He released me with a good pension many years ago.  He is a tough but fair man.  I am one of the few people to whom he entrusted his given name.
+@question tough So Zorn is tough?
+@question given_name What is Zorn's given name?
+@match *
+Hello! Welcome to my tavern.
+@question tavern So you are the owner of this tavern?
+</pre></li>
+<li>Annie (15,8): <br /><pre>@match *
+Hee hee hee hee! Oh, Haemon you are soooooo witty!
+</pre></li>
+<li>cleric (13,4): <br /><pre>@match hi|hello
+Greetings traveler.
+@match temple
+Ah yes, the temple along the northern wall.  That location is quite strange.  Almost as much as it's inhabitants.
+@match location|strange
+Why so interesting?  Because it was built on top of a grave site.
+@match inhabitants|inhabitant|residents|tenants|troll|trolls
+I can't for the life of me imagine why trolls would be so interested in a temple at that location.  They must not be followers of their typical god, Gnarg.  Maybe Devourers?
+@match grave|grave site|graveyard
+Oh yes, some of the Last Men who met their demise fleeing to here, Kingdom of Brittany before it was a kingdom, were entombed at that location.
+@match last men
+You have not hear the Lore of the Last Men?
+@match lore|lore of the last men
+Ah, well - I can share with you what I know.  The Last Men were a select group of people who fled Scorn after the Dragon Wars and the betrayel of the werebeasts.
+@match dragon war|dragon wars
+I know very little about that - just that Dragons once attacked Scorn and left it buried & ruined.
+@match buried|ruined
+As I said, I know very little - nothing more.
+@match werebeasts|werebeast
+The werebeasts hunted the Last Men as they fled Scorn to here.  The werebeasts were unable to survive the ice mountains and it's denizens.  Fortunately, most of the Last Men did.
+@match administration
+The ruling administration has a tolerance of all races here.
+@match ice mountain|ice mountains
+The legend has it - the mountains and icestorms appeared from nowhere.  As if they were summoned by mages.  How much truth bending took place for that tale?  One may never know.
+@match gnarg
+Gnarg is the god of trolls, goblins and even assassins.  You won't find too many civilized lands that accept temples of that kind.  I would flee in fear if the Administration here would allow the cult to set up here!
+@match devourers
+Devourers is the patron of the undead - mostly with wraiths who have returned to this world to finish what they could not accomplish when they were living.  Some embrace the darker side of Devourers, such as Necromancers and others in the dark arts.
+@match valkyrie
+Oh?  Valkyrie you say? She is the deity of warriors.  I know nothing more then that.
+</pre></li>
+<li>pirate (10,8): <br /><pre>@match *
+Run along, pup! Canna ye see we's wit' our wimmen!?
 </pre></li>
 </ul>
 </li>
@@ -6881,12 +6562,12 @@ Ah, the swamp!  There is a password to activate the portal to go directly to the
 There were quite a few famous people in the past.  Ragnarok, Zykie, Kashu are the few, now that I recall.
 @match fortress
 Which fortress are you talking about?
-@match Butakis
+@match butakis
 Butakis has a royal library in his inner city.  There are a lot of useful information you can find from the books there.  There password to enter the fortress of Butakis is 'windwalk'.
 @match the sunset
 The Sunset Fortress?
 There is a password you need to tell the giant oak tree in the middle of the forest for the oak tree to transport you to the island on Sunset lake, where the fortress is.  The word is the name of the great druid of the land.  His name is Twak.
-@match Mopoon
+@match mopoon
 Mopoon's Weaponary?
 Well there are two portals in his cave, that the old wizard Wist used to use as his laboratory.  The password is Kashu, the legendary warrior king.  However the portals are not common and may be disguised as something unlikely.  One of the portal is supposed to transport you to the old wizard's tower.
 @match hello|hi
@@ -6987,7 +6668,7 @@ What is it?
 @match key
 You have guessed correctly.  The first object you seek is in the Volcano.  The first word you seek is TIMELESSNESS.
 @match name
-I am the Sphinx
+I am the Sphinx!
 @match *
 Have you come for a riddle?
 </pre></li>
@@ -7078,11 +6759,11 @@ Gea-Ga-Ring
 Goraon
 Gran-Garan
 @match rufto
-@question dragons What dragons?
 He is a guard of this ruin.  To enter his room you must get four keys.  His four dragons have the keys.
+@question dragons What dragons?
 @match *
-@question rufto Who is Rufto the wizard?
 ...Help me.  I was captured by Rufto the wizard.
+@question rufto Who is Rufto the wizard?
 </pre></li>
 </ul>
 </li>
@@ -7492,7 +7173,7 @@ You're not our master! Who are you! who are you!? AEEEEEEEIIIIIIIIIIII!!
 <li>/quests/skud/entrance</li>
 <ul><li>Guardian (7,1): <br /><pre>@match skud|great
 Yes, he was one of the greatest wizards to walk this land.  But he is no longer of this earth.
-@match Magic|wizard
+@match magic|wizard
 He summoned many creatures from the depths of the Abyss.  I guard this entrance now, to ensure that none of those apparitions ever walk our lands.
 @match land|long|earth
 Yes, he began to use his magic in the ways of evil.  The board of wizards exiled him to this tower, where he was consumed by his own magic.
@@ -7529,15 +7210,12 @@ Well, there's even a nice collection of demiliches on the upper floor, just abov
 </li>
 <li>/navar_city/mlab/tavernb1</li>
 <ul><li>Diamond Broker (51,19): <br /><pre>@match *
-You can buy First World Bank 2000 Diamond Notes or Redeem your notes.
-here.
+You can buy First World Bank 2000 Diamond Notes or Redeem your notes here.
 </pre></li>
 </ul>
 </li>
 <li>/navar_city/mlab/tavern2</li>
-<ul><li>Elite Mikhovian Guard (25,7): <br /><pre>@match *
-</pre></li>
-<li>castle guard (10,16): <br /><pre>@match *
+<ul><li>castle guard (10,16): <br /><pre>@match *
 Move along...
 </pre></li>
 <li>innkeeper (3,19): <br /><pre>@match *
@@ -7555,7 +7233,7 @@ I am so poor! I have almost no money! Those bastards!!!
 <li>bartender (48,34): <br /><pre>@match yes
 Well you look supicious... there was a murder here a little while ago you know... of some old man, clamied to have magical powers but... I dunno, he he he.
 @match who|murder|man|old
-Yea someone named sarnatch or something
+Yea someone named sarnatch or something.
 @match no
 Well with that kind of attitude you're gunna hit the drink like sarnatch.... whatever his name was.
 @match sarnatch
@@ -7646,14 +7324,14 @@ To open the door, say "release".
 Well, my pets have become quite crazy, so I had to emprison them.
 And now I can't get anymore into my home...
 @match *
-@question what What is terrible?
 Hello...
 Ha, this is terrible...
+@question what What is terrible?
 </pre></li>
 </ul>
 </li>
 <li>/dragonisland/advguild</li>
-<ul><li>homesick sphinx (28,28): <br /><pre>@match Hello
+<ul><li>homesick sphinx (28,28): <br /><pre>@match hello
 Hello! Please don't talk in here.
 @match *
 I don't know any riddles right now.  Please leave me alone.
@@ -7669,7 +7347,7 @@ And take care not to damage anything!
 To join the guild, you must pay at the alter over there, and then pass a dangerous test.  Only hardened adventurers may join!
 @match test
 The test is dangerous: We've tied the key to this guild to the eye of a Dread.
-@match Hallo|Hello|Hi
+@match hallo|hello|hi
 Hi! Do you want do know something about admission to the guild?
 </pre></li>
 <li>landlady (14,9): <br /><pre>@match hallo|hello|hi
@@ -7704,7 +7382,7 @@ Hi, welcome to the jewery shop, Flawless Beauty!
 <ul><li>castle guard (10,14): <br /><pre>@match visit|meet|see|talk
 Who are you visiting?
 Let me guess.  Wist? or Twis? Duan? Fiery? Joey?
-@match Wist|Twis|Duan|Fiery|Joey
+@match wist|twis|duan|fiery|joey
 Okay. But be careful.  OPEN THE GATE!!! ...
 @match monster|treasure
 There is no monsters or treasure here.  This is prison. Only the most dangerous criminals of the lands are imprisoned here.
@@ -7715,7 +7393,7 @@ No loitering here! Go to the bar and get a drink if you have nothing to do.
 <li>castle guard (4,14): <br /><pre>@match visit|meet|see|talk
 Who are you visiting?
 Let me guess.  Wist? or Twis? Duan? Fiery? Joey?
-@match Wist|Twis|Duan|Fiery|Joey
+@match wist|twis|duan|fiery|joey
 Okay. But be careful.  OPEN THE GATE!!! ...
 @match monster|treasure
 There is no monsters or treasure here.  This is prison. Only the most dangerous criminals of the lands are imprisoned here.
@@ -7835,6 +7513,321 @@ Yes, you can summon the dead with those portals if you know their names.  Gettin
 </pre></li>
 </ul>
 </li>
+<li>/brest/zorn/castle.mainfloor</li>
+<ul><li>fearless zorn guard (49,48): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (49,36): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (49,31): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (49,9): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (48,36): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (48,31): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (48,9): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (47,11): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (47,9): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (46,48): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (46,9): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (45,48): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (45,36): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (45,31): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (45,9): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (44,36): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (44,31): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (43,11): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (41,48): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (41,36): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (41,31): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (41,9): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (40,48): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (40,36): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (40,31): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (40,9): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (39,11): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (37,48): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (37,36): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (37,31): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (36,16): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (36,9): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (35,37): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (35,36): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (35,35): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (35,32): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (35,31): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (35,30): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (35,16): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (35,9): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (34,16): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (34,14): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (34,11): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (34,9): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (32,46): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (31,46): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (31,14): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (31,13): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (31,12): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (27,46): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (27,14): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (27,13): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (27,12): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (26,46): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (24,16): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (24,14): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (24,11): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (24,9): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (23,37): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (23,36): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (23,35): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (23,32): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (23,31): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (23,30): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (23,16): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (23,9): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (22,16): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (22,9): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (21,48): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (21,47): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (21,36): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (21,31): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (21,28): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (21,27): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (21,24): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (21,23): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (21,20): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (21,19): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (18,48): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (18,36): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (18,31): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (18,9): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (17,48): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (17,36): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (17,31): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (17,9): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (14,36): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (14,31): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (13,48): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (13,36): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (13,31): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (12,48): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (10,36): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (10,31): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (9,48): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (9,47): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (9,36): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (9,31): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (9,28): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (9,27): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (9,24): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (9,23): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (9,20): <br /><pre>@match *
+...
+</pre></li>
+<li>fearless zorn guard (9,19): <br /><pre>@match *
+...
+</pre></li>
+</ul>
+</li>
 <li>/pup_land/castle_eureca/chest</li>
 <ul><li>ghost of the chest (6,4): <br /><pre>@match yes
 Good boy! I can tell you: The first hundred years are hard, but then you get used to it...
@@ -7876,7 +7869,7 @@ Hello, we don't welcome strangers.  Now be warned and go back.  If you intend to
 </ul>
 </li>
 <li>/lake_country/elven_moon/elvenmoon.5</li>
-<ul><li>elf man (19,9): <br /><pre>@match Queen's White Rose|rose
+<ul><li>elf man (19,9): <br /><pre>@match queen's white rose|rose
 The rose can sometimes be found in the labyrinth.
 @match labyrinth
 How else did you arrive here?
@@ -7889,7 +7882,7 @@ The Bow of Elven Moon requires skill and wisdom for one to obtain.  Simply look 
 There are many keys.
 @match vim
 We do have a Tower of Vim key.
-@match where|show|Tower of Vim|Tower of Vim key
+@match where|show|tower of vim|tower of vim key
 You will need to find the Queen's White Rose.
 @match *
 *you hear the murmur of elvish song*
@@ -7924,7 +7917,7 @@ This is a sacred place.  You best leave.
 Did you know that pears are favored by the Queen?
 @match queen
 She is very beautiful.
-@match Seegin
+@match seegin
 Seegin is wonderful.
 @match yes|ok
 Wonderful.
@@ -7935,11 +7928,11 @@ I attend the pear trees and my rose bush.  I don't have time to fetch some pipew
 </pre></li>
 <li>Oakie the Ent (5,15): <br /><pre>@match elf|elves
 Elven Moon is a sacred place where the elves come to pray.
-@match elven moon|Elvenmoon
+@match elven moon|elvenmoon
 The door to Elven Moon is at the center of the lake.
 @match lake
 The lake is north east of here.  Did you need help?
-@match yes|help|how*
+@match yes|help|how
 One must speak the magic words, then the bridge will appear by the flowers.
 @match magic|magic words
 The elves change the words every now and then.  Seek the guardian of the maze.
@@ -8032,7 +8025,7 @@ Welcome to my laboratory, adventurer! Do you wanna fight against him?
 </ul>
 </li>
 <li>/lake_country/shops/clems_archery</li>
-<ul><li>warrior, Clem (9,12): <br /><pre>@match Butakis|fortress
+<ul><li>warrior, Clem (9,12): <br /><pre>@match butakis|fortress
 You need to know the password to enter the fortress.  Otherwise it's going to be very dangerous.
 @match password
 Oh, Well.  You don't seem to me like a bad person; so I will tell you the password.  It's "windwalk". But don't tell anyone else.  There is already enough trouble these days.  Especially some thieves start to cause them in the fortress.
@@ -8082,7 +8075,7 @@ I don't know what you are talking about.
 </pre></li>
 <li>Royal Guard (14,24): <br /><pre>@match open|gate|grate|in|let|enter|out
 Why should I let you in?
-@match Lothar
+@match lothar
 Ok! Here you go...
 @match *
 What would you like?
@@ -8267,7 +8260,7 @@ YoYoYou WiLlL BoW BeFoRe GrEaTeR PoWeRs oF DeAtH aNd SeE ThE WiZaRd WhOm CoNtRoL
 </ul>
 </li>
 <li>/lake_country/Butakis/prison_e</li>
-<ul><li>Twis (12,12): <br /><pre>@match name|Wist
+<ul><li>Twis (12,12): <br /><pre>@match name|wist
 How many time do I have to tell you that I am not Wist!
 @match save|help|release|escape
 Okay.  Help me escape here and I will reward you. Here is the plan. Find Fiery, my apprentice and get the chalice of fire from him.  When you get the chalice, I will tell you what to do next.
@@ -8278,7 +8271,7 @@ Okay.  Put it in the liquid that surrounds the cell.  It will breach the antimag
 @match reward|pay|payment|repay
 Did I promise reward?
 Ooh, okay.  As reward, I grant you permission to my private study.  If you have done as I asked, come in and I will send you to my study.
-@match Fiery
+@match fiery
 Fiery was my pupil.  He had the chalice of fire.  Force him to give it to you if you have to.  I don't know where he is now.  Search in the fortress and you may find him... I don't care if he dies.
 @match *
 How long do you think you can trap me in this place? Sooner or later I will get out and I will come back to crush you, all of you! Now what can you do for me?
@@ -8653,7 +8646,7 @@ Use my seal to open the door.  Bring me my crown, and I will let you go downstai
 Do you have my seal? You need my seal to open the door.
 @match crown
 It's very simple, moron! Go upstairs, get my crown, and place it on the altar.  THEN you may continue on your quest. <Geez, some people are so stupid...>
-@match Grey|shield|sword|quest|treasure
+@match grey|shield|sword|quest|treasure
 Ahh, you are looking for the Greyshield are you? If you get my sword (the Greysword), then I will let you into the treasure room... You must be worthy to gain the Greyshield!
 @match *
 <That stupid whats-his-face! He can never take care of anything himself!> What do you want? <sigh>
@@ -8889,7 +8882,7 @@ Let me die, let me die, let me die!
 <li>/lake_country/snake_pit/Chaos_lair1</li>
 <ul><li>dragonman guard (19,23): <br /><pre>@match open|enter|gate|door
 What's your name? What's your business?
-@match Orcus|Balrog|Asmodeus|Jessy
+@match orcus|balrog|asmodeus|jessy
 Gatekeeper! OPEN!!.
 @match kill
 Great! We all need some excercises!
@@ -8900,7 +8893,7 @@ You'd better leave before I throw you out or summon more guards!
 </pre></li>
 <li>dragonman guard (14,23): <br /><pre>@match open|enter|gate|door
 What's your name? What's your business?
-@match Orcus|Balrog|Asmodeus|Jessy
+@match orcus|balrog|asmodeus|jessy
 Gatekeeper! OPEN!!.
 @match kill
 Great! We all need some excercises!
