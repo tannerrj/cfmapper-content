@@ -1,4 +1,5 @@
 # cfmapper-content
+
 Output of crossfire-mapper script used by Crossfire
 
 ## Introduction
@@ -23,3 +24,7 @@ This program is not part of the regular build process. The command to compile cr
 ```
 ./configure --enable-mapper && make && sudo make install
 ```
+
+## License
+
+GNU General Public License version 2.0 (GPLv2)
