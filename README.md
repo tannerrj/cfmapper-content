@@ -10,7 +10,7 @@ Summary and more information on the [Crossfire Mapper](http://wiki.cross-fire.or
 
 ## Prerequisites
 
-A working installation of the Crossfire server complete with maps and archetypes.
+A working installation of the Crossfire server complete with maps and archetypes is required.
 
 More details on the server build process is found on the [Compiling the Crossfire Server](http://wiki.cross-fire.org/dokuwiki/doku.php/server:server_compiling) wiki page.
 
