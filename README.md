@@ -1,6 +1,6 @@
 # cfmapper-content
 
-Output of crossfire-mapper script used by Crossfire
+Output of crossfire-mapper script used by [Crossfire](https://sourceforge.net/projects/crossfire/)
 
 ## Introduction
 
