@@ -13,8 +13,7 @@ http://wiki.cross-fire.org/dokuwiki/doku.php/maps:tools:crossfire-mapper
 
 A working installation of the Crossfire server complete with maps and archetypes.
 
-More details on the server build process:
-http://wiki.cross-fire.org/dokuwiki/doku.php/server:server_compiling
+More details on the server build process is found on the [Compiling the Crossfire Server](http://wiki.cross-fire.org/dokuwiki/doku.php/server:server_compiling) wiki page
 
 ## Installation
 
@@ -23,7 +22,9 @@ To build it, you need the GD library (ie. install a libgd-devel package).
 This program is not part of the regular build process. The command to compile crossfire-mapper is invoked during ./configure
 
 ```bash
+
 ./configure --enable-mapper && make && sudo make install
+
 ```
 
 ## License
