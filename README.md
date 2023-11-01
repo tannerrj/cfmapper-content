@@ -34,6 +34,11 @@ Actual command used to generate the map content provided in this code repository
 
 ```
 
+## Live Web Page
+
+Content generated via cfmapper and themed for Crossfire website
+ * <http://www.crossfireatlas.net/>
+
 ## Questions
 
 For any questions or general inquiries on the game or server source code:
