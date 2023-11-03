@@ -18,7 +18,7 @@ More details on the server build process is found on the [Compiling the Crossfir
 
 To build it, you need the GD library (ie. install a libgd-devel package).
 
-This program is not part of the regular build process. The command to compile mapper is invoked during ./configure
+This program is not part of the regular build process. The command to compile mapper is invoked during `./configure`
 
 ```bash
 
