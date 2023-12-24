@@ -61,3 +61,9 @@ The cfmapper-content project repo can be reached via [tannerrj GitHub Profile](h
 ## License
 
 GNU General Public License version 2.0 (GPLv2)
+
+## Crossfire Social Media Links
+
+ * [Facebook](https://www.facebook.com/crossfireproject/)
+ * [Mastodon](https://mastodon.social/@crossfiremrpg)
+ * [X (Formerly Twitter)](https://twitter.com/crossfiremrpg/)
