@@ -56,7 +56,9 @@ For any questions or general inquiries on the game or server source code:
  * [Discord](https://crossfire.real-time.com/discord) invite [link](https://discord.gg/CCQqbqu)
  * [IRC](https://crossfire.real-time.com/irc/) at irc.libera.chat:6697 (TLS) or irc.libera.chat:6667 (plain text)
 
-The cfmapper-content project repo can be reached via [tannerrj GitHub Profile](https://github.com/tannerrj)
+## Questions
+
+I can be reached via [tannerrj GitHub Profile](https://github.com/tannerrj)
 
 ## License
 
