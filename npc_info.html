@@ -2523,29 +2523,6 @@ Can't you see I'm studying?
 @reply studying What are you studying?
 @reply no No, of course not.
 </pre></li>
-        <li>man (28, 9)<pre>@match name
-My name is Brum.
-@identify
-@match job
-I used to wander the lands.
-@match story|yes
-Very, well......many years ago I met a great wizard.
-@reply wizard A wizard?
-@match wizard|skud
-Yes, Skud the Great. He had a tower in the mountains.
-@reply tower Where was this tower?
-@match tower|mountain
-The tower was high in the peaks of the Black Ice Mountains, hidden in a valley.
-@reply black Where are the Black Ice Mountains?
-@reply valley What is in this valley?
-@match mountains|black|ice
-The Black Ice Mountain range lies a bit to the west of Navar.
-@match valley
-Yes, I heard that somewhere in the depths of the castle dungeon rests a piece of the Talisman!!! I never found it.
-@match *
-Would you like to hear a story?
-@reply yes Yes, I'd like to hear a story.
-</pre></li>
         <li>elf (27, 17)<pre>@match name
 Amras Telrunya, and that's Anie...
 @identify
@@ -2621,21 +2598,6 @@ Look, mate... Isn't it obvious?
 @match *
 Go away, I'm busy.
 N 15
-</pre></li>
-        <li>wounded fighter (22, 19)<pre>@match name
-Apanu... Aaeeia! ...ugak
-@identify
-@match wound|pain
-I got injured trying to kill the monsters in Castle Aaaarg.
-@reply castle What castle?
-@match castle|aaaarg
-It's full of a lot of nasty monsters - wyverns, giants, beholders. Do you want to go there?
-@reply yes Yes, I want to go.
-@match yes
-It's almost directly to the northeast of Scorn - about 400 chains. The easiest way to get there is to take the north road outside of Scorn. Once you get past the lake, start heading east/northeast - you will need to climb over some mountains. If you run across a river, just start going north - keep going north past the lake it flows from - about 75 chains. The castle is in a valley with some hills and woods.
-@match *
-Buzz off. Can't you see I am in pain!
-@reply pain Why are you in pain?
 </pre></li>
         <li>city dweller (21, 33)<pre>@match job
 We're playing Bingo here! I am the Bingo Master!
@@ -2721,8 +2683,68 @@ I chop them down in the great forest to the east. I wandered across a great towe
 @match tower|great
 The tower of Sokoban. Apparently, he was a puzzle creator. For those who can solve the puzzles, there is rumored to be a nice treasure.
 </pre></li>
-        <li>man (5, 29)<pre>@match *
+        <li>man (8, 32)<pre>@match *
 Howdy.
+</pre></li>
+        <li>wounded fighter (8, 24)<pre>@match name
+Apanu... Aaeeia! ...ugak
+@identify
+@match wound|pain
+I got injured trying to kill the monsters in Castle Aaaarg.
+@reply castle What castle?
+@match castle|aaaarg
+It's full of a lot of nasty monsters - wyverns, giants, beholders. Do you want to go there?
+@reply yes Yes, I want to go.
+@match yes
+It's almost directly to the northeast of Scorn - about 400 chains. The easiest way to get there is to take the north road outside of Scorn. Once you get past the lake, start heading east/northeast - you will need to climb over some mountains. If you run across a river, just start going north - keep going north past the lake it flows from - about 75 chains. The castle is in a valley with some hills and woods.
+@match *
+Buzz off. Can't you see I am in pain!
+@reply pain Why are you in pain?
+</pre></li>
+        <li>man (4, 31)<pre>@match name
+My name is Brum.
+@identify
+@match job
+I used to wander the lands.
+@match story|yes
+Very, well......many years ago I met a great wizard.
+@reply wizard A wizard?
+@match wizard|skud
+Yes, Skud the Great. He had a tower in the mountains.
+@reply tower Where was this tower?
+@match tower|mountain
+The tower was high in the peaks of the Black Ice Mountains, hidden in a valley.
+@reply black Where are the Black Ice Mountains?
+@reply valley What is in this valley?
+@match mountains|black|ice
+The Black Ice Mountain range lies a bit to the west of Navar.
+@match valley
+Yes, I heard that somewhere in the depths of the castle dungeon rests a piece of the Talisman!!! I never found it.
+@match *
+Would you like to hear a story?
+@reply yes Yes, I'd like to hear a story.
+</pre></li>
+        <li>upset merchant (3, 26)<pre>@match bragh|o'leary|name
+Aye, I be BRAGH O'LEARY, former OWNER of the Scorn TRAININ' CENTER. You be some whelp here to gloat over my loss of me TRAININ' CENTER?
+Away wit' ye! Bartender! Another Booze! (hic)
+@identify
+@reply train Yes, what a sorry loss of the Training Center...
+@match train|center
+You liked me TRAININ' CENTER did ye? Well good for ye!
+Some bleedin' CONSORTIUM bought it from the Bank afore I could raise the platinum to pay off the foreclosure. Buncha zombie lovers. (hic)
+@reply consortium Who is the consortium?
+@match job|owner
+Aye. I were the owner of the TRAININ' CENTER. I tol' the bloody Bank I'd gi' 'em their bloody money. Bleedin' slime foreclosed on me.
+@match consortium
+The consortamum ... constortanum ... BLAST! I dinno who they be. I just hears they broke up and MOVED me TRAININ' CENTER to other parts o' the world. The slime! (hic)
+I also hears they ha' repr'sentatives tha' hang out in taverns to recruit people inta their centers.
+@reply move So where did you move?
+@match move
+Well, young'un, I dinna know the details, but I hears the high-level TRAININ' CENTERs are in the wilderness near Santo Dominion, Darcap, Brest 'n Navar, but th' term "near" is used a bit loosely here - ye unnershtan'? (hic) I dinna know what the bloody fools did wit' me low-level TRAININ' CENTERs. Anyway, ask around in the taverns in them towns. Some'n there will be able to ansher ye questions.
+@match *
+(hic) Leave me be. Kin ye no see I be drinkin'!?
+@reply name What is your name?
+@reply job What is your job?
 </pre></li>
         <li>wizard with an aura of great power (3, 21)<pre>@match job|name
 You suddenly feel you weren't worthy enough to ask...
@@ -2761,28 +2783,6 @@ Okay, if you're not past the 5th rank, then you'll probably be very happy to do 
 Well, if you're past the 9th Tier in your guilds, and you have some strong friends, you might want to stop Yqreth from desolating more land than he already has. He got his hands on a new spell, he does, and he's abusing it. Turned to evil for sure, he has. I've heard what some of his former servants have said about him. If his soul doesn't belong to the Dark already, it will soon. He resides in the Tower of the Stars, which is south of Scorn. It's hard going to get there.
 @match hard
 If you're 12th rank or better, you might want to seek the Temple of Darkness. You need a strong fighter along on the quest: their god has granted their prayer to ban magic in his temple proper. I battled one of their adepts for a time. He had such incredible reserves of power that I had to withdraw from the fight. I'm sure that he must have had a Power Crystal. The Temple is in a Dark Forest just north of the Great East Road.
-</pre></li>
-        <li>upset merchant (3, 12)<pre>@match bragh|o'leary|name
-Aye, I be BRAGH O'LEARY, former OWNER of the Scorn TRAININ' CENTER. You be some whelp here to gloat over my loss of me TRAININ' CENTER?
-Away wit' ye! Bartender! Another Booze! (hic)
-@identify
-@reply train Yes, what a sorry loss of the Training Center...
-@match train|center
-You liked me TRAININ' CENTER did ye? Well good for ye!
-Some bleedin' CONSORTIUM bought it from the Bank afore I could raise the platinum to pay off the foreclosure. Buncha zombie lovers. (hic)
-@reply consortium Who is the consortium?
-@match job|owner
-Aye. I were the owner of the TRAININ' CENTER. I tol' the bloody Bank I'd gi' 'em their bloody money. Bleedin' slime foreclosed on me.
-@match consortium
-The consortamum ... constortanum ... BLAST! I dinno who they be. I just hears they broke up and MOVED me TRAININ' CENTER to other parts o' the world. The slime! (hic)
-I also hears they ha' repr'sentatives tha' hang out in taverns to recruit people inta their centers.
-@reply move So where did you move?
-@match move
-Well, young'un, I dinna know the details, but I hears the high-level TRAININ' CENTERs are in the wilderness near Santo Dominion, Darcap, Brest 'n Navar, but th' term "near" is used a bit loosely here - ye unnershtan'? (hic) I dinna know what the bloody fools did wit' me low-level TRAININ' CENTERs. Anyway, ask around in the taverns in them towns. Some'n there will be able to ansher ye questions.
-@match *
-(hic) Leave me be. Kin ye no see I be drinkin'!?
-@reply name What is your name?
-@reply job What is your job?
 </pre></li>
         <li>drunk (3, 8)<pre>@match name
 My name is Dilek.
