@@ -1594,7 +1594,7 @@ Seems the mail's down... sorry, come back once the required law is passed.
     </li>
     <li><a href='darcap/darcap/library_ground.html'>Darcap Library</a>
       <ul>
-        <li>Lovast (16, 7)<pre>@match access
+        <li>Lovast (17, 8)<pre>@match access
 The entire downstairs part of the library is open to all visitors, for a small fee. The upstairs is still under construction.
 @question fee Why is there a fee?
 @match fee
@@ -1603,7 +1603,7 @@ Well, the library uses the money to acquire new books. That's why the books in t
 Oh, hello! Welcome to the Darcap Public Library!
 @question access What parts of the library can I access?
 </pre></li>
-        <li>Trevor (2, 9)<pre>@match hi|hello|greet
+        <li>Trevor (3, 10)<pre>@match hi|hello|greet
 G'day, an' welcome to the library. Anything I can help you with?
 @match *
 Shush! This is a library!
@@ -2466,25 +2466,9 @@ Oh my, thank you, good adventurer. I have a little knowledge that can help you o
     </li>
     <li><a href='scorn/taverns/goths.html'>Goth's Tavern</a>
       <ul>
-        <li>scary-looking dragon (34, 19)<pre>@match name
-Gramzon, Bringer-of-Ashes.
-@identify
-@match hi|hello|job
-I am the Emissary of the Dragonlords to the City of Scorn. I have come to present the Demands of my masters. However, your King is less than cooperative. I should tell my masters that the city is ripe for conquering.
-@match demand
-The Dragonlords demand in tribute:
-10 virgins per year,
-100 head of cattle,
-and 100000 pieces of gold
-Such tribute would help them express kindness by refraining from destroying your squalid little city.
-@match dragonlord|master
-My masters, the Dragonlords, are most puissant. Few mortals may hope to overcome them in combat, for they wield such magics as would snuff the life of a mortal in seconds. No mortal can deal blows, arcane or otherwise, quickly enough to destroy the Lords, before they are destroyed. The only way a mortal could destroy one of the Dragonlords is by some clever device, for none may face one in straight combat to the death and live. To even challenge a Dragonlord to combat, you would have to pass all their draconic guards. The last of these is Ancient Dragons, whose teeth are spears, whose claws are swords, and whose breath is death! Would you know where the dragonlords dwell so that you might behold their magnificence?
-@match yes
-Their dwelling is on the western edge of the mountains southwest of Navar.
-@match weapon
-What? Where did you hear about that? Well, why would I tell you anything about this mythical 'weapon'?
-@match bribe
-You're beginning to interest me. I have a weakness for emeralds of great value. Bring me seven, and I shall tell you what you want to know. Drop them right above me and I shall reveal the location of the weapon's hiding place.
+        <li>scary-looking dragon (34, 19)<pre>@match *
+You are not the King. I demand an audience with the King!
+(Something is wrong with this dialog; please report this issue to a Dungeon Master.)
 </pre></li>
         <li>slightly drunken apprentice conjurer (32, 4)<pre>@match name
 Awiergan Cynricson at your service!
@@ -3465,8 +3449,14 @@ Hello. Sorry, but I don't have much to say for now.
         <li>Staff Sgt. MacDonald (14, 11)<pre>@match *
 Hello. Sorry, but I don't have much to say for now.
 </pre></li>
-        <li>Court Master Kurte (6, 11)<pre>@match *
-Hello, I'm too busy to answer your questions, but maybe my military colleagues would have time for you.
+        <li>Court Master Kurte (6, 11)<pre>@match quest|morkov
+Praise God someone is here to save us. We are being overrun by damned creatures that stalk the night. So far we have been able to take care of them, but we cannot find their source. I charge you with finding the source and stoping it, with any means possible...you might start with talking to that good for nothing High Wizzard of ours, Wizzo, you will find him in his shop, he may know something about the dead that plague us.
+@match necromancy
+Why do you ask about that vile art of magic, it is banned because our previous High Wizard practiced it regularly. Bringing forth vile creatures. But we put a stop to him, threw him in prison we did.
+@match wizzo
+Yes that Wizzo is a good for nothing leech, oh he was of some use to the city until he opened his shop. He is more entrepreneur than wizard now.
+@match *
+Hello, I'm too busy to answer your questions, but maybe my military colleagues would have time for you. Unless you have something very specific to ask me?
 </pre></li>
       </ul>
     </li>
@@ -8077,7 +8067,7 @@ Thank you for saving us.
     </li>
     <li><a href='darcap/darcap/random_house.html'>The Random House</a>
       <ul>
-        <li>Cartio (7, 4)<pre>@match *
+        <li>Cartio (8, 5)<pre>@match *
 Hello, and welcome to the Darcap Random House! You can visit our magic house here, which changes every visit. We only ask for a small entry fee of 10 silver so we can pay the magicians who create this place.
 </pre></li>
       </ul>
@@ -8098,7 +8088,7 @@ We are thieves. But we would never kill or harm anybody. We are not like Nazgul 
     </li>
     <li><a href='darcap/darcap/thilgar.html'>Thilgar's house</a>
       <ul>
-        <li>Thilgar (8, 10)<pre>@match armors
+        <li>Thilgar (9, 11)<pre>@match armors
 Isn't it?
 Those are all very rare and valuable armors, it took me years and much effort to manage to collect them. Be my guest, feel free to look at them.
 @match *
@@ -8766,6 +8756,19 @@ I am a descendant of the great Entorinaas Durdennis Rhyz. A long time ago, he se
 I am hiding from the king of Scorn, he fears what may happen if his enemies get some of my works.
 @match *
 I am Terrance Rhyz. How may I help you?
+</pre></li>
+      </ul>
+    </li>
+    <li><a href='navar_city/shops/city1magic.html'>Wizzo's Magic Shop</a>
+      <ul>
+        <li>Wizzo (10, 13)<pre>@match dead|morkov|quest
+Oh, you are taking on that quest, well good luck adventurer, you will need your wits and sword behind you all the way.  All I really know is that strange things have been happening in the tower. I have seen lights flicker from the windows.
+@match tower
+Yes, well it is susposed to be my tower, but I do not use it.  It belonged to the old High Wizard, but he was chained in the Prison, I do not know where he lies within.
+@match light
+Yes, strange lights have been seen from the tower, this might be of some importance, but I do not visit the tower at all.
+@match *
+Sorry I am a little busy with my inventory, if you will give me a moment I will be right with you.
 </pre></li>
       </ul>
     </li>
