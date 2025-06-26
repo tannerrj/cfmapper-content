@@ -7,7 +7,7 @@
   <p><b>Region description:</b> Isolated from the rest of the region by an extensive mountain range to the south, and possessing a massive natural harbour, Darcap is a small, but easily defensible town, dominated by a pair of powerful guilds. The town is also noted for its circus, whose reputation draws visitors from all over the world.
 </p>
 
-  <p>136 maps found:</p>
+  <p>137 maps found:</p>
   <ul>
     <li><a href='darcap/darcap/airhouse.html'>Air House</a></li>
     <li><a href='darcap/darcap/shops/bank_darcap.html'>Bank of Skud, Darcap Branch</a></li>
@@ -19,6 +19,7 @@
     <li><a href='darcap/castle/castle2.1.html'>Castle Zaah, Floor 1</a></li>
     <li><a href='darcap/castle/castle2.2.html'>Castle Zaah, Floor 2</a></li>
     <li><a href='darcap/castle/castle2.3.html'>Castle Zaah, Floor 3</a></li>
+    <li><a href='darcap/darcap/shops/furniture.html'>Chest in Case</a></li>
     <li><a href='darcap/darcap/quest.html'>Courthouse</a></li>
     <li><a href='darcap/darcap/shops/gshop.html'>Darcap General Store</a></li>
     <li><a href='darcap/darcap/shops/IPO_darcap.html'>Darcap Imperial Post Office</a></li>
@@ -163,5 +164,87 @@
   </ul>
 
   <a href="maps.html">Back to global map index.</a>
+    <script src='lunr.js'></script>
+    <script src='search_data.js'></script>
+    <script src='search_index.js'></script>
+
+    <input type="text" id="search_text" />
+    <select id="search_what">
+      <option value="">everything</option>
+    </select>
+    <button type="button" id="search_button">Search</button>
+    <div id="search_results">
+    </div>
+
+    <script>
+    var idx = lunr.Index.load(search_index);
+    var txt = document.getElementById("search_text");
+    var search_what = document.getElementById("search_what");
+    var sb = document.getElementById("search_button");
+    var display = document.getElementById("search_results");
+    var root = '';
+
+    for (const [key, value] of Object.entries(search_type)) {
+      var opt = document.createElement("option");
+      opt.value = key;
+      opt.innerHTML = value;
+      search_what.appendChild(opt);
+    }
+
+    var do_search = function () {
+      var what = txt.value;
+      if (what) {
+        display.innerHTML = '';
+        var hq = function(q) {
+          q.term(lunr.tokenizer(what), {fields: ['name', 'text'], presence: lunr.Query.presence.REQUIRED});
+          var sw = search_what.value;
+          if (sw != '')
+            q.term(sw, {fields: ['type'], presence: lunr.Query.presence.REQUIRED});
+        };
+        var results = idx.query(hq);
+        if (results.length > 0) {
+          var more = results.length > 10;
+          if (more)
+            results = results.slice(0, 10);
+          const list = document.createElement("ul");
+          display.appendChild(list);
+          results.forEach(function(item) {
+            const data = search_data[item.ref];
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = root + data.url;
+            const n = document.createElement("span");
+            n.innerText = data.name;
+            a.appendChild(n);
+            const t = document.createElement("span");
+            t.innerText = "(" + search_type[data.type] + ")";
+            a.appendChild(t);
+            li.appendChild(a);
+            list.appendChild(li);
+          });
+          if (more) {
+            const li = document.createElement("li");
+            li.appendChild(document.createTextNode("(only first 10 items displayed)"));
+            list.appendChild(li);
+          }
+        } else {
+          display.appendChild(document.createTextNode("No matching result"));
+        }
+      }
+    }
+
+    txt.addEventListener('keydown', function onEvent(event) {
+        if (event.key === "Enter") {
+            do_search();
+            return false;
+        }
+    });
+
+    sb.addEventListener('click', function() {
+      do_search();
+      return false;
+    });
+
+    </script>
   </body>
 </html>

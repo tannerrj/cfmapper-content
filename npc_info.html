@@ -849,12 +849,16 @@ Water, earth, air, and fire... It's a big task but the rewards are great! Enter 
 @match *
 I've devoted myself to the elemental quest.
 </pre></li>
-        <li>well-trained warrior (13, 10)<pre>@match artifact|hear
-A friend told me something about very powerful bracers... But he died in an attempt to get those. I believe he was killed by the... BELZEBUB!
-@match proving|tower|yes
-There's an ancient temple in the underground, beneath that tower. It is said that the most deadly creatures are lurking down there!
+        <li>Adept Warrior (13, 10)<pre>@match slimey|critter|gear|expense
+Yeah, it's something I have never seen before. I kept my distance after I saw some poor blokes sword rust and crumble in to pieces after he took a swipe at that thing.
+@match exception|minor
+Some slimey, slow moving critter in their garden might give you a run for your money - or for the expense of your gear!
+@match easy|village|shabby
+Of course, with your apparent skill level and all decked out in that plundered loot, you should do fine - with a minor exception.
+@match adventurer
+Well then, go and rough up some denziens in a shabby village to the south by south east of here - near an open bay by the sea. It should be easy enough for you.
 @match *
-Go to the Warrior Proving Tower. It's on the northeast edge of the continent. I've heard about incredible artifacts in there.
+So you looking for an adventure or just want to bother me while I try to finish my drink?
 </pre></li>
         <li>TCI Representative (11, 13)<pre>@match tci
 Training Centers Incorporated is the best dang training you'll ever get. We have locations all over the world in exotic settings. Come fight with us! (Heh, they tell us we have to say all that.)
@@ -3718,7 +3722,7 @@ I have a mission for you, but you will need to come back later.
     </li>
     <li><a href='navar_city/slums/Iggys_house.html'>Iggy's House</a>
       <ul>
-        <li>Iggy (4, 12)<pre>@match *
+        <li>Iggy (6, 14)<pre>@match *
 I invited over a few folks, but the party got out of hand. Maybe you can help me out?
 </pre></li>
       </ul>
@@ -7940,6 +7944,13 @@ Maybe you should look after him?
 There's a wounded warrior in one of the rooms upstairs. That guy is in really bad shape. I wonder what happened to him?
 @question warrior A warrior, really?
 </pre></li>
+        <li>well-trained warrior (10, 9)<pre>@match artifact|hear
+A friend told me something about very powerful bracers... But he died in an attempt to get those. I believe he was killed by the... BELZEBUB!
+@match proving|tower|yes
+There's an ancient temple in the underground, beneath that tower. It is said that the most deadly creatures are lurking down there!
+@match *
+Go to the Warrior Proving Tower. It's quite a ways north by northeast from here. I've heard about incredible artifacts in there.
+</pre></li>
         <li>sailor (8, 13)<pre>@match apartment
 Sure, it's just a matter of having enough money. I made some sailing, and the pay was good, so here I am.
 @match mudman
@@ -9256,5 +9267,87 @@ Hello, dearie, welcome to my home.
       </ul>
     </li>
   </ul>
+    <script src='lunr.js'></script>
+    <script src='search_data.js'></script>
+    <script src='search_index.js'></script>
+
+    <input type="text" id="search_text" />
+    <select id="search_what">
+      <option value="">everything</option>
+    </select>
+    <button type="button" id="search_button">Search</button>
+    <div id="search_results">
+    </div>
+
+    <script>
+    var idx = lunr.Index.load(search_index);
+    var txt = document.getElementById("search_text");
+    var search_what = document.getElementById("search_what");
+    var sb = document.getElementById("search_button");
+    var display = document.getElementById("search_results");
+    var root = '';
+
+    for (const [key, value] of Object.entries(search_type)) {
+      var opt = document.createElement("option");
+      opt.value = key;
+      opt.innerHTML = value;
+      search_what.appendChild(opt);
+    }
+
+    var do_search = function () {
+      var what = txt.value;
+      if (what) {
+        display.innerHTML = '';
+        var hq = function(q) {
+          q.term(lunr.tokenizer(what), {fields: ['name', 'text'], presence: lunr.Query.presence.REQUIRED});
+          var sw = search_what.value;
+          if (sw != '')
+            q.term(sw, {fields: ['type'], presence: lunr.Query.presence.REQUIRED});
+        };
+        var results = idx.query(hq);
+        if (results.length > 0) {
+          var more = results.length > 10;
+          if (more)
+            results = results.slice(0, 10);
+          const list = document.createElement("ul");
+          display.appendChild(list);
+          results.forEach(function(item) {
+            const data = search_data[item.ref];
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = root + data.url;
+            const n = document.createElement("span");
+            n.innerText = data.name;
+            a.appendChild(n);
+            const t = document.createElement("span");
+            t.innerText = "(" + search_type[data.type] + ")";
+            a.appendChild(t);
+            li.appendChild(a);
+            list.appendChild(li);
+          });
+          if (more) {
+            const li = document.createElement("li");
+            li.appendChild(document.createTextNode("(only first 10 items displayed)"));
+            list.appendChild(li);
+          }
+        } else {
+          display.appendChild(document.createTextNode("No matching result"));
+        }
+      }
+    }
+
+    txt.addEventListener('keydown', function onEvent(event) {
+        if (event.key === "Enter") {
+            do_search();
+            return false;
+        }
+    });
+
+    sb.addEventListener('click', function() {
+      do_search();
+      return false;
+    });
+
+    </script>
   </body>
 </html>

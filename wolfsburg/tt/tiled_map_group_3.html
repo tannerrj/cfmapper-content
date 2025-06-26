@@ -1,36 +1,116 @@
 <!doctype html>
-<head>
-<title>Twin Towers, West Tower Level 1</title>
-</head>
-<body>
+  <head>
+    <title>Crossfire Mapper - Twin Towers, West Tower Level 1</title>
+  </head>
+  <body>
 <h1>Twin Towers, West Tower Level 1</h1>
-<p>Map Twin Towers, West Tower Level 1, in region <a href="../../wolfsburg.html">The Port of Wolfsburg</a>. Map level: 0.</p>
+<p>Map Twin Towers, West Tower Level 1, in region <a href='../../wolfsburg.html'>The Port of Wolfsburg</a>. Map level: 0.</p>
 <p>Map view:
 <br>
-<a href="tiled_map_group_3.png"><img src="tiled_map_group_3.small.png" alt="Twin Towers, West Tower Level 1"></a>
+<a href="tiled_map_group_3.x1.png"><img src="tiled_map_group_3.x2.png" alt="Twin Towers, West Tower Level 1"></a>
 <br>
 (click for larger view)
 </p>
 <p>Exits from this map:</p>
 <ul>
-<li><a href="ttb2.html">Twin Towers, East Tower Level 2</a></li>
-<li><a href="../../world/world_128_109.html">world_128_109</a></li>
-
+  <li><a href='ttb2.html'>Twin Towers, East Tower Level 2</a></li>
+  <li><a href='../../world/world_128_109.html'>world_128_109</a></li>
 </ul>
-
-<p>Exits leading to this map:</p>
+<p>Exits to this map:</p>
 <ul>
-<li><a href="ttb2.html">Twin Towers, East Tower Level 2</a></li>
-<li><a href="../../world/world_128_109.html">world_128_109</a></li>
-
+  <li><a href='ttb2.html'>Twin Towers, East Tower Level 2</a></li>
+  <li><a href='../../world/world_128_109.html'>world_128_109</a></li>
 </ul>
 
+<p>Monsters found on map:
+earth para-elemental, fire para-elemental, ice para-elemental, lava para-elemental, lightning para-elemental, mud para-elemental, princess, water para-elemental, wounded knight.
+</p>
 
-
-<p>Monsters on map (level from 2000 to 0): earth para-elemental, fire para-elemental, ice para-elemental, lava para-elemental, lightning para-elemental, mud para-elemental, princess, water para-elemental, wounded knight.</p>
 
 <p>
-<a href="../../wolfsburg.html">The Port of Wolfsburg's map index</a> | <a href="../../regions.html">Region index</a> | <a href="../../maps.html">Global map index</a> | <a href="../../world.html">World map</a>
+<a href='../../wolfsburg.html'>The Port of Wolfsburg's map index</a> | <a href='../../regions.html'>Region index</a> | <a href='../../maps.html'>Global map index</a> | <a href='../../world.html'>World map</a>
 </p>
-</body>
+    <script src='../../lunr.js'></script>
+    <script src='../../search_data.js'></script>
+    <script src='../../search_index.js'></script>
+
+    <input type="text" id="search_text" />
+    <select id="search_what">
+      <option value="">everything</option>
+    </select>
+    <button type="button" id="search_button">Search</button>
+    <div id="search_results">
+    </div>
+
+    <script>
+    var idx = lunr.Index.load(search_index);
+    var txt = document.getElementById("search_text");
+    var search_what = document.getElementById("search_what");
+    var sb = document.getElementById("search_button");
+    var display = document.getElementById("search_results");
+    var root = '../../';
+
+    for (const [key, value] of Object.entries(search_type)) {
+      var opt = document.createElement("option");
+      opt.value = key;
+      opt.innerHTML = value;
+      search_what.appendChild(opt);
+    }
+
+    var do_search = function () {
+      var what = txt.value;
+      if (what) {
+        display.innerHTML = '';
+        var hq = function(q) {
+          q.term(lunr.tokenizer(what), {fields: ['name', 'text'], presence: lunr.Query.presence.REQUIRED});
+          var sw = search_what.value;
+          if (sw != '')
+            q.term(sw, {fields: ['type'], presence: lunr.Query.presence.REQUIRED});
+        };
+        var results = idx.query(hq);
+        if (results.length > 0) {
+          var more = results.length > 10;
+          if (more)
+            results = results.slice(0, 10);
+          const list = document.createElement("ul");
+          display.appendChild(list);
+          results.forEach(function(item) {
+            const data = search_data[item.ref];
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = root + data.url;
+            const n = document.createElement("span");
+            n.innerText = data.name;
+            a.appendChild(n);
+            const t = document.createElement("span");
+            t.innerText = "(" + search_type[data.type] + ")";
+            a.appendChild(t);
+            li.appendChild(a);
+            list.appendChild(li);
+          });
+          if (more) {
+            const li = document.createElement("li");
+            li.appendChild(document.createTextNode("(only first 10 items displayed)"));
+            list.appendChild(li);
+          }
+        } else {
+          display.appendChild(document.createTextNode("No matching result"));
+        }
+      }
+    }
+
+    txt.addEventListener('keydown', function onEvent(event) {
+        if (event.key === "Enter") {
+            do_search();
+            return false;
+        }
+    });
+
+    sb.addEventListener('click', function() {
+      do_search();
+      return false;
+    });
+
+    </script>
+  </body>
 </html>

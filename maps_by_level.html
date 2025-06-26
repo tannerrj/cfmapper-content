@@ -1,9 +1,9 @@
 <!doctype html>
   <head>
-    <title>Crossfire Mapper - List of all 3081 maps, by level</title>
+    <title>Crossfire Mapper - List of all 3084 maps, by level</title>
   </head>
   <body>
-<h1>List of all 3081 maps, by level</h1>
+<h1>List of all 3084 maps, by level</h1>
 <ul>  <li>0
     <ul>
       <li><a href='mlab/citydeclouds/misc/tiled_map_group_8.html'>Chess Collesium, Entrance</a></li>
@@ -673,6 +673,7 @@
       <li><a href='scorn/shops/privateshop_43_37.html'>Scorn Private Shop 4337</a></li>
       <li><a href='scorn/shops/privateshop_48_34.html'>Scorn Private Shop 4834</a></li>
       <li><a href='scorn/shops/privateshop_48_35.html'>Scorn Private Shop 4835</a></li>
+      <li><a href='scorn/shops/market.html'>Scorn Public Market</a></li>
       <li><a href='scorn/towers/brewery.1.html'>Scorn's Brewery Cantina</a></li>
       <li><a href='scorn/towers/brewery.3.html'>Scorn's Brewery Cellar</a></li>
       <li><a href='scorn/towers/brewery.2.html'>Scorn's Brewery Entrance</a></li>
@@ -2297,6 +2298,7 @@
       <li><a href='darcap/castle/castle2.0.html'>Castle Zaah, Dungeon</a></li>
       <li><a href='pup_land/cave_weapon/cave3.html'>Cave Weapon, Biological Organisms Research Group</a></li>
       <li><a href='pup_land/cave_weapon/cave4.html'>Cave Weapon, Research Group</a></li>
+      <li><a href='darcap/darcap/shops/furniture.html'>Chest in Case</a></li>
       <li><a href='scorn/kar/creepy.house2.html'>Creepy House, Dungeon Level 2</a></li>
       <li><a href='wolfsburg/magara/cellar1/hole.html'>Dank House, Cellar</a></li>
       <li><a href='dragonisland/drowmansion.html'>Dark Elf House</a></li>
@@ -2343,6 +2345,7 @@
       <li><a href='port_joseph/pirates/torttemple.html'>Temple</a></li>
       <li><a href='darcap/temple_justice/temple_justice.4.html'>Temple Justice, Level 4</a></li>
       <li><a href='scorn/temples/devourers_lower.html'>Temple of the Devourers, Lower Level</a></li>
+      <li><a href='santo_dominion/shops/furniture.html'>The Hoarder's Hoard</a></li>
       <li><a href='quests/peterm/Demonology/ApprenticeLevel.html'>Tower of Demonology Apprentice Level</a></li>
       <li><a href='navar_city/illusion/illtow4.html'>Tower of Illusion, 4th Level</a></li>
       <li><a href='quests/peterm/CTower/Barracks.html'>Tower of the Stars, Barracks</a></li>
@@ -3243,5 +3246,87 @@
     </ul>
   </li>
 </ul>
+    <script src='lunr.js'></script>
+    <script src='search_data.js'></script>
+    <script src='search_index.js'></script>
+
+    <input type="text" id="search_text" />
+    <select id="search_what">
+      <option value="">everything</option>
+    </select>
+    <button type="button" id="search_button">Search</button>
+    <div id="search_results">
+    </div>
+
+    <script>
+    var idx = lunr.Index.load(search_index);
+    var txt = document.getElementById("search_text");
+    var search_what = document.getElementById("search_what");
+    var sb = document.getElementById("search_button");
+    var display = document.getElementById("search_results");
+    var root = '';
+
+    for (const [key, value] of Object.entries(search_type)) {
+      var opt = document.createElement("option");
+      opt.value = key;
+      opt.innerHTML = value;
+      search_what.appendChild(opt);
+    }
+
+    var do_search = function () {
+      var what = txt.value;
+      if (what) {
+        display.innerHTML = '';
+        var hq = function(q) {
+          q.term(lunr.tokenizer(what), {fields: ['name', 'text'], presence: lunr.Query.presence.REQUIRED});
+          var sw = search_what.value;
+          if (sw != '')
+            q.term(sw, {fields: ['type'], presence: lunr.Query.presence.REQUIRED});
+        };
+        var results = idx.query(hq);
+        if (results.length > 0) {
+          var more = results.length > 10;
+          if (more)
+            results = results.slice(0, 10);
+          const list = document.createElement("ul");
+          display.appendChild(list);
+          results.forEach(function(item) {
+            const data = search_data[item.ref];
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = root + data.url;
+            const n = document.createElement("span");
+            n.innerText = data.name;
+            a.appendChild(n);
+            const t = document.createElement("span");
+            t.innerText = "(" + search_type[data.type] + ")";
+            a.appendChild(t);
+            li.appendChild(a);
+            list.appendChild(li);
+          });
+          if (more) {
+            const li = document.createElement("li");
+            li.appendChild(document.createTextNode("(only first 10 items displayed)"));
+            list.appendChild(li);
+          }
+        } else {
+          display.appendChild(document.createTextNode("No matching result"));
+        }
+      }
+    }
+
+    txt.addEventListener('keydown', function onEvent(event) {
+        if (event.key === "Enter") {
+            do_search();
+            return false;
+        }
+    });
+
+    sb.addEventListener('click', function() {
+      do_search();
+      return false;
+    });
+
+    </script>
   </body>
 </html>

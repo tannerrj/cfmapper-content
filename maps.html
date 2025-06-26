@@ -1,9 +1,9 @@
 <!doctype html>
   <head>
-    <title>Crossfire Mapper - List of all 3081 maps, by alphabetical order</title>
+    <title>Crossfire Mapper - List of all 3084 maps, by alphabetical order</title>
   </head>
   <body>
-  <h1>List of all 3081 maps, by alphabetical order</h1>
+  <h1>List of all 3084 maps, by alphabetical order</h1>
   <ul>    <li>a
       <ul>
         <li><a href='navar_city/magara/houses/large_house.html'>A Large house</a></li>
@@ -264,6 +264,7 @@
         <li><a href='mlab/citydeclouds/misc/cwdcchessarenab2.html'>Chess Collesium, Balcony</a></li>
         <li><a href='mlab/citydeclouds/misc/tiled_map_group_8.html'>Chess Collesium, Entrance</a></li>
         <li><a href='pup_land/castle_eureca/chest.html'>Chest</a></li>
+        <li><a href='darcap/darcap/shops/furniture.html'>Chest in Case</a></li>
         <li><a href='azumauindo/suno-yamatoshi/shops/bank1.html'>Chokinbako</a></li>
         <li><a href='azumauindo/suno-yamatoshi/shops/bank1_vault.html'>Chokinbako Kinko-shitsu</a></li>
         <li><a href='azumauindo/suno-yamatoshi/shops/bank2.html'>Chokinbako Rooftop</a></li>
@@ -1684,6 +1685,7 @@
         <li><a href='scorn/shops/privateshop_43_37.html'>Scorn Private Shop 4337</a></li>
         <li><a href='scorn/shops/privateshop_48_34.html'>Scorn Private Shop 4834</a></li>
         <li><a href='scorn/shops/privateshop_48_35.html'>Scorn Private Shop 4835</a></li>
+        <li><a href='scorn/shops/market.html'>Scorn Public Market</a></li>
         <li><a href='scorn/shops/scorn.sale1.html'>Scorn Sale Shop</a></li>
         <li><a href='scorn/houses/tannery.html'>Scorn Tannery</a></li>
         <li><a href='scorn/shops/weaponshop.html'>Scorn Weapon Shop</a></li>
@@ -1903,6 +1905,7 @@
         <li><a href='santo_dominion/tavern.2ndfloor.html'>The Golden Lion, 2nd Floor</a></li>
         <li><a href='santo_dominion/tavern.downstairs.html'>The Golden Lion, Downstairs</a></li>
         <li><a href='planes/tiled_map_group_4.html'>The Green Way</a></li>
+        <li><a href='santo_dominion/shops/furniture.html'>The Hoarder's Hoard</a></li>
         <li><a href='navar_city/mlab/thehole.html'>The Hole</a></li>
         <li><a href='scorn/houses/jones.html'>The Jones'</a></li>
         <li><a href='santo_dominion/peacock.html'>The Little Peacock</a></li>
@@ -3159,5 +3162,87 @@
       </ul>
     </li>
   </ul>
+    <script src='lunr.js'></script>
+    <script src='search_data.js'></script>
+    <script src='search_index.js'></script>
+
+    <input type="text" id="search_text" />
+    <select id="search_what">
+      <option value="">everything</option>
+    </select>
+    <button type="button" id="search_button">Search</button>
+    <div id="search_results">
+    </div>
+
+    <script>
+    var idx = lunr.Index.load(search_index);
+    var txt = document.getElementById("search_text");
+    var search_what = document.getElementById("search_what");
+    var sb = document.getElementById("search_button");
+    var display = document.getElementById("search_results");
+    var root = '';
+
+    for (const [key, value] of Object.entries(search_type)) {
+      var opt = document.createElement("option");
+      opt.value = key;
+      opt.innerHTML = value;
+      search_what.appendChild(opt);
+    }
+
+    var do_search = function () {
+      var what = txt.value;
+      if (what) {
+        display.innerHTML = '';
+        var hq = function(q) {
+          q.term(lunr.tokenizer(what), {fields: ['name', 'text'], presence: lunr.Query.presence.REQUIRED});
+          var sw = search_what.value;
+          if (sw != '')
+            q.term(sw, {fields: ['type'], presence: lunr.Query.presence.REQUIRED});
+        };
+        var results = idx.query(hq);
+        if (results.length > 0) {
+          var more = results.length > 10;
+          if (more)
+            results = results.slice(0, 10);
+          const list = document.createElement("ul");
+          display.appendChild(list);
+          results.forEach(function(item) {
+            const data = search_data[item.ref];
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = root + data.url;
+            const n = document.createElement("span");
+            n.innerText = data.name;
+            a.appendChild(n);
+            const t = document.createElement("span");
+            t.innerText = "(" + search_type[data.type] + ")";
+            a.appendChild(t);
+            li.appendChild(a);
+            list.appendChild(li);
+          });
+          if (more) {
+            const li = document.createElement("li");
+            li.appendChild(document.createTextNode("(only first 10 items displayed)"));
+            list.appendChild(li);
+          }
+        } else {
+          display.appendChild(document.createTextNode("No matching result"));
+        }
+      }
+    }
+
+    txt.addEventListener('keydown', function onEvent(event) {
+        if (event.key === "Enter") {
+            do_search();
+            return false;
+        }
+    });
+
+    sb.addEventListener('click', function() {
+      do_search();
+      return false;
+    });
+
+    </script>
   </body>
 </html>
