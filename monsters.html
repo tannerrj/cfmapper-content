@@ -5328,7 +5328,7 @@
     </tr>
     <tr>
       <td id="m405">Dread</td>
-      <td>611</td>
+      <td>610</td>
       <td>Found on 77 maps:
         <ul>
           <li><a href='navar_city/magara/houses/large_house.html'>A Large house</a></li>
@@ -6809,8 +6809,8 @@
     </tr>
     <tr>
       <td id="m529">fire elemental</td>
-      <td>591</td>
-      <td>Found on 43 maps:
+      <td>552</td>
+      <td>Found on 42 maps:
         <ul>
           <li><a href='euthville/wiz1.html'>Abyss, Entrance</a></li>
           <li><a href='brest/jes.admini.1.html'>Administration, Level 2</a></li>
@@ -6819,7 +6819,6 @@
           <li><a href='quests/mcz/castle_fire.html'>Castle of Ra-Gar, Level of Fire</a></li>
           <li><a href='mlab/citydeclouds/cdccotgf1.html'>City De Clouds - Office of Guards, Level 1</a></li>
           <li><a href='navar_city/misc/tiled_map_group_6.html'>Civic Theater, Lower Level 3</a></li>
-          <li><a href='brest/brittany/dol-guldur.4.html'>Dol-Guldur</a></li>
           <li><a href='brest/brittany/dol-guldur.3.html'>Dol-Guldur, Library</a></li>
           <li><a href='brest/brittany/dol-guldur.6.html'>Dol-Guldur, Master's Chamber</a></li>
           <li><a href='dragonisland/house7.html'>Dreadful house</a></li>
@@ -18005,7 +18004,7 @@
     </tr>
     <tr>
       <td id="m1491">slime</td>
-      <td>586</td>
+      <td>582</td>
       <td>Found on 34 maps:
         <ul>
           <li><a href='santo_dominion/magara/opera.html'>A Little Opera</a></li>
@@ -18124,8 +18123,8 @@
     </tr>
     <tr>
       <td id="m1500">small troll</td>
-      <td>407</td>
-      <td>Found on 48 maps:
+      <td>403</td>
+      <td>Found on 47 maps:
         <ul>
           <li><a href='navar_city/magara/houses/large_house.html'>A Large house</a></li>
           <li><a href='santo_dominion/magara/opera.html'>A Little Opera</a></li>
@@ -18136,7 +18135,6 @@
           <li><a href='mlab/citydeclouds/cdcbigstore/cdcbigstore3f.html'>City de Clouds Big Store</a></li>
           <li><a href='dungeons/dark-cave/dark-cave-2.html'>Dark Cave, Dwarven Tomb</a></li>
           <li><a href='quests/peterm/temple/OuterTemple.html'>Dark Forest, Outer Temple</a></li>
-          <li><a href='brest/brittany/dol-guldur.4.html'>Dol-Guldur</a></li>
           <li><a href='dragonisland/house5.html'>Enter at Own Risk</a></li>
           <li><a href='whalingoutpost/houses/infestedhouse1.html'>Fisherman's Cabin</a></li>
           <li><a href='quests/cd/cd.cellar1.757.html'>Fortress Ang, Cellar</a></li>
@@ -20059,7 +20057,7 @@
     </tr>
     <tr>
       <td id="m1671">troll</td>
-      <td>424</td>
+      <td>423</td>
       <td>Found on 67 maps:
         <ul>
           <li><a href='santo_dominion/magara/opera.html'>A Little Opera</a></li>
@@ -21947,87 +21945,5 @@
       </td>
     </tr>
   </table>
-    <script src='lunr.js'></script>
-    <script src='search_data.js'></script>
-    <script src='search_index.js'></script>
-
-    <input type="text" id="search_text" />
-    <select id="search_what">
-      <option value="">everything</option>
-    </select>
-    <button type="button" id="search_button">Search</button>
-    <div id="search_results">
-    </div>
-
-    <script>
-    var idx = lunr.Index.load(search_index);
-    var txt = document.getElementById("search_text");
-    var search_what = document.getElementById("search_what");
-    var sb = document.getElementById("search_button");
-    var display = document.getElementById("search_results");
-    var root = '';
-
-    for (const [key, value] of Object.entries(search_type)) {
-      var opt = document.createElement("option");
-      opt.value = key;
-      opt.innerHTML = value;
-      search_what.appendChild(opt);
-    }
-
-    var do_search = function () {
-      var what = txt.value;
-      if (what) {
-        display.innerHTML = '';
-        var hq = function(q) {
-          q.term(lunr.tokenizer(what), {fields: ['name', 'text'], presence: lunr.Query.presence.REQUIRED});
-          var sw = search_what.value;
-          if (sw != '')
-            q.term(sw, {fields: ['type'], presence: lunr.Query.presence.REQUIRED});
-        };
-        var results = idx.query(hq);
-        if (results.length > 0) {
-          var more = results.length > 10;
-          if (more)
-            results = results.slice(0, 10);
-          const list = document.createElement("ul");
-          display.appendChild(list);
-          results.forEach(function(item) {
-            const data = search_data[item.ref];
-            const li = document.createElement("li");
-            const a = document.createElement("a");
-            a.href = root + data.url;
-            const n = document.createElement("span");
-            n.innerText = data.name;
-            a.appendChild(n);
-            const t = document.createElement("span");
-            t.innerText = "(" + search_type[data.type] + ")";
-            a.appendChild(t);
-            li.appendChild(a);
-            list.appendChild(li);
-          });
-          if (more) {
-            const li = document.createElement("li");
-            li.appendChild(document.createTextNode("(only first 10 items displayed)"));
-            list.appendChild(li);
-          }
-        } else {
-          display.appendChild(document.createTextNode("No matching result"));
-        }
-      }
-    }
-
-    txt.addEventListener('keydown', function onEvent(event) {
-        if (event.key === "Enter") {
-            do_search();
-            return false;
-        }
-    });
-
-    sb.addEventListener('click', function() {
-      do_search();
-      return false;
-    });
-
-    </script>
   </body>
 </html>

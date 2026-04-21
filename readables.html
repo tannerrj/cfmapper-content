@@ -11744,13 +11744,6 @@ Due to the power of the magic involved, retrieving large creatures from their ce
 </pre></li>
       </ul>
     </li>
-    <li><a href='wolfsburg/apartments/pet-apartment/pet-apartment3.html'>Personal Pet Apartment, Level 3</a>
-      <ul>
-        <li>note (1, 1)<pre>Seems the roof collapsed, well, I doubt anyone has enough money to ever get up here, so there is no point fixing it up.
-(This area is buildable)
-</pre></li>
-      </ul>
-    </li>
     <li><a href='wolfsburg/apartments/pet-apartment/torture-chamber.html'>Personal Pet Apartment, Torture Chamber</a>
       <ul>
         <li>note (2, 2)<pre>Warning: no responsibility assumed if you get trapped in your own torture chamber by one of your pets!
@@ -15154,6 +15147,10 @@ When the door is open the character will be able to leave.
       <ul>
         <li>sign (20, 45)<pre>Beware! The downstairs is significantly more difficult than this level. Be prepared to deal with draining attacks.
 </pre></li>
+        <li>sign (16, 46)<pre>Death and certain doom await beyond these walls!
+</pre></li>
+        <li>sign (14, 46)<pre>Proceed at your own risk! Powerful and dangerous foes await beyond these stairs!
+</pre></li>
       </ul>
     </li>
     <li><a href='scorn/mansion/str-tunnel.html'>Scorn Mansion - Strange Tunnel</a>
@@ -17529,6 +17526,22 @@ Goblin Leader shouts:
 </pre></li>
       </ul>
     </li>
+    <li><a href='darcap/darcap/house_tunnels.html'>Underground Tunnel</a>
+      <ul>
+        <li>Earth House (5, 9)<pre>Earth House
+</pre></li>
+        <li>Air House (5, 5)<pre>Air House
+</pre></li>
+        <li>Water House (5, 1)<pre>Water House
+</pre></li>
+        <li>Air House (2, 9)<pre>Air House
+</pre></li>
+        <li>Water House (2, 5)<pre>Water House
+</pre></li>
+        <li>Fire House (2, 1)<pre>Fire House
+</pre></li>
+      </ul>
+    </li>
     <li><a href='brest/underground.html'>Underground, Level 1</a>
       <ul>
         <li>sign (41, 26)<pre>You kill all the monster,
@@ -19355,87 +19368,5 @@ LARGE canaries ...
       </ul>
     </li>
   </ul>
-    <script src='lunr.js'></script>
-    <script src='search_data.js'></script>
-    <script src='search_index.js'></script>
-
-    <input type="text" id="search_text" />
-    <select id="search_what">
-      <option value="">everything</option>
-    </select>
-    <button type="button" id="search_button">Search</button>
-    <div id="search_results">
-    </div>
-
-    <script>
-    var idx = lunr.Index.load(search_index);
-    var txt = document.getElementById("search_text");
-    var search_what = document.getElementById("search_what");
-    var sb = document.getElementById("search_button");
-    var display = document.getElementById("search_results");
-    var root = '';
-
-    for (const [key, value] of Object.entries(search_type)) {
-      var opt = document.createElement("option");
-      opt.value = key;
-      opt.innerHTML = value;
-      search_what.appendChild(opt);
-    }
-
-    var do_search = function () {
-      var what = txt.value;
-      if (what) {
-        display.innerHTML = '';
-        var hq = function(q) {
-          q.term(lunr.tokenizer(what), {fields: ['name', 'text'], presence: lunr.Query.presence.REQUIRED});
-          var sw = search_what.value;
-          if (sw != '')
-            q.term(sw, {fields: ['type'], presence: lunr.Query.presence.REQUIRED});
-        };
-        var results = idx.query(hq);
-        if (results.length > 0) {
-          var more = results.length > 10;
-          if (more)
-            results = results.slice(0, 10);
-          const list = document.createElement("ul");
-          display.appendChild(list);
-          results.forEach(function(item) {
-            const data = search_data[item.ref];
-            const li = document.createElement("li");
-            const a = document.createElement("a");
-            a.href = root + data.url;
-            const n = document.createElement("span");
-            n.innerText = data.name;
-            a.appendChild(n);
-            const t = document.createElement("span");
-            t.innerText = "(" + search_type[data.type] + ")";
-            a.appendChild(t);
-            li.appendChild(a);
-            list.appendChild(li);
-          });
-          if (more) {
-            const li = document.createElement("li");
-            li.appendChild(document.createTextNode("(only first 10 items displayed)"));
-            list.appendChild(li);
-          }
-        } else {
-          display.appendChild(document.createTextNode("No matching result"));
-        }
-      }
-    }
-
-    txt.addEventListener('keydown', function onEvent(event) {
-        if (event.key === "Enter") {
-            do_search();
-            return false;
-        }
-    });
-
-    sb.addEventListener('click', function() {
-      do_search();
-      return false;
-    });
-
-    </script>
   </body>
 </html>
