@@ -2,7 +2,7 @@
   <head>
     <title>Crossfire Mapper - Maps index for Port Joseph</title>
   </head>
-  <body>
+  <body data-root="">
   <p><b>Region's longname:</b> Port Joseph</p>
   <p><b>Region description:</b> Port Joseph is located on the largest (which isn't saying much) of a chain of islands west of the Kingdom of Scorn.  While the island doesn't boast very much, most everything there is very practical.  How the times have changed. The early days of Port Joseph was a haven for the most ruthless band of pirates that the high seas has ever seen. The infamous reputation of Port Joseph died with the passing of renowned pirate admiral, Moogley Bill. While his legend lives on, his treasure horde is still missing. Thanks to increased presence and protection from The King's Navy, many trade routes now pass through or near the area, so that makes the Port a frequent stop and transfer point for merchants.  However, the pirate roots are still relevant today.
 </p>
@@ -73,75 +73,6 @@
     <div id="search_results">
     </div>
 
-    <script>
-    var idx = lunr.Index.load(search_index);
-    var txt = document.getElementById("search_text");
-    var search_what = document.getElementById("search_what");
-    var sb = document.getElementById("search_button");
-    var display = document.getElementById("search_results");
-    var root = '';
-
-    for (const [key, value] of Object.entries(search_type)) {
-      var opt = document.createElement("option");
-      opt.value = key;
-      opt.innerHTML = value;
-      search_what.appendChild(opt);
-    }
-
-    var do_search = function () {
-      var what = txt.value;
-      if (what) {
-        display.innerHTML = '';
-        var hq = function(q) {
-          q.term(lunr.tokenizer(what), {fields: ['name', 'text'], presence: lunr.Query.presence.REQUIRED});
-          var sw = search_what.value;
-          if (sw != '')
-            q.term(sw, {fields: ['type'], presence: lunr.Query.presence.REQUIRED});
-        };
-        var results = idx.query(hq);
-        if (results.length > 0) {
-          var more = results.length > 10;
-          if (more)
-            results = results.slice(0, 10);
-          const list = document.createElement("ul");
-          display.appendChild(list);
-          results.forEach(function(item) {
-            const data = search_data[item.ref];
-            const li = document.createElement("li");
-            const a = document.createElement("a");
-            a.href = root + data.url;
-            const n = document.createElement("span");
-            n.innerText = data.name;
-            a.appendChild(n);
-            const t = document.createElement("span");
-            t.innerText = "(" + search_type[data.type] + ")";
-            a.appendChild(t);
-            li.appendChild(a);
-            list.appendChild(li);
-          });
-          if (more) {
-            const li = document.createElement("li");
-            li.appendChild(document.createTextNode("(only first 10 items displayed)"));
-            list.appendChild(li);
-          }
-        } else {
-          display.appendChild(document.createTextNode("No matching result"));
-        }
-      }
-    }
-
-    txt.addEventListener('keydown', function onEvent(event) {
-        if (event.key === "Enter") {
-            do_search();
-            return false;
-        }
-    });
-
-    sb.addEventListener('click', function() {
-      do_search();
-      return false;
-    });
-
-    </script>
+    <script src='search.js'></script>
   </body>
 </html>

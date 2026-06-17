@@ -2,7 +2,7 @@
   <head>
     <title>Crossfire Mapper - Maps index for Mazes of Menace</title>
   </head>
-  <body>
+  <body data-root="">
   <p><b>Region's longname:</b> Mazes of Menace</p>
   <p><b>Region description:</b> Recently, you have begun to find yourself unfulfilled and distant in your daily occupation. Strange dreams of prospecting, stealing, crusading, and combat have haunted you in your sleep for many months, but you aren't sure of the reason. Some nights you awaken suddenly and cry out, terrified at the vivid recollection of the strange and powerful creatures that seem to be lurking behind every corner of the dungeon in your dream. Eventually you can resist the yearning to seek out the fantastic place in your dreams no longer. After all, when other adventurers came back this way after spending time in the caverns, they usually seemed better off than when they passed through the first time. And who was to say that all of those who did not return had not just kept going?
 </p>
@@ -30,75 +30,6 @@
     <div id="search_results">
     </div>
 
-    <script>
-    var idx = lunr.Index.load(search_index);
-    var txt = document.getElementById("search_text");
-    var search_what = document.getElementById("search_what");
-    var sb = document.getElementById("search_button");
-    var display = document.getElementById("search_results");
-    var root = '';
-
-    for (const [key, value] of Object.entries(search_type)) {
-      var opt = document.createElement("option");
-      opt.value = key;
-      opt.innerHTML = value;
-      search_what.appendChild(opt);
-    }
-
-    var do_search = function () {
-      var what = txt.value;
-      if (what) {
-        display.innerHTML = '';
-        var hq = function(q) {
-          q.term(lunr.tokenizer(what), {fields: ['name', 'text'], presence: lunr.Query.presence.REQUIRED});
-          var sw = search_what.value;
-          if (sw != '')
-            q.term(sw, {fields: ['type'], presence: lunr.Query.presence.REQUIRED});
-        };
-        var results = idx.query(hq);
-        if (results.length > 0) {
-          var more = results.length > 10;
-          if (more)
-            results = results.slice(0, 10);
-          const list = document.createElement("ul");
-          display.appendChild(list);
-          results.forEach(function(item) {
-            const data = search_data[item.ref];
-            const li = document.createElement("li");
-            const a = document.createElement("a");
-            a.href = root + data.url;
-            const n = document.createElement("span");
-            n.innerText = data.name;
-            a.appendChild(n);
-            const t = document.createElement("span");
-            t.innerText = "(" + search_type[data.type] + ")";
-            a.appendChild(t);
-            li.appendChild(a);
-            list.appendChild(li);
-          });
-          if (more) {
-            const li = document.createElement("li");
-            li.appendChild(document.createTextNode("(only first 10 items displayed)"));
-            list.appendChild(li);
-          }
-        } else {
-          display.appendChild(document.createTextNode("No matching result"));
-        }
-      }
-    }
-
-    txt.addEventListener('keydown', function onEvent(event) {
-        if (event.key === "Enter") {
-            do_search();
-            return false;
-        }
-    });
-
-    sb.addEventListener('click', function() {
-      do_search();
-      return false;
-    });
-
-    </script>
+    <script src='search.js'></script>
   </body>
 </html>

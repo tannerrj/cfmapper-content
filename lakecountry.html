@@ -2,7 +2,7 @@
   <head>
     <title>Crossfire Mapper - Maps index for Lake Country</title>
   </head>
-  <body>
+  <body data-root="">
   <p><b>Region's longname:</b> Lake Country</p>
   <p><b>Region description:</b> Founded by Lord Butakis, this land is a unique region of lakes, rivers and the sea. Changes, both natural and unnatural, had drastically transformed the landscape of this area.  Rivers had been diverted, lakes were drained, and the sea had reseeded - only to have all this undone or remade through a catastrophic flood a decade later.
 As a result of this devastation, one needs to recognize the hardship and sorrow that has been a burden on this land. Many lives have been lost, several graves - marked and unmarked fill area.  Rumors that the fog, which covers the land, is a testament of the grief and anguish experienced by the first settlers has drawn those brave enough to face such superstition.  Another interest of lore is the wandering spirit from the nearby forest; a spirit in which seems to be holding grudge from ages ago. Others travel to Lake Country because of its reputation - the rich shops operated by retired adventurers, the Training Tower and the safety within the Fortress of Lord Butakis.
@@ -91,75 +91,6 @@ As a result of this devastation, one needs to recognize the hardship and sorrow 
     <div id="search_results">
     </div>
 
-    <script>
-    var idx = lunr.Index.load(search_index);
-    var txt = document.getElementById("search_text");
-    var search_what = document.getElementById("search_what");
-    var sb = document.getElementById("search_button");
-    var display = document.getElementById("search_results");
-    var root = '';
-
-    for (const [key, value] of Object.entries(search_type)) {
-      var opt = document.createElement("option");
-      opt.value = key;
-      opt.innerHTML = value;
-      search_what.appendChild(opt);
-    }
-
-    var do_search = function () {
-      var what = txt.value;
-      if (what) {
-        display.innerHTML = '';
-        var hq = function(q) {
-          q.term(lunr.tokenizer(what), {fields: ['name', 'text'], presence: lunr.Query.presence.REQUIRED});
-          var sw = search_what.value;
-          if (sw != '')
-            q.term(sw, {fields: ['type'], presence: lunr.Query.presence.REQUIRED});
-        };
-        var results = idx.query(hq);
-        if (results.length > 0) {
-          var more = results.length > 10;
-          if (more)
-            results = results.slice(0, 10);
-          const list = document.createElement("ul");
-          display.appendChild(list);
-          results.forEach(function(item) {
-            const data = search_data[item.ref];
-            const li = document.createElement("li");
-            const a = document.createElement("a");
-            a.href = root + data.url;
-            const n = document.createElement("span");
-            n.innerText = data.name;
-            a.appendChild(n);
-            const t = document.createElement("span");
-            t.innerText = "(" + search_type[data.type] + ")";
-            a.appendChild(t);
-            li.appendChild(a);
-            list.appendChild(li);
-          });
-          if (more) {
-            const li = document.createElement("li");
-            li.appendChild(document.createTextNode("(only first 10 items displayed)"));
-            list.appendChild(li);
-          }
-        } else {
-          display.appendChild(document.createTextNode("No matching result"));
-        }
-      }
-    }
-
-    txt.addEventListener('keydown', function onEvent(event) {
-        if (event.key === "Enter") {
-            do_search();
-            return false;
-        }
-    });
-
-    sb.addEventListener('click', function() {
-      do_search();
-      return false;
-    });
-
-    </script>
+    <script src='search.js'></script>
   </body>
 </html>
