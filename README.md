@@ -39,6 +39,9 @@ Actual command used to generate the map content provided in this code repository
 Content generated via cfmapper and themed for Crossfire website
  * <http://www.crossfireatlas.net/>
 
+Crossfire Mapper content with search enabled, no themed or layout changes
+ * <https://github.com/tannerrj/cfmapper-content>
+
 ## Questions
 
 For any questions or general inquiries on the game or server source code:
@@ -66,6 +69,7 @@ GNU General Public License version 2.0 (GPLv2)
 
 ## Crossfire Social Media Links
 
+ * [BlueSky](https://bsky.app/profile/crossfireproject.bsky.social)
  * [Facebook](https://www.facebook.com/crossfireproject/)
  * [Mastodon](https://mastodon.social/@crossfiremrpg)
  * [X (Formerly Twitter)](https://twitter.com/crossfiremrpg/)
